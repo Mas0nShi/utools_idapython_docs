@@ -19,6 +19,7 @@ moreover, remove useless nodes.
 
 - [ ] more search pattern
 - [ ] beautify
+- [ ] a bug with docs mode in utools (maybe): fail to show character '_' in search list.
 
 ## screenshot
 
