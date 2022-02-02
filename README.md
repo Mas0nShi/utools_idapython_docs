@@ -12,7 +12,7 @@ moreover, remove useless nodes.
 
 ## features
 
-- based on utools
+- platform of utools
 - quick search in globals(variables/function/...)
 
 ## todo
