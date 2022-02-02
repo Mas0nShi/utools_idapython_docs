@@ -1,0 +1,1119 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_lines API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: lines"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_lines</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: lines</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_lines.COLOR_ADDR"><code class="name">var <span class="ident">COLOR_ADDR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_ADDR = 40</div></div>
+</dd>
+<dt id="ida_lines.COLOR_ADDR_SIZE"><code class="name">var <span class="ident">COLOR_ADDR_SIZE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Size of a tagged address (see 'COLOR_ADDR' )</div></div>
+</dd>
+<dt id="ida_lines.COLOR_ALTOP"><code class="name">var <span class="ident">COLOR_ALTOP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_ALTOP = 22</div></div>
+</dd>
+<dt id="ida_lines.COLOR_ASMDIR"><code class="name">var <span class="ident">COLOR_ASMDIR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_ASMDIR = 27</div></div>
+</dd>
+<dt id="ida_lines.COLOR_AUTOCMT"><code class="name">var <span class="ident">COLOR_AUTOCMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_AUTOCMT = 4</div></div>
+</dd>
+<dt id="ida_lines.COLOR_BG_MAX"><code class="name">var <span class="ident">COLOR_BG_MAX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Max color number.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_BINPREF"><code class="name">var <span class="ident">COLOR_BINPREF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_BINPREF = 20</div></div>
+</dd>
+<dt id="ida_lines.COLOR_CHAR"><code class="name">var <span class="ident">COLOR_CHAR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_CHAR = 10</div></div>
+</dd>
+<dt id="ida_lines.COLOR_CNAME"><code class="name">var <span class="ident">COLOR_CNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_CNAME = 37</div></div>
+</dd>
+<dt id="ida_lines.COLOR_CODE"><code class="name">var <span class="ident">COLOR_CODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Single instruction.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_CODNAME"><code class="name">var <span class="ident">COLOR_CODNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_CODNAME = 26</div></div>
+</dd>
+<dt id="ida_lines.COLOR_COLLAPSED"><code class="name">var <span class="ident">COLOR_COLLAPSED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_COLLAPSED = 39</div></div>
+</dd>
+<dt id="ida_lines.COLOR_CREF"><code class="name">var <span class="ident">COLOR_CREF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_CREF = 14</div></div>
+</dd>
+<dt id="ida_lines.COLOR_CREFTAIL"><code class="name">var <span class="ident">COLOR_CREFTAIL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_CREFTAIL = 16</div></div>
+</dd>
+<dt id="ida_lines.COLOR_CURITEM"><code class="name">var <span class="ident">COLOR_CURITEM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Current item.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_CURLINE"><code class="name">var <span class="ident">COLOR_CURLINE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Current line.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DATA"><code class="name">var <span class="ident">COLOR_DATA</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Data bytes.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DATNAME"><code class="name">var <span class="ident">COLOR_DATNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_DATNAME = 6</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DCHAR"><code class="name">var <span class="ident">COLOR_DCHAR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_DCHAR = 30</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DEFAULT"><code class="name">var <span class="ident">COLOR_DEFAULT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Default.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DEMNAME"><code class="name">var <span class="ident">COLOR_DEMNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_DEMNAME = 8</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DNAME"><code class="name">var <span class="ident">COLOR_DNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_DNAME = 7</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DNUM"><code class="name">var <span class="ident">COLOR_DNUM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_DNUM = 31</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DREF"><code class="name">var <span class="ident">COLOR_DREF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_DREF = 15</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DREFTAIL"><code class="name">var <span class="ident">COLOR_DREFTAIL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_DREFTAIL = 17</div></div>
+</dd>
+<dt id="ida_lines.COLOR_DSTR"><code class="name">var <span class="ident">COLOR_DSTR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_DSTR = 29</div></div>
+</dd>
+<dt id="ida_lines.COLOR_ERROR"><code class="name">var <span class="ident">COLOR_ERROR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_ERROR = 18</div></div>
+</dd>
+<dt id="ida_lines.COLOR_ESC"><code class="name">var <span class="ident">COLOR_ESC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Escape character (Quote next character). This is needed to output '\1'
+and '\2' characters.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_EXTERN"><code class="name">var <span class="ident">COLOR_EXTERN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+External name definition segment.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_EXTRA"><code class="name">var <span class="ident">COLOR_EXTRA</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_EXTRA = 21</div></div>
+</dd>
+<dt id="ida_lines.COLOR_FG_MAX"><code class="name">var <span class="ident">COLOR_FG_MAX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_FG_MAX = 40</div></div>
+</dd>
+<dt id="ida_lines.COLOR_HIDLINE"><code class="name">var <span class="ident">COLOR_HIDLINE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Hidden line.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_HIDNAME"><code class="name">var <span class="ident">COLOR_HIDNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_HIDNAME = 23</div></div>
+</dd>
+<dt id="ida_lines.COLOR_IMPNAME"><code class="name">var <span class="ident">COLOR_IMPNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_IMPNAME = 34</div></div>
+</dd>
+<dt id="ida_lines.COLOR_INSN"><code class="name">var <span class="ident">COLOR_INSN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_INSN = 5</div></div>
+</dd>
+<dt id="ida_lines.COLOR_INV"><code class="name">var <span class="ident">COLOR_INV</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Escape character (Inverse foreground and background colors). This
+escape character has no corresponding 'COLOR_OFF' . Its action
+continues until the next 'COLOR_INV' or end of line.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_KEYWORD"><code class="name">var <span class="ident">COLOR_KEYWORD</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_KEYWORD = 32</div></div>
+</dd>
+<dt id="ida_lines.COLOR_LIBFUNC"><code class="name">var <span class="ident">COLOR_LIBFUNC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Library function.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_LIBNAME"><code class="name">var <span class="ident">COLOR_LIBNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_LIBNAME = 24</div></div>
+</dd>
+<dt id="ida_lines.COLOR_LOCNAME"><code class="name">var <span class="ident">COLOR_LOCNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_LOCNAME = 25</div></div>
+</dd>
+<dt id="ida_lines.COLOR_LUMFUNC"><code class="name">var <span class="ident">COLOR_LUMFUNC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Lumina function.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_LUMINA"><code class="name">var <span class="ident">COLOR_LUMINA</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_LUMINA = 52</div></div>
+</dd>
+<dt id="ida_lines.COLOR_MACRO"><code class="name">var <span class="ident">COLOR_MACRO</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_MACRO = 28</div></div>
+</dd>
+<dt id="ida_lines.COLOR_NUMBER"><code class="name">var <span class="ident">COLOR_NUMBER</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_NUMBER = 12</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OFF"><code class="name">var <span class="ident">COLOR_OFF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Escape character (OFF). Followed by a color code ( 'color_t' ).</div></div>
+</dd>
+<dt id="ida_lines.COLOR_ON"><code class="name">var <span class="ident">COLOR_ON</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Escape character (ON). Followed by a color code ( 'color_t' ).</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OPND1"><code class="name">var <span class="ident">COLOR_OPND1</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_OPND1 = 41</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OPND2"><code class="name">var <span class="ident">COLOR_OPND2</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_OPND2 = 42</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OPND3"><code class="name">var <span class="ident">COLOR_OPND3</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_OPND3 = 43</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OPND4"><code class="name">var <span class="ident">COLOR_OPND4</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_OPND4 = 44</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OPND5"><code class="name">var <span class="ident">COLOR_OPND5</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_OPND5 = 45</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OPND6"><code class="name">var <span class="ident">COLOR_OPND6</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_OPND6 = 46</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OPND7"><code class="name">var <span class="ident">COLOR_OPND7</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_OPND7 = 47</div></div>
+</dd>
+<dt id="ida_lines.COLOR_OPND8"><code class="name">var <span class="ident">COLOR_OPND8</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_OPND8 = 48</div></div>
+</dd>
+<dt id="ida_lines.COLOR_PREFIX"><code class="name">var <span class="ident">COLOR_PREFIX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_PREFIX = 19</div></div>
+</dd>
+<dt id="ida_lines.COLOR_REG"><code class="name">var <span class="ident">COLOR_REG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_REG = 33</div></div>
+</dd>
+<dt id="ida_lines.COLOR_REGCMT"><code class="name">var <span class="ident">COLOR_REGCMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_REGCMT = 2</div></div>
+</dd>
+<dt id="ida_lines.COLOR_REGFUNC"><code class="name">var <span class="ident">COLOR_REGFUNC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Regular function.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_RESERVED1"><code class="name">var <span class="ident">COLOR_RESERVED1</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_RESERVED1 = 51</div></div>
+</dd>
+<dt id="ida_lines.COLOR_RPTCMT"><code class="name">var <span class="ident">COLOR_RPTCMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_RPTCMT = 3</div></div>
+</dd>
+<dt id="ida_lines.COLOR_SEGNAME"><code class="name">var <span class="ident">COLOR_SEGNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_SEGNAME = 35</div></div>
+</dd>
+<dt id="ida_lines.COLOR_SELECTED"><code class="name">var <span class="ident">COLOR_SELECTED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Selected.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_STRING"><code class="name">var <span class="ident">COLOR_STRING</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_STRING = 11</div></div>
+</dd>
+<dt id="ida_lines.COLOR_SYMBOL"><code class="name">var <span class="ident">COLOR_SYMBOL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_SYMBOL = 9</div></div>
+</dd>
+<dt id="ida_lines.COLOR_UNAME"><code class="name">var <span class="ident">COLOR_UNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_UNAME = 38</div></div>
+</dd>
+<dt id="ida_lines.COLOR_UNKNAME"><code class="name">var <span class="ident">COLOR_UNKNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_UNKNAME = 36</div></div>
+</dd>
+<dt id="ida_lines.COLOR_UNKNOWN"><code class="name">var <span class="ident">COLOR_UNKNOWN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Unexplored byte.</div></div>
+</dd>
+<dt id="ida_lines.COLOR_VOIDOP"><code class="name">var <span class="ident">COLOR_VOIDOP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+COLOR_VOIDOP = 13</div></div>
+</dd>
+<dt id="ida_lines.E_NEXT"><code class="name">var <span class="ident">E_NEXT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+E_NEXT = 2000</div></div>
+</dd>
+<dt id="ida_lines.E_PREV"><code class="name">var <span class="ident">E_PREV</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+E_PREV = 1000</div></div>
+</dd>
+<dt id="ida_lines.GENDSM_FORCE_CODE"><code class="name">var <span class="ident">GENDSM_FORCE_CODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+GENDSM_FORCE_CODE = 1</div></div>
+</dd>
+<dt id="ida_lines.GENDSM_MULTI_LINE"><code class="name">var <span class="ident">GENDSM_MULTI_LINE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+GENDSM_MULTI_LINE = 2</div></div>
+</dd>
+<dt id="ida_lines.GENDSM_REMOVE_TAGS"><code class="name">var <span class="ident">GENDSM_REMOVE_TAGS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+GENDSM_REMOVE_TAGS = 4</div></div>
+</dd>
+<dt id="ida_lines.PALETTE_SIZE"><code class="name">var <span class="ident">PALETTE_SIZE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PALETTE_SIZE = 53</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_ADDR"><code class="name">var <span class="ident">SCOLOR_ADDR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Hidden address mark.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_ALTOP"><code class="name">var <span class="ident">SCOLOR_ALTOP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Alternative operand.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_ASMDIR"><code class="name">var <span class="ident">SCOLOR_ASMDIR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Assembler directive.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_AUTOCMT"><code class="name">var <span class="ident">SCOLOR_AUTOCMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Automatic comment.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_BINPREF"><code class="name">var <span class="ident">SCOLOR_BINPREF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Binary line prefix bytes.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_CHAR"><code class="name">var <span class="ident">SCOLOR_CHAR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Char constant in instruction.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_CNAME"><code class="name">var <span class="ident">SCOLOR_CNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Regular code name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_CODNAME"><code class="name">var <span class="ident">SCOLOR_CODNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Dummy code name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_COLLAPSED"><code class="name">var <span class="ident">SCOLOR_COLLAPSED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Collapsed line.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_CREF"><code class="name">var <span class="ident">SCOLOR_CREF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Code reference.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_CREFTAIL"><code class="name">var <span class="ident">SCOLOR_CREFTAIL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Code reference to tail byte.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DATNAME"><code class="name">var <span class="ident">SCOLOR_DATNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Dummy Data Name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DCHAR"><code class="name">var <span class="ident">SCOLOR_DCHAR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Char constant in data directive.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DEFAULT"><code class="name">var <span class="ident">SCOLOR_DEFAULT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Default.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DEMNAME"><code class="name">var <span class="ident">SCOLOR_DEMNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Demangled Name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DNAME"><code class="name">var <span class="ident">SCOLOR_DNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Regular Data Name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DNUM"><code class="name">var <span class="ident">SCOLOR_DNUM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Numeric constant in data directive.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DREF"><code class="name">var <span class="ident">SCOLOR_DREF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Data reference.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DREFTAIL"><code class="name">var <span class="ident">SCOLOR_DREFTAIL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Data reference to tail byte.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_DSTR"><code class="name">var <span class="ident">SCOLOR_DSTR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+String constant in data directive.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_ERROR"><code class="name">var <span class="ident">SCOLOR_ERROR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Error or problem.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_ESC"><code class="name">var <span class="ident">SCOLOR_ESC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Escape character (Quote next character)</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_EXTRA"><code class="name">var <span class="ident">SCOLOR_EXTRA</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Extra line.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_FG_MAX"><code class="name">var <span class="ident">SCOLOR_FG_MAX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SCOLOR_FG_MAX = '('</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_HIDNAME"><code class="name">var <span class="ident">SCOLOR_HIDNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Hidden name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_IMPNAME"><code class="name">var <span class="ident">SCOLOR_IMPNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Imported name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_INSN"><code class="name">var <span class="ident">SCOLOR_INSN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Instruction.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_INV"><code class="name">var <span class="ident">SCOLOR_INV</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Escape character (Inverse colors)</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_KEYWORD"><code class="name">var <span class="ident">SCOLOR_KEYWORD</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Keywords.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_LIBNAME"><code class="name">var <span class="ident">SCOLOR_LIBNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Library function name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_LOCNAME"><code class="name">var <span class="ident">SCOLOR_LOCNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Local variable name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_MACRO"><code class="name">var <span class="ident">SCOLOR_MACRO</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Macro.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_NUMBER"><code class="name">var <span class="ident">SCOLOR_NUMBER</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Numeric constant in instruction.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_OFF"><code class="name">var <span class="ident">SCOLOR_OFF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Escape character (OFF)</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_ON"><code class="name">var <span class="ident">SCOLOR_ON</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Escape character (ON)</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_OPND1"><code class="name">var <span class="ident">SCOLOR_OPND1</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SCOLOR_OPND1 = ')'</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_OPND2"><code class="name">var <span class="ident">SCOLOR_OPND2</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SCOLOR_OPND2 = '*'</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_OPND3"><code class="name">var <span class="ident">SCOLOR_OPND3</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SCOLOR_OPND3 = '+'</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_OPND4"><code class="name">var <span class="ident">SCOLOR_OPND4</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SCOLOR_OPND4 = ','</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_OPND5"><code class="name">var <span class="ident">SCOLOR_OPND5</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SCOLOR_OPND5 = '-'</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_OPND6"><code class="name">var <span class="ident">SCOLOR_OPND6</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SCOLOR_OPND6 = '.'</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_PREFIX"><code class="name">var <span class="ident">SCOLOR_PREFIX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Line prefix.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_REG"><code class="name">var <span class="ident">SCOLOR_REG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Register name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_REGCMT"><code class="name">var <span class="ident">SCOLOR_REGCMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Regular comment.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_RPTCMT"><code class="name">var <span class="ident">SCOLOR_RPTCMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Repeatable comment (defined not here)</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_SEGNAME"><code class="name">var <span class="ident">SCOLOR_SEGNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Segment name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_STRING"><code class="name">var <span class="ident">SCOLOR_STRING</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+String constant in instruction.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_SYMBOL"><code class="name">var <span class="ident">SCOLOR_SYMBOL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Punctuation.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_UNAME"><code class="name">var <span class="ident">SCOLOR_UNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Regular unknown name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_UNKNAME"><code class="name">var <span class="ident">SCOLOR_UNKNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Dummy unknown name.</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_UTF8"><code class="name">var <span class="ident">SCOLOR_UTF8</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SCOLOR_UTF8 = '2'</div></div>
+</dd>
+<dt id="ida_lines.SCOLOR_VOIDOP"><code class="name">var <span class="ident">SCOLOR_VOIDOP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Void operand.</div></div>
+</dd>
+<dt id="ida_lines.VEL_CMT"><code class="name">var <span class="ident">VEL_CMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+VEL_CMT = 2</div></div>
+</dd>
+<dt id="ida_lines.VEL_POST"><code class="name">var <span class="ident">VEL_POST</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+VEL_POST = 1</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_lines.COLSTR"><code class="name flex">
+<span>def <span class="ident">COLSTR</span></span>(<span>str, tag)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Utility function to create a colored line</div>
+<div class="epy_par">
+<strong class="epy_parameter">str</strong>: The string</div>
+<div class="epy_par">
+<strong class="epy_parameter">tag</strong>: Color tag constant. One of SCOLOR_XXXX</div></div>
+</dd>
+<dt id="ida_lines.add_extra_cmt"><code class="name flex">
+<span>def <span class="ident">add_extra_cmt</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add anterior/posterior comment line(s).</div>
+<div class="epy_par">
+<strong class="epy_sig">add_extra_cmt(ea, isprev, format) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">isprev</strong>: do we add anterior lines? (0-no, posterior) (C++: bool)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">format</strong>: printf() style format string. may contain \n to denote<div class="epy_nested">
+new lines. The resulting string should not contain
+comment characters (;), the kernel will add them
+automatically. (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if success</div>
+</div></div>
+</dd>
+<dt id="ida_lines.add_extra_line"><code class="name flex">
+<span>def <span class="ident">add_extra_line</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add anterior/posterior non-comment line(s).</div>
+<div class="epy_par">
+<strong class="epy_sig">add_extra_line(ea, isprev, format) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">isprev</strong>: do we add anterior lines? (0-no, posterior) (C++: bool)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">format</strong>: printf() style format string. may contain \n to denote<div class="epy_nested">
+new lines. (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if success</div>
+</div></div>
+</dd>
+<dt id="ida_lines.add_pgm_cmt"><code class="name flex">
+<span>def <span class="ident">add_pgm_cmt</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add anterior comment line(s) at the start of program.</div>
+<div class="epy_par">
+<strong class="epy_sig">add_pgm_cmt(format) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">format</strong>: printf() style format string. may contain \n to denote<div class="epy_nested">
+new lines. The resulting string should not contain
+comment characters (;), the kernel will add them
+automatically. (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if success</div>
+</div></div>
+</dd>
+<dt id="ida_lines.add_sourcefile"><code class="name flex">
+<span>def <span class="ident">add_sourcefile</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Mark a range of address as belonging to a source file. An address
+range may belong only to one source file. A source file may be
+represented by several address ranges.</div>
+<div class="epy_par">
+<strong class="epy_sig">add_sourcefile(ea1, ea2, filename) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea1</strong>: linear address of start of the address range (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea2</strong>: linear address of end of the address range (excluded)<div class="epy_nested">
+(C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">filename</strong>: name of source file. (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_lines.calc_bg_color"><code class="name flex">
+<span>def <span class="ident">calc_bg_color</span></span>(<span>*args) &#8209;&gt;&#160;bgcolor_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get background color for line at 'ea'</div>
+<div class="epy_par">
+<strong class="epy_sig">calc_bg_color(ea) -&gt; bgcolor_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: RGB color</div>
+</div></div>
+</dd>
+<dt id="ida_lines.calc_prefix_color"><code class="name flex">
+<span>def <span class="ident">calc_prefix_color</span></span>(<span>*args) &#8209;&gt;&#160;color_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get prefix color for line at 'ea'</div>
+<div class="epy_par">
+<strong class="epy_sig">calc_prefix_color(ea) -&gt; color_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Line prefix colors</div>
+</div></div>
+</dd>
+<dt id="ida_lines.create_encoding_helper"><code class="name flex">
+<span>def <span class="ident">create_encoding_helper</span></span>(<span>*args) &#8209;&gt;&#160;encoder_t&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">create_encoding_helper(encidx=-1, nr=nr_once) -&gt; encoder_t *</strong><div class="epy_nested">
+encidx: int
+nr: enum encoder_t::notify_recerr_t</div>
+</div></div>
+</dd>
+<dt id="ida_lines.del_extra_cmt"><code class="name flex">
+<span>def <span class="ident">del_extra_cmt</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">del_extra_cmt(ea, what)</strong><div class="epy_nested">
+ea: ea_t
+what: int</div>
+</div></div>
+</dd>
+<dt id="ida_lines.del_sourcefile"><code class="name flex">
+<span>def <span class="ident">del_sourcefile</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete information about the source file.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_sourcefile(ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_lines.delete_extra_cmts"><code class="name flex">
+<span>def <span class="ident">delete_extra_cmts</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">delete_extra_cmts(ea, what)</strong><div class="epy_nested">
+ea: ea_t
+what: int</div>
+</div></div>
+</dd>
+<dt id="ida_lines.generate_disasm_line"><code class="name flex">
+<span>def <span class="ident">generate_disasm_line</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">generate_disasm_line(ea, flags=0) -&gt; str</strong><div class="epy_nested">
+ea: ea_t
+flags: int</div>
+</div></div>
+</dd>
+<dt id="ida_lines.generate_disassembly"><code class="name flex">
+<span>def <span class="ident">generate_disassembly</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">generate_disassembly(ea, max_lines, as_stack, notags) -&gt; PyObject *</strong><div class="epy_nested">
+Generate disassembly lines (many lines) and put them into a buffer</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: address to generate disassembly for</div>
+<div class="epy_nested">
+<strong class="epy_parameter">max_lines</strong>: how many lines max to generate</div>
+<div class="epy_nested">
+<strong class="epy_parameter">as_stack</strong>: Display undefined items as 2/4/8 bytes</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>:<ul class="epy_ul">
+<li class="epy_li"><span class="epy_nested">
+None on failure</span>
+</li>
+<li class="epy_li"><span class="epy_nested">
+tuple(most_important_line_number, tuple(lines)) : Returns a tuple containing<div class="epy_nested">
+the most important line number and a tuple of generated lines</div>
+</span>
+</li>
+</ul>
+</div>
+</div></div>
+</dd>
+<dt id="ida_lines.get_extra_cmt"><code class="name flex">
+<span>def <span class="ident">get_extra_cmt</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_extra_cmt(ea, what) -&gt; ssize_t</strong><div class="epy_nested">
+ea: ea_t
+what: int</div>
+</div></div>
+</dd>
+<dt id="ida_lines.get_first_free_extra_cmtidx"><code class="name flex">
+<span>def <span class="ident">get_first_free_extra_cmtidx</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_first_free_extra_cmtidx(ea, start) -&gt; int</strong><div class="epy_nested">
+ea: ea_t
+start: int</div>
+</div></div>
+</dd>
+<dt id="ida_lines.get_sourcefile"><code class="name flex">
+<span>def <span class="ident">get_sourcefile</span></span>(<span>*args) &#8209;&gt;&#160;char&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get name of source file occupying the given address.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_sourcefile(ea, bounds=None) -&gt; char const *</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">bounds</strong>: pointer to the output buffer with the address range for<div class="epy_nested">
+the current file. May be NULL. (C++: range_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: NULL if source file information is not found, otherwise<div class="epy_nested">
+returns pointer to file name</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_lines.install_user_defined_prefix"><code class="name flex">
+<span>def <span class="ident">install_user_defined_prefix</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+User-defined line-prefixes are displayed just after the autogenerated
+line prefixes in the disassembly listing. There is no need to call
+this function explicitly. Use the 'user_defined_prefix_t' class.</div>
+<div class="epy_par">
+<strong class="epy_sig">install_user_defined_prefix(prefix_len, udp, owner) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">prefix_len</strong>: prefixed length. if 0, then uninstall UDP (C++:<div class="epy_nested">
+size_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">udp</strong>: object to generate user-defined prefix (C++: struct<div class="epy_nested">
+user_defined_prefix_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">owner</strong>: pointer to the
+plugin_t
+that owns UDP if non-NULL,<div class="epy_nested">
+then the object will be uninstalled and destroyed when
+the plugin gets unloaded (C++: const void *)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_lines.requires_color_esc"><code class="name flex">
+<span>def <span class="ident">requires_color_esc</span></span>(<span>c)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Checks if the given character requires escaping</div>
+<div class="epy_par">
+<strong class="epy_parameter">c</strong>: character (string of one char)</div>
+<div class="epy_par">
+<strong class="epy_tag">return</strong>: Boolean</div></div>
+</dd>
+<dt id="ida_lines.set_user_defined_prefix"><code class="name flex">
+<span>def <span class="ident">set_user_defined_prefix</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_user_defined_prefix(width, pycb) -&gt; PyObject *</strong><div class="epy_nested">
+Deprecated. Please use install_user_defined_prefix() instead</div>
+</div></div>
+</dd>
+<dt id="ida_lines.tag_addr"><code class="name flex">
+<span>def <span class="ident">tag_addr</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Insert an address mark into a string.</div>
+<div class="epy_par">
+<strong class="epy_sig">tag_addr(ea) -&gt; PyObject *</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: address to include (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_lines.tag_advance"><code class="name flex">
+<span>def <span class="ident">tag_advance</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Move pointer to a 'line' to 'cnt' positions right. Take into account
+escape sequences.</div>
+<div class="epy_par">
+<strong class="epy_sig">tag_advance(line, cnt) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">line</strong>: pointer to string (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">cnt</strong>: number of positions to move right (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: moved pointer</div>
+</div></div>
+</dd>
+<dt id="ida_lines.tag_remove"><code class="name flex">
+<span>def <span class="ident">tag_remove</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Remove color escape sequences from a string.</div>
+<div class="epy_par">
+<strong class="epy_sig">tag_remove(nonnul_instr) -&gt; PyObject *</strong><div class="epy_nested">
+nonnul_instr: char const *</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: length of resulting string, -1 if error</div>
+</div></div>
+</dd>
+<dt id="ida_lines.tag_skipcode"><code class="name flex">
+<span>def <span class="ident">tag_skipcode</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Skip one color code. This function should be used if you are
+interested in color codes and want to analyze all of them. Otherwise
+'tag_skipcodes()' function is better since it will skip all colors at
+once. This function will skip the current color code if there is one.
+If the current symbol is not a color code, it will return the input.</div>
+<div class="epy_par">
+<strong class="epy_sig">tag_skipcode(line) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">line</strong> (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: moved pointer</div>
+</div></div>
+</dd>
+<dt id="ida_lines.tag_skipcodes"><code class="name flex">
+<span>def <span class="ident">tag_skipcodes</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Move the pointer past all color codes.</div>
+<div class="epy_par">
+<strong class="epy_sig">tag_skipcodes(line) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">line</strong>: can't be NULL (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: moved pointer, can't be NULL</div>
+</div></div>
+</dd>
+<dt id="ida_lines.tag_strlen"><code class="name flex">
+<span>def <span class="ident">tag_strlen</span></span>(<span>*args) &#8209;&gt;&#160;ssize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Calculate length of a colored string This function computes the length
+in unicode codepoints of a line</div>
+<div class="epy_par">
+<strong class="epy_sig">tag_strlen(line) -&gt; ssize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">line</strong> (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the number of codepoints in the line, or -1 on error</div>
+</div></div>
+</dd>
+<dt id="ida_lines.update_extra_cmt"><code class="name flex">
+<span>def <span class="ident">update_extra_cmt</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">update_extra_cmt(ea, what, str)</strong><div class="epy_nested">
+ea: ea_t
+what: int
+str: char const *</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_lines.user_defined_prefix_t"><code class="flex name class">
+<span>class <span class="ident">user_defined_prefix_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ user_defined_prefix_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, prefix_len, owner) -&gt; user_defined_prefix_t</strong><div class="epy_nested">
+prefix_len: size_t
+owner: void const *</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_lines.user_defined_prefix_t.get_user_defined_prefix"><code class="name flex">
+<span>def <span class="ident">get_user_defined_prefix</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+This callback must be overridden by the derived class.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_user_defined_prefix(self, ea, insn, lnnum, indent, line)</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: the current address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">insn</strong>: the current instruction. if the current item is not an<div class="epy_nested">
+instruction, then insn.itype is zero.
+- an
+ida_ua.insn_t, or an address (C++: const insn_t &amp;)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">lnnum</strong> (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">indent</strong>: see explanations for gen_printf() (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">line</strong>: the line to be generated. the line usually contains color<div class="epy_nested">
+tags. this argument can be examined to decide whether to
+generate the prefix. (C++: const char *)</div>
+</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

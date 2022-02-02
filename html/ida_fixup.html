@@ -1,0 +1,711 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_fixup API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: fixup"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_fixup</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: fixup</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_fixup.FIXUPF_CREATED"><code class="name">var <span class="ident">FIXUPF_CREATED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+fixup was not present in the input file</div></div>
+</dd>
+<dt id="ida_fixup.FIXUPF_EXTDEF"><code class="name">var <span class="ident">FIXUPF_EXTDEF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+target is a location (otherwise - segment). Use this bit if the target
+is a symbol rather than an offset from the beginning of a segment.</div></div>
+</dd>
+<dt id="ida_fixup.FIXUPF_LOADER_MASK"><code class="name">var <span class="ident">FIXUPF_LOADER_MASK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+additional flags. The bits from this mask are not stored in the
+database and can be used by the loader at its discretion.</div></div>
+</dd>
+<dt id="ida_fixup.FIXUPF_REL"><code class="name">var <span class="ident">FIXUPF_REL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+fixup is relative to the linear address `base' . Otherwise fixup is
+relative to the start of the segment with `sel' selector.</div></div>
+</dd>
+<dt id="ida_fixup.FIXUPF_UNUSED"><code class="name">var <span class="ident">FIXUPF_UNUSED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+fixup is ignored by IDAdisallows the kernel to convert operandsthis
+fixup is not used during output</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_CUSTOM"><code class="name">var <span class="ident">FIXUP_CUSTOM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_CUSTOM = 32768</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_HI16"><code class="name">var <span class="ident">FIXUP_HI16</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_HI16 = 7</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_HI8"><code class="name">var <span class="ident">FIXUP_HI8</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_HI8 = 6</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_LOW16"><code class="name">var <span class="ident">FIXUP_LOW16</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_LOW16 = 9</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_LOW8"><code class="name">var <span class="ident">FIXUP_LOW8</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_LOW8 = 8</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_OFF16"><code class="name">var <span class="ident">FIXUP_OFF16</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_OFF16 = 1</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_OFF16S"><code class="name">var <span class="ident">FIXUP_OFF16S</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_OFF16S = 15</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_OFF32"><code class="name">var <span class="ident">FIXUP_OFF32</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_OFF32 = 4</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_OFF32S"><code class="name">var <span class="ident">FIXUP_OFF32S</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_OFF32S = 16</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_OFF64"><code class="name">var <span class="ident">FIXUP_OFF64</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_OFF64 = 12</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_OFF8"><code class="name">var <span class="ident">FIXUP_OFF8</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_OFF8 = 13</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_OFF8S"><code class="name">var <span class="ident">FIXUP_OFF8S</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_OFF8S = 14</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_PTR16"><code class="name">var <span class="ident">FIXUP_PTR16</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_PTR16 = 3</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_PTR32"><code class="name">var <span class="ident">FIXUP_PTR32</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_PTR32 = 5</div></div>
+</dd>
+<dt id="ida_fixup.FIXUP_SEG16"><code class="name">var <span class="ident">FIXUP_SEG16</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FIXUP_SEG16 = 2</div></div>
+</dd>
+<dt id="ida_fixup.V695_FIXUP_VHIGH"><code class="name">var <span class="ident">V695_FIXUP_VHIGH</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+V695_FIXUP_VHIGH = 10</div></div>
+</dd>
+<dt id="ida_fixup.V695_FIXUP_VLOW"><code class="name">var <span class="ident">V695_FIXUP_VLOW</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+V695_FIXUP_VLOW = 11</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_fixup.calc_fixup_size"><code class="name flex">
+<span>def <span class="ident">calc_fixup_size</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Calculate size of fixup in bytes (the number of bytes the fixup
+patches)</div>
+<div class="epy_par">
+<strong class="epy_sig">calc_fixup_size(type) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">type</strong> (C++: fixup_type_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: -1 - means error</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.contains_fixups"><code class="name flex">
+<span>def <span class="ident">contains_fixups</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does the specified address range contain any fixup information?</div>
+<div class="epy_par">
+<strong class="epy_sig">contains_fixups(ea, size) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">size</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.del_fixup"><code class="name flex">
+<span>def <span class="ident">del_fixup</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete fixup information.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_fixup(source)</strong><div class="epy_nested">
+<strong class="epy_parameter">source</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.exists_fixup"><code class="name flex">
+<span>def <span class="ident">exists_fixup</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Check that a fixup exists at the given address.</div>
+<div class="epy_par">
+<strong class="epy_sig">exists_fixup(source) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">source</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.find_custom_fixup"><code class="name flex">
+<span>def <span class="ident">find_custom_fixup</span></span>(<span>*args) &#8209;&gt;&#160;fixup_type_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get id of a custom fixup handler.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_custom_fixup(name) -&gt; fixup_type_t</strong><div class="epy_nested">
+<strong class="epy_parameter">name</strong>: name of the custom fixup handler (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: id with FIXUP_CUSTOM bit set or 0</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.gen_fix_fixups"><code class="name flex">
+<span>def <span class="ident">gen_fix_fixups</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Relocate the bytes with fixup information once more (generic
+function). This function may be called from 'loader_t::move_segm()' if
+it suits the goal. If 'loader_t::move_segm' is not defined then this
+function will be called automatically when moving segments or rebasing
+the entire program. Special parameter values (from = BADADDR, size =
+0, to = delta) are used when the function is called from
+rebase_program(delta).</div>
+<div class="epy_par">
+<strong class="epy_sig">gen_fix_fixups(_from, to, size)</strong><div class="epy_nested">
+<strong class="epy_parameter">_from</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">to</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">size</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.get_first_fixup_ea"><code class="name flex">
+<span>def <span class="ident">get_first_fixup_ea</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the first address with fixup information</div></div>
+</dd>
+<dt id="ida_fixup.get_fixup"><code class="name flex">
+<span>def <span class="ident">get_fixup</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get fixup information.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_fixup(fd, source) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">fd</strong> (C++: fixup_data_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">source</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.get_fixup_desc"><code class="name flex">
+<span>def <span class="ident">get_fixup_desc</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_fixup.fixup_data_t" href="#ida_fixup.fixup_data_t">fixup_data_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get FIXUP description comment.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_fixup_desc(source, fd) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">source</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">fd</strong> (C++: const
+fixup_data_t
+&amp;)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.get_fixup_handler"><code class="name flex">
+<span>def <span class="ident">get_fixup_handler</span></span>(<span>*args) &#8209;&gt;&#160;fixup_handler_t&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get handler of standard or custom fixup.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_fixup_handler(type) -&gt; fixup_handler_t const *</strong><div class="epy_nested">
+<strong class="epy_parameter">type</strong> (C++: fixup_type_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.get_fixup_value"><code class="name flex">
+<span>def <span class="ident">get_fixup_value</span></span>(<span>*args) &#8209;&gt;&#160;uval_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the operand value. This function get fixup bytes from data or an
+instruction at `ea' and convert them to the operand value (maybe
+partially). It is opposite in meaning to the 'patch_fixup_value()' .
+For example, FIXUP_HI8 read a byte at 'patch_fixup_value()'
+`ea' and
+shifts it left by 8 bits, or AArch64's custom fixup BRANCH26 get low
+26 bits of the insn at `ea' and shifts it left by 2 bits. This
+function is mainly used to get a relocation addend.
+'fixup_handler_t::size'</div>
+<div class="epy_par">
+<strong class="epy_sig">get_fixup_value(ea, type) -&gt; uval_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: address to get fixup bytes from, the size of the fixup<div class="epy_nested">
+bytes depends on the fixup type. (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">type</strong> (C++: fixup_type_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: operand - value</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.get_fixups"><code class="name flex">
+<span>def <span class="ident">get_fixups</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_fixups(out, ea, size) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">out</strong> (C++: fixups_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">size</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.get_next_fixup_ea"><code class="name flex">
+<span>def <span class="ident">get_next_fixup_ea</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next address with fixup information</div>
+<div class="epy_par">
+<strong class="epy_sig">get_next_fixup_ea(ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: current address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the next address with fixup information, or BADADDR</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.get_prev_fixup_ea"><code class="name flex">
+<span>def <span class="ident">get_prev_fixup_ea</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find previous address with fixup information</div>
+<div class="epy_par">
+<strong class="epy_sig">get_prev_fixup_ea(ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: current address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the previous address with fixup information, or BADADDR</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.handle_fixups_in_macro"><code class="name flex">
+<span>def <span class="ident">handle_fixups_in_macro</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Handle two fixups in a macro. We often combine two instruction that
+load parts of a value into one macro instruction. For example: ARM:
+ADRP X0, #var@PAGE ADD X0, X0, #var@PAGEOFF --&gt; ADRL X0, var MIPS: lui
+$v0, hi(var) addiu $v0, $v0, lo(var) --&gt; la $v0, var When applying the
+fixups that fall inside such a macro, we should convert them to one
+refinfo. This function does exactly that. It should be called from the
+apply() callback of a custom fixup.</div>
+<div class="epy_par">
+<strong class="epy_sig">handle_fixups_in_macro(ri, ea, other, macro_reft_and_flags) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ri</strong> (C++: refinfo_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">other</strong> (C++: fixup_type_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">macro_reft_and_flags</strong> (C++: uint32)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success ('false' means that RI was not changed)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.is_fixup_custom"><code class="name flex">
+<span>def <span class="ident">is_fixup_custom</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is fixup processed by processor module?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_fixup_custom(type) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">type</strong> (C++: fixup_type_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.patch_fixup_value"><code class="name flex">
+<span>def <span class="ident">patch_fixup_value</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Patch the fixup bytes. This function updates data or an instruction at
+`ea' to the fixup bytes. For example, FIXUP_HI8 updates a byte at `ea'
+to the high byte of `fd-&gt;off' , or AArch64's custom fixup BRANCH26
+updates low 26 bits of the insn at `ea' to the value of `fd-&gt;off'
+shifted right by 2. 'fixup_handler_t::size'</div>
+<div class="epy_par">
+<strong class="epy_sig">patch_fixup_value(ea, fd) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: address where data are changed, the size of the changed<div class="epy_nested">
+data depends on the fixup type. (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">fd</strong> (C++: const
+fixup_data_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: false - the fixup bytes do not fit (e.g.
+fd-&gt;off
+is greater<div class="epy_nested">
+than 0xFFFFFFC for BRANCH26). The database is changed
+even in this case.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.set_fixup"><code class="name flex">
+<span>def <span class="ident">set_fixup</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set fixup information. You should fill 'fixup_data_t' and call this
+function and the kernel will remember information in the database.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_fixup(source, fd)</strong><div class="epy_nested">
+<strong class="epy_parameter">source</strong>: the fixup source address, i.e. the address modified by<div class="epy_nested">
+the fixup (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">fd</strong>: fixup data (C++: const
+fixup_data_t
+&amp;)</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_fixup.fixup_data_t"><code class="flex name class">
+<span>class <span class="ident">fixup_data_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ fixup_data_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; fixup_data_t</strong><div class="epy_nested">
+type_: fixup_type_t
+flags_: uint32</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_fixup.fixup_data_t.displacement"><code class="name">var <span class="ident">displacement</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">fixup_data_t_displacement_get(self) -&gt; adiff_t</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.off"><code class="name">var <span class="ident">off</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">fixup_data_t_off_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.sel"><code class="name">var <span class="ident">sel</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">fixup_data_t_sel_get(self) -&gt; sel_t</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_fixup.fixup_data_t.calc_size"><code class="name flex">
+<span>def <span class="ident">calc_size</span></span>(<span>self, *args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'calc_fixup_size()'</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.clr_extdef"><code class="name flex">
+<span>def <span class="ident">clr_extdef</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clr_extdef(self)</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.clr_unused"><code class="name flex">
+<span>def <span class="ident">clr_unused</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clr_unused(self)</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.get"><code class="name flex">
+<span>def <span class="ident">get</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'get_fixup()'</div>
+<div class="epy_par">
+<strong class="epy_sig">get(self, source) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">source</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.get_base"><code class="name flex">
+<span>def <span class="ident">get_base</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get base of fixup.The target is calculated as 'get_base()' + off.
+'get_base()' + off 'FIXUPF_REL'</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.get_desc"><code class="name flex">
+<span>def <span class="ident">get_desc</span></span>(<span>self, *args) &#8209;&gt;&#160;char&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'get_fixup_desc()'</div>
+<div class="epy_par">
+<strong class="epy_sig">get_desc(self, source) -&gt; char const *</strong><div class="epy_nested">
+<strong class="epy_parameter">source</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.get_flags"><code class="name flex">
+<span>def <span class="ident">get_flags</span></span>(<span>self, *args) &#8209;&gt;&#160;uint32</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Fixup flags 'Fixup flags' .</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.get_handler"><code class="name flex">
+<span>def <span class="ident">get_handler</span></span>(<span>self, *args) &#8209;&gt;&#160;fixup_handler_t&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'get_fixup_handler()'</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.get_type"><code class="name flex">
+<span>def <span class="ident">get_type</span></span>(<span>self, *args) &#8209;&gt;&#160;fixup_type_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Fixup type 'Types of fixups' .</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.get_value"><code class="name flex">
+<span>def <span class="ident">get_value</span></span>(<span>self, *args) &#8209;&gt;&#160;uval_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'get_fixup_value()'</div>
+<div class="epy_par">
+<strong class="epy_sig">get_value(self, ea) -&gt; uval_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.has_base"><code class="name flex">
+<span>def <span class="ident">has_base</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is fixup relative?</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.is_custom"><code class="name flex">
+<span>def <span class="ident">is_custom</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'is_fixup_custom()'</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.is_extdef"><code class="name flex">
+<span>def <span class="ident">is_extdef</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">is_extdef(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.is_unused"><code class="name flex">
+<span>def <span class="ident">is_unused</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">is_unused(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.patch_value"><code class="name flex">
+<span>def <span class="ident">patch_value</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'patch_fixup_value()'</div>
+<div class="epy_par">
+<strong class="epy_sig">patch_value(self, ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.set"><code class="name flex">
+<span>def <span class="ident">set</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'set_fixup()'</div>
+<div class="epy_par">
+<strong class="epy_sig">set(self, source)</strong><div class="epy_nested">
+<strong class="epy_parameter">source</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.set_base"><code class="name flex">
+<span>def <span class="ident">set_base</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set base of fixup. The target should be set before a call of this
+function.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_base(self, new_base)</strong><div class="epy_nested">
+<strong class="epy_parameter">new_base</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.set_extdef"><code class="name flex">
+<span>def <span class="ident">set_extdef</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_extdef(self)</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.set_sel"><code class="name flex">
+<span>def <span class="ident">set_sel</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_sel(self, seg)</strong><div class="epy_nested">
+<strong class="epy_parameter">seg</strong> (C++: const
+segment_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.set_target_sel"><code class="name flex">
+<span>def <span class="ident">set_target_sel</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set selector of fixup to the target. The target should be set before a
+call of this function.</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.set_type"><code class="name flex">
+<span>def <span class="ident">set_type</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_type(self, type_)</strong><div class="epy_nested">
+<strong class="epy_parameter">type_</strong> (C++: fixup_type_t)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.set_type_and_flags"><code class="name flex">
+<span>def <span class="ident">set_type_and_flags</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_type_and_flags(self, type_, flags_=0)</strong><div class="epy_nested">
+<strong class="epy_parameter">type_</strong> (C++: fixup_type_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags_</strong> (C++: uint32)</div>
+</div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.set_unused"><code class="name flex">
+<span>def <span class="ident">set_unused</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_unused(self)</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_data_t.was_created"><code class="name flex">
+<span>def <span class="ident">was_created</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is fixup artificial?</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_fixup.fixup_info_t"><code class="flex name class">
+<span>class <span class="ident">fixup_info_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ fixup_info_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; fixup_info_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_fixup.fixup_info_t.ea"><code class="name">var <span class="ident">ea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">fixup_info_t_ea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_fixup.fixup_info_t.fd"><code class="name">var <span class="ident">fd</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">fixup_info_t_fd_get(self) -&gt; fixup_data_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

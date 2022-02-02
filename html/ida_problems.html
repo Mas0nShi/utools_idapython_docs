@@ -1,0 +1,244 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_problems API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: problems"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_problems</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: problems</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_problems.PR_ATTN"><code class="name">var <span class="ident">PR_ATTN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_ATTN = 12</div></div>
+</dd>
+<dt id="ida_problems.PR_BADSTACK"><code class="name">var <span class="ident">PR_BADSTACK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_BADSTACK = 11</div></div>
+</dd>
+<dt id="ida_problems.PR_COLLISION"><code class="name">var <span class="ident">PR_COLLISION</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_COLLISION = 15</div></div>
+</dd>
+<dt id="ida_problems.PR_DECIMP"><code class="name">var <span class="ident">PR_DECIMP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_DECIMP = 16</div></div>
+</dd>
+<dt id="ida_problems.PR_DISASM"><code class="name">var <span class="ident">PR_DISASM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_DISASM = 7</div></div>
+</dd>
+<dt id="ida_problems.PR_END"><code class="name">var <span class="ident">PR_END</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_END = 17</div></div>
+</dd>
+<dt id="ida_problems.PR_FINAL"><code class="name">var <span class="ident">PR_FINAL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_FINAL = 13</div></div>
+</dd>
+<dt id="ida_problems.PR_HEAD"><code class="name">var <span class="ident">PR_HEAD</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_HEAD = 8</div></div>
+</dd>
+<dt id="ida_problems.PR_ILLADDR"><code class="name">var <span class="ident">PR_ILLADDR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_ILLADDR = 9</div></div>
+</dd>
+<dt id="ida_problems.PR_JUMP"><code class="name">var <span class="ident">PR_JUMP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_JUMP = 6</div></div>
+</dd>
+<dt id="ida_problems.PR_MANYLINES"><code class="name">var <span class="ident">PR_MANYLINES</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_MANYLINES = 10</div></div>
+</dd>
+<dt id="ida_problems.PR_NOBASE"><code class="name">var <span class="ident">PR_NOBASE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_NOBASE = 1</div></div>
+</dd>
+<dt id="ida_problems.PR_NOCMT"><code class="name">var <span class="ident">PR_NOCMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_NOCMT = 4</div></div>
+</dd>
+<dt id="ida_problems.PR_NOFOP"><code class="name">var <span class="ident">PR_NOFOP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_NOFOP = 3</div></div>
+</dd>
+<dt id="ida_problems.PR_NONAME"><code class="name">var <span class="ident">PR_NONAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_NONAME = 2</div></div>
+</dd>
+<dt id="ida_problems.PR_NOXREFS"><code class="name">var <span class="ident">PR_NOXREFS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_NOXREFS = 5</div></div>
+</dd>
+<dt id="ida_problems.PR_ROLLED"><code class="name">var <span class="ident">PR_ROLLED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PR_ROLLED = 14</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_problems.forget_problem"><code class="name flex">
+<span>def <span class="ident">forget_problem</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Remove an address from a problem list</div>
+<div class="epy_par">
+<strong class="epy_sig">forget_problem(type, ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">type</strong>: problem list type (C++: problist_id_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_problems.get_problem"><code class="name flex">
+<span>def <span class="ident">get_problem</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get an address from the specified problem list. The address is not
+removed from the list.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_problem(type, lowea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">type</strong>: problem list type (C++: problist_id_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">lowea</strong>: the returned address will be higher or equal than the<div class="epy_nested">
+specified address (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: linear address or
+BADADDR</div>
+</div></div>
+</dd>
+<dt id="ida_problems.get_problem_desc"><code class="name flex">
+<span>def <span class="ident">get_problem_desc</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the human-friendly description of the problem, if one was provided
+to remember_problem.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_problem_desc(t, ea) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">t</strong>: problem list type. (C++: problist_id_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address. (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the message length or -1 if none</div>
+</div></div>
+</dd>
+<dt id="ida_problems.get_problem_name"><code class="name flex">
+<span>def <span class="ident">get_problem_name</span></span>(<span>*args) &#8209;&gt;&#160;char&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get problem list description.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_problem_name(type, longname=True) -&gt; char const *</strong><div class="epy_nested">
+<strong class="epy_parameter">type</strong> (C++: problist_id_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">longname</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_problems.is_problem_present"><code class="name flex">
+<span>def <span class="ident">is_problem_present</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Check if the specified address is present in the problem list.</div>
+<div class="epy_par">
+<strong class="epy_sig">is_problem_present(t, ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">t</strong> (C++: problist_id_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_problems.remember_problem"><code class="name flex">
+<span>def <span class="ident">remember_problem</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Insert an address to a list of problems. Display a message saying
+about the problem (except of 'PR_ATTN' , 'PR_FINAL' ) 'PR_JUMP' is
+temporarily ignored.</div>
+<div class="epy_par">
+<strong class="epy_sig">remember_problem(type, ea, msg=None)</strong><div class="epy_nested">
+<strong class="epy_parameter">type</strong>: problem list type (C++: problist_id_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">msg</strong>: a user-friendly message to be displayed instead of the<div class="epy_nested">
+default more generic one associated with the type of
+problem. Defaults to NULL. (C++: const char *)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_problems.was_ida_decision"><code class="name flex">
+<span>def <span class="ident">was_ida_decision</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">was_ida_decision(ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

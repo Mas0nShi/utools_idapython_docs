@@ -1,0 +1,1026 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_range API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: range"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_range</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: range</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_range.RANGE_KIND_FUNC"><code class="name">var <span class="ident">RANGE_KIND_FUNC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RANGE_KIND_FUNC = 1</div></div>
+</dd>
+<dt id="ida_range.RANGE_KIND_HIDDEN_RANGE"><code class="name">var <span class="ident">RANGE_KIND_HIDDEN_RANGE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RANGE_KIND_HIDDEN_RANGE = 3</div></div>
+</dd>
+<dt id="ida_range.RANGE_KIND_SEGMENT"><code class="name">var <span class="ident">RANGE_KIND_SEGMENT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RANGE_KIND_SEGMENT = 2</div></div>
+</dd>
+<dt id="ida_range.RANGE_KIND_UNKNOWN"><code class="name">var <span class="ident">RANGE_KIND_UNKNOWN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RANGE_KIND_UNKNOWN = 0</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_range.range_t_print"><code class="name flex">
+<span>def <span class="ident">range_t_print</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Helper function. Should not be called directly!</div>
+<div class="epy_par">
+<strong class="epy_sig">range_t_print(cb) -&gt; str</strong><div class="epy_nested">
+cb: range_t const *</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_range.array_of_rangesets"><code class="flex name class">
+<span>class <span class="ident">array_of_rangesets</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ qvector&lt; rangeset_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; array_of_rangesets</strong><div class="epy_nested">
+x: qvector&lt; rangeset_t &gt; const &amp;</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_range.array_of_rangesets.add_unique"><code class="name flex">
+<span>def <span class="ident">add_unique</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">add_unique(self, x) -&gt; bool</strong><div class="epy_nested">
+x: rangeset_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.at"><code class="name flex">
+<span>def <span class="ident">at</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.rangeset_t" href="#ida_range.rangeset_t">rangeset_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">at(self, _idx) -&gt; rangeset_t</strong><div class="epy_nested">
+_idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.back"><code class="name flex">
+<span>def <span class="ident">back</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_range.array_of_rangesets.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrangeset_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; rangeset_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; rangeset_t</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.capacity"><code class="name flex">
+<span>def <span class="ident">capacity</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">capacity(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear(self)</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">empty(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrangeset_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; rangeset_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; rangeset_t</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.erase"><code class="name flex">
+<span>def <span class="ident">erase</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrangeset_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">erase(self, it) -&gt; rangeset_t</strong><div class="epy_nested">
+it: qvector&lt; rangeset_t &gt;::iterator</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">erase(self, first, last) -&gt; rangeset_t</strong><div class="epy_nested">
+first: qvector&lt; rangeset_t &gt;::iterator
+last: qvector&lt; rangeset_t &gt;::iterator</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.extract"><code class="name flex">
+<span>def <span class="ident">extract</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.rangeset_t" href="#ida_range.rangeset_t">rangeset_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">extract(self) -&gt; rangeset_t</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrangeset_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; rangeset_t</strong><div class="epy_nested">
+x: rangeset_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; rangeset_t</strong><div class="epy_nested">
+x: rangeset_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.front"><code class="name flex">
+<span>def <span class="ident">front</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_range.array_of_rangesets.grow"><code class="name flex">
+<span>def <span class="ident">grow</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+grow(self, x=rangeset_t())<div class="epy_nested">
+x: rangeset_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.has"><code class="name flex">
+<span>def <span class="ident">has</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">has(self, x) -&gt; bool</strong><div class="epy_nested">
+x: rangeset_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.inject"><code class="name flex">
+<span>def <span class="ident">inject</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">inject(self, s, len)</strong><div class="epy_nested">
+s: rangeset_t *
+len: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.insert"><code class="name flex">
+<span>def <span class="ident">insert</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrangeset_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">insert(self, it, x) -&gt; rangeset_t</strong><div class="epy_nested">
+it: qvector&lt; rangeset_t &gt;::iterator
+x: rangeset_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.pop_back"><code class="name flex">
+<span>def <span class="ident">pop_back</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">pop_back(self)</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.push_back"><code class="name flex">
+<span>def <span class="ident">push_back</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.rangeset_t" href="#ida_range.rangeset_t">rangeset_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">push_back(self, x)</strong><div class="epy_nested">
+x: rangeset_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.qclear"><code class="name flex">
+<span>def <span class="ident">qclear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">qclear(self)</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.reserve"><code class="name flex">
+<span>def <span class="ident">reserve</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reserve(self, cnt)</strong><div class="epy_nested">
+cnt: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.resize"><code class="name flex">
+<span>def <span class="ident">resize</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize, x)</strong><div class="epy_nested">
+_newsize: size_t
+x: rangeset_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize)</strong><div class="epy_nested">
+_newsize: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+r: qvector&lt; rangeset_t &gt; &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.array_of_rangesets.truncate"><code class="name flex">
+<span>def <span class="ident">truncate</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">truncate(self)</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_range.range_t"><code class="flex name class">
+<span>class <span class="ident">range_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ range_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; range_t</strong><div class="epy_nested">
+ea1: ea_t
+ea2: ea_t</div>
+</div></div>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="ida_bytes.hidden_range_t" href="ida_bytes.html#ida_bytes.hidden_range_t">hidden_range_t</a></li>
+<li><a title="ida_frame.regvar_t" href="ida_frame.html#ida_frame.regvar_t">regvar_t</a></li>
+<li><a title="ida_funcs.func_t" href="ida_funcs.html#ida_funcs.func_t">func_t</a></li>
+<li><a title="ida_gdl.qbasic_block_t" href="ida_gdl.html#ida_gdl.qbasic_block_t">qbasic_block_t</a></li>
+<li><a title="ida_idd.memory_info_t" href="ida_idd.html#ida_idd.memory_info_t">memory_info_t</a></li>
+<li><a title="ida_idd.scattered_segm_t" href="ida_idd.html#ida_idd.scattered_segm_t">scattered_segm_t</a></li>
+<li><a title="ida_segment.segment_t" href="ida_segment.html#ida_segment.segment_t">segment_t</a></li>
+<li><a title="ida_segregs.sreg_range_t" href="ida_segregs.html#ida_segregs.sreg_range_t">sreg_range_t</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_range.range_t.endEA"><code class="name">var <span class="ident">endEA</span></code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_range.range_t.end_ea"><code class="name">var <span class="ident">end_ea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">range_t_end_ea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_range.range_t.startEA"><code class="name">var <span class="ident">startEA</span></code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_range.range_t.start_ea"><code class="name">var <span class="ident">start_ea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">range_t_start_ea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_range.range_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set 'start_ea' , 'end_ea' to 0.</div></div>
+</dd>
+<dt id="ida_range.range_t.compare"><code class="name flex">
+<span>def <span class="ident">compare</span></span>(<span>self, *args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Compare two 'range_t' instances, based on the start_ea.</div>
+<div class="epy_par">
+<strong class="epy_sig">compare(self, r) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">r</strong> (C++: const
+range_t
+&amp;)</div>
+</div></div>
+</dd>
+<dt id="ida_range.range_t.contains"><code class="name flex">
+<span>def <span class="ident">contains</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is 'ea' in the address range?</div>
+<div class="epy_par">
+<strong class="epy_sig">contains(self, ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">contains(self, r) -&gt; bool</strong><div class="epy_nested">
+r: range_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.range_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the size of the 'range_t' &lt;= 0?</div></div>
+</dd>
+<dt id="ida_range.range_t.extend"><code class="name flex">
+<span>def <span class="ident">extend</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Ensure that the 'range_t' includes 'ea'.</div>
+<div class="epy_par">
+<strong class="epy_sig">extend(self, ea)</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_range.range_t.intersect"><code class="name flex">
+<span>def <span class="ident">intersect</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Assign the 'range_t' to the intersection between the 'range_t' and
+'r'.</div>
+<div class="epy_par">
+<strong class="epy_sig">intersect(self, r)</strong><div class="epy_nested">
+<strong class="epy_parameter">r</strong> (C++: const
+range_t
+&amp;)</div>
+</div></div>
+</dd>
+<dt id="ida_range.range_t.overlaps"><code class="name flex">
+<span>def <span class="ident">overlaps</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is there an ea in 'r' that is also in this 'range_t' ?</div>
+<div class="epy_par">
+<strong class="epy_sig">overlaps(self, r) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">r</strong> (C++: const
+range_t
+&amp;)</div>
+</div></div>
+</dd>
+<dt id="ida_range.range_t.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;asize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get 'end_ea' - 'start_ea' .</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_range.rangeset_t"><code class="flex name class">
+<span>class <span class="ident">rangeset_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ rangeset_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; rangeset_t</strong><div class="epy_nested">
+range: range_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, ivs) -&gt; rangeset_t</strong><div class="epy_nested">
+ivs: rangeset_t const &amp;</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_range.rangeset_t.add"><code class="name flex">
+<span>def <span class="ident">add</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add an address range to the set. If 'range' intersects an existing
+element e, then e is extended to include 'range', and any superfluous
+elements (subsets of e) are removed.</div>
+<div class="epy_par">
+<strong class="epy_sig">add(self, range) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">range</strong>: address range to add. cannot be empty (C++: const<div class="epy_nested">
+range_t
+&amp;)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: false if no elements were added (the set was unchanged)</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">add(self, start, _end) -&gt; bool</strong><div class="epy_nested">
+start: ea_t
+_end: ea_t</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: false if no elements were added (the set was unchanged)</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">add(self, aset) -&gt; bool</strong><div class="epy_nested">
+aset: rangeset_t const &amp;</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: false if no elements were added (the set was unchanged)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.rangeset_t" href="#ida_range.rangeset_t">rangeset_t</a>::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get an iterator that points to the first element in the set.</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.cached_range"><code class="name flex">
+<span>def <span class="ident">cached_range</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.range_t" href="#ida_range.range_t">range_t</a>&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+When searching the rangeset, we keep a cached element to help speed up
+searches.</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete all elements from the set. See 'qvector::clear()'</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.contains"><code class="name flex">
+<span>def <span class="ident">contains</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does an element of the rangeset contain 'ea'? See
+range_t::contains(ea_t)</div>
+<div class="epy_par">
+<strong class="epy_sig">contains(self, ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">contains(self, aset) -&gt; bool</strong><div class="epy_nested">
+aset: rangeset_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does the set have zero elements.</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.rangeset_t" href="#ida_range.rangeset_t">rangeset_t</a>::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get an iterator that points to the end of the set. (This is NOT the
+last element)</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.find_range"><code class="name flex">
+<span>def <span class="ident">find_range</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.range_t" href="#ida_range.range_t">range_t</a>&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the element from the set that contains 'ea'.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_range(self, ea) -&gt; range_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: NULL if there is no such element</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.getrange"><code class="name flex">
+<span>def <span class="ident">getrange</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.range_t" href="#ida_range.range_t">range_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the 'range_t' at index 'idx'.</div>
+<div class="epy_par">
+<strong class="epy_sig">getrange(self, idx) -&gt; range_t</strong><div class="epy_nested">
+<strong class="epy_parameter">idx</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.has_common"><code class="name flex">
+<span>def <span class="ident">has_common</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is there an ea in 'range' that is also in the rangeset?</div>
+<div class="epy_par">
+<strong class="epy_sig">has_common(self, range) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">range</strong> (C++: const
+range_t
+&amp;)</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">has_common(self, aset) -&gt; bool</strong><div class="epy_nested">
+aset: rangeset_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.includes"><code class="name flex">
+<span>def <span class="ident">includes</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is every ea in 'range' contained in the rangeset?</div>
+<div class="epy_par">
+<strong class="epy_sig">includes(self, range) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">range</strong> (C++: const
+range_t
+&amp;)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.intersect"><code class="name flex">
+<span>def <span class="ident">intersect</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set the rangeset to its intersection with 'aset'.</div>
+<div class="epy_par">
+<strong class="epy_sig">intersect(self, aset) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">aset</strong> (C++: const
+rangeset_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: false if the set was unchanged</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.is_equal"><code class="name flex">
+<span>def <span class="ident">is_equal</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Do this rangeset and 'aset' have identical elements?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_equal(self, aset) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">aset</strong> (C++: const
+rangeset_t
+&amp;)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.is_subset_of"><code class="name flex">
+<span>def <span class="ident">is_subset_of</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is every element in the rangeset contained in an element of 'aset'?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_subset_of(self, aset) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">aset</strong> (C++: const
+rangeset_t
+&amp;)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.lastrange"><code class="name flex">
+<span>def <span class="ident">lastrange</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.range_t" href="#ida_range.range_t">range_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the last 'range_t' in the set.</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.next_addr"><code class="name flex">
+<span>def <span class="ident">next_addr</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the smallest ea_t value greater than 'ea' contained in the
+rangeset.</div>
+<div class="epy_par">
+<strong class="epy_sig">next_addr(self, ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.next_range"><code class="name flex">
+<span>def <span class="ident">next_range</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the smallest ea_t value greater than 'ea' that is not in the same
+range as 'ea'.</div>
+<div class="epy_par">
+<strong class="epy_sig">next_range(self, ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.nranges"><code class="name flex">
+<span>def <span class="ident">nranges</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the number of 'range_t' elements in the set.</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.prev_addr"><code class="name flex">
+<span>def <span class="ident">prev_addr</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the largest ea_t value less than 'ea' contained in the rangeset.</div>
+<div class="epy_par">
+<strong class="epy_sig">prev_addr(self, ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.prev_range"><code class="name flex">
+<span>def <span class="ident">prev_range</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the largest ea_t value less than 'ea' that is not in the same
+range as 'ea'.</div>
+<div class="epy_par">
+<strong class="epy_sig">prev_range(self, ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.sub"><code class="name flex">
+<span>def <span class="ident">sub</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Subtract an address range from the set. All subsets of 'range' will be
+removed, and all elements that intersect 'range' will be
+truncated/split so they do not include 'range'.</div>
+<div class="epy_par">
+<strong class="epy_sig">sub(self, range) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">range</strong>: address range to subtract. cannot be empty. (C++: const<div class="epy_nested">
+range_t
+&amp;)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: false if nothing was subtracted (the set was unchanged)</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">sub(self, ea) -&gt; bool</strong><div class="epy_nested">
+ea: ea_t</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: false if nothing was subtracted (the set was unchanged)</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">sub(self, aset) -&gt; bool</strong><div class="epy_nested">
+aset: rangeset_t const &amp;</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: false if nothing was subtracted (the set was unchanged)</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangeset_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set this = 'r' and 'r' = this. See 'qvector::swap()'</div>
+<div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+<strong class="epy_parameter">r</strong> (C++: rangeset_t
+&amp;)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_range.rangevec_base_t"><code class="flex name class">
+<span>class <span class="ident">rangevec_base_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ qvector&lt; range_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; rangevec_base_t</strong><div class="epy_nested">
+x: qvector&lt; range_t &gt; const &amp;</div>
+</div></div>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="ida_range.rangevec_t" href="#ida_range.rangevec_t">rangevec_t</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_range.rangevec_base_t.add_unique"><code class="name flex">
+<span>def <span class="ident">add_unique</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">add_unique(self, x) -&gt; bool</strong><div class="epy_nested">
+x: range_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.at"><code class="name flex">
+<span>def <span class="ident">at</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.range_t" href="#ida_range.range_t">range_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">at(self, _idx) -&gt; range_t</strong><div class="epy_nested">
+_idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.back"><code class="name flex">
+<span>def <span class="ident">back</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_range.rangevec_base_t.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrange_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; range_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; range_t</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.capacity"><code class="name flex">
+<span>def <span class="ident">capacity</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">capacity(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear(self)</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">empty(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrange_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; range_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; range_t</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.erase"><code class="name flex">
+<span>def <span class="ident">erase</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrange_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">erase(self, it) -&gt; range_t</strong><div class="epy_nested">
+it: qvector&lt; range_t &gt;::iterator</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">erase(self, first, last) -&gt; range_t</strong><div class="epy_nested">
+first: qvector&lt; range_t &gt;::iterator
+last: qvector&lt; range_t &gt;::iterator</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.extract"><code class="name flex">
+<span>def <span class="ident">extract</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.range_t" href="#ida_range.range_t">range_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">extract(self) -&gt; range_t</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrange_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; range_t</strong><div class="epy_nested">
+x: range_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; range_t</strong><div class="epy_nested">
+x: range_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.front"><code class="name flex">
+<span>def <span class="ident">front</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_range.rangevec_base_t.grow"><code class="name flex">
+<span>def <span class="ident">grow</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+grow(self, x=range_t())<div class="epy_nested">
+x: range_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.has"><code class="name flex">
+<span>def <span class="ident">has</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">has(self, x) -&gt; bool</strong><div class="epy_nested">
+x: range_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.inject"><code class="name flex">
+<span>def <span class="ident">inject</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">inject(self, s, len)</strong><div class="epy_nested">
+s: range_t *
+len: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.insert"><code class="name flex">
+<span>def <span class="ident">insert</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorrange_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">insert(self, it, x) -&gt; range_t</strong><div class="epy_nested">
+it: qvector&lt; range_t &gt;::iterator
+x: range_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.pop_back"><code class="name flex">
+<span>def <span class="ident">pop_back</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">pop_back(self)</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.push_back"><code class="name flex">
+<span>def <span class="ident">push_back</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_range.range_t" href="#ida_range.range_t">range_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">push_back(self, x)</strong><div class="epy_nested">
+x: range_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.qclear"><code class="name flex">
+<span>def <span class="ident">qclear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">qclear(self)</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.reserve"><code class="name flex">
+<span>def <span class="ident">reserve</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reserve(self, cnt)</strong><div class="epy_nested">
+cnt: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.resize"><code class="name flex">
+<span>def <span class="ident">resize</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize, x)</strong><div class="epy_nested">
+_newsize: size_t
+x: range_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize)</strong><div class="epy_nested">
+_newsize: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+r: qvector&lt; range_t &gt; &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_range.rangevec_base_t.truncate"><code class="name flex">
+<span>def <span class="ident">truncate</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">truncate(self)</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_range.rangevec_t"><code class="flex name class">
+<span>class <span class="ident">rangevec_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ rangevec_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; rangevec_t</strong></div></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="ida_range.rangevec_base_t" href="#ida_range.rangevec_base_t">rangevec_base_t</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="ida_tryblks.try_handler_t" href="ida_tryblks.html#ida_tryblks.try_handler_t">try_handler_t</a></li>
+<li><a title="ida_tryblks.tryblk_t" href="ida_tryblks.html#ida_tryblks.tryblk_t">tryblk_t</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="ida_range.rangevec_base_t" href="#ida_range.rangevec_base_t">rangevec_base_t</a></b></code>:
+<ul class="hlist">
+<li><code><a title="ida_range.rangevec_base_t.add_unique" href="#ida_range.rangevec_base_t.add_unique">add_unique</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.at" href="#ida_range.rangevec_base_t.at">at</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.begin" href="#ida_range.rangevec_base_t.begin">begin</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.capacity" href="#ida_range.rangevec_base_t.capacity">capacity</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.clear" href="#ida_range.rangevec_base_t.clear">clear</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.empty" href="#ida_range.rangevec_base_t.empty">empty</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.end" href="#ida_range.rangevec_base_t.end">end</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.erase" href="#ida_range.rangevec_base_t.erase">erase</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.extract" href="#ida_range.rangevec_base_t.extract">extract</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.find" href="#ida_range.rangevec_base_t.find">find</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.grow" href="#ida_range.rangevec_base_t.grow">grow</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.has" href="#ida_range.rangevec_base_t.has">has</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.inject" href="#ida_range.rangevec_base_t.inject">inject</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.insert" href="#ida_range.rangevec_base_t.insert">insert</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.pop_back" href="#ida_range.rangevec_base_t.pop_back">pop_back</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.push_back" href="#ida_range.rangevec_base_t.push_back">push_back</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.qclear" href="#ida_range.rangevec_base_t.qclear">qclear</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.reserve" href="#ida_range.rangevec_base_t.reserve">reserve</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.resize" href="#ida_range.rangevec_base_t.resize">resize</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.size" href="#ida_range.rangevec_base_t.size">size</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.swap" href="#ida_range.rangevec_base_t.swap">swap</a></code></li>
+<li><code><a title="ida_range.rangevec_base_t.truncate" href="#ida_range.rangevec_base_t.truncate">truncate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

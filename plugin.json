@@ -1,0 +1,18 @@
+{
+	"version": "1.0.0",
+    "pluginName": "IDA Python API",
+    "description": "IDA Python SDK for utools",
+    "author": "Mas0n",
+    "homepage": "https://blog.shi1011.cn",
+	"platform": ["win32", "darwin", "linux"],
+	"logo": "html/assets/favicon.png",
+	"preload": "preload.js",
+	"features": [
+		{
+		  "code": "idapython",
+		  "explain": "IDA Python API Quick Search",
+		  "cmds":["idapython"]
+		}
+
+	]
+}

@@ -1,0 +1,2601 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_idd API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: idd"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_idd</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: idd</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_idd.BBLK_TRACE"><code class="name">var <span class="ident">BBLK_TRACE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BBLK_TRACE = 8</div></div>
+</dd>
+<dt id="ida_idd.BPT_DEFAULT"><code class="name">var <span class="ident">BPT_DEFAULT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BPT_DEFAULT = 12</div></div>
+</dd>
+<dt id="ida_idd.BPT_EXEC"><code class="name">var <span class="ident">BPT_EXEC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BPT_EXEC = 8</div></div>
+</dd>
+<dt id="ida_idd.BPT_RDWR"><code class="name">var <span class="ident">BPT_RDWR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BPT_RDWR = 3</div></div>
+</dd>
+<dt id="ida_idd.BPT_READ"><code class="name">var <span class="ident">BPT_READ</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BPT_READ = 2</div></div>
+</dd>
+<dt id="ida_idd.BPT_SOFT"><code class="name">var <span class="ident">BPT_SOFT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BPT_SOFT = 4</div></div>
+</dd>
+<dt id="ida_idd.BPT_WRITE"><code class="name">var <span class="ident">BPT_WRITE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BPT_WRITE = 1</div></div>
+</dd>
+<dt id="ida_idd.BREAKPOINT"><code class="name">var <span class="ident">BREAKPOINT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BREAKPOINT = 16</div></div>
+</dd>
+<dt id="ida_idd.DEF_ADDRSIZE"><code class="name">var <span class="ident">DEF_ADDRSIZE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DEF_ADDRSIZE = 4</div></div>
+</dd>
+<dt id="ida_idd.DRC_CRC"><code class="name">var <span class="ident">DRC_CRC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_CRC = 2</div></div>
+</dd>
+<dt id="ida_idd.DRC_ERROR"><code class="name">var <span class="ident">DRC_ERROR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_ERROR = -7</div></div>
+</dd>
+<dt id="ida_idd.DRC_EVENTS"><code class="name">var <span class="ident">DRC_EVENTS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_EVENTS = 3</div></div>
+</dd>
+<dt id="ida_idd.DRC_FAILED"><code class="name">var <span class="ident">DRC_FAILED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_FAILED = -1</div></div>
+</dd>
+<dt id="ida_idd.DRC_IDBSEG"><code class="name">var <span class="ident">DRC_IDBSEG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_IDBSEG = -4</div></div>
+</dd>
+<dt id="ida_idd.DRC_NETERR"><code class="name">var <span class="ident">DRC_NETERR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_NETERR = -2</div></div>
+</dd>
+<dt id="ida_idd.DRC_NOCHG"><code class="name">var <span class="ident">DRC_NOCHG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_NOCHG = -6</div></div>
+</dd>
+<dt id="ida_idd.DRC_NOFILE"><code class="name">var <span class="ident">DRC_NOFILE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_NOFILE = -3</div></div>
+</dd>
+<dt id="ida_idd.DRC_NONE"><code class="name">var <span class="ident">DRC_NONE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_NONE = 0</div></div>
+</dd>
+<dt id="ida_idd.DRC_NOPROC"><code class="name">var <span class="ident">DRC_NOPROC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_NOPROC = -5</div></div>
+</dd>
+<dt id="ida_idd.DRC_OK"><code class="name">var <span class="ident">DRC_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DRC_OK = 1</div></div>
+</dd>
+<dt id="ida_idd.EXCEPTION"><code class="name">var <span class="ident">EXCEPTION</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+EXCEPTION = 64</div></div>
+</dd>
+<dt id="ida_idd.EXC_BREAK"><code class="name">var <span class="ident">EXC_BREAK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+break on the exception</div></div>
+</dd>
+<dt id="ida_idd.EXC_HANDLE"><code class="name">var <span class="ident">EXC_HANDLE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+should be handled by the debugger?</div></div>
+</dd>
+<dt id="ida_idd.EXC_MSG"><code class="name">var <span class="ident">EXC_MSG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+instead of a warning, log the exception to the output window</div></div>
+</dd>
+<dt id="ida_idd.EXC_SILENT"><code class="name">var <span class="ident">EXC_SILENT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+do not warn or log to the output window</div></div>
+</dd>
+<dt id="ida_idd.FUNC_TRACE"><code class="name">var <span class="ident">FUNC_TRACE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+FUNC_TRACE = 4</div></div>
+</dd>
+<dt id="ida_idd.IDD_INTERFACE_VERSION"><code class="name">var <span class="ident">IDD_INTERFACE_VERSION</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+The IDD interface version number.</div></div>
+</dd>
+<dt id="ida_idd.INFORMATION"><code class="name">var <span class="ident">INFORMATION</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+INFORMATION = 512</div></div>
+</dd>
+<dt id="ida_idd.INSN_TRACE"><code class="name">var <span class="ident">INSN_TRACE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+INSN_TRACE = 2</div></div>
+</dd>
+<dt id="ida_idd.LIB_LOADED"><code class="name">var <span class="ident">LIB_LOADED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+LIB_LOADED = 128</div></div>
+</dd>
+<dt id="ida_idd.LIB_UNLOADED"><code class="name">var <span class="ident">LIB_UNLOADED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+LIB_UNLOADED = 256</div></div>
+</dd>
+<dt id="ida_idd.NO_EVENT"><code class="name">var <span class="ident">NO_EVENT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+NO_EVENT = 0</div></div>
+</dd>
+<dt id="ida_idd.NO_PROCESS"><code class="name">var <span class="ident">NO_PROCESS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+No process.</div></div>
+</dd>
+<dt id="ida_idd.NO_THREAD"><code class="name">var <span class="ident">NO_THREAD</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+No thread. in 'PROCESS_STARTED' this value can be used to specify that
+the main thread has not been created. It will be initialized later by
+a 'THREAD_STARTED' event.</div></div>
+</dd>
+<dt id="ida_idd.PROCESS_ATTACHED"><code class="name">var <span class="ident">PROCESS_ATTACHED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PROCESS_ATTACHED = 1024</div></div>
+</dd>
+<dt id="ida_idd.PROCESS_DETACHED"><code class="name">var <span class="ident">PROCESS_DETACHED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PROCESS_DETACHED = 2048</div></div>
+</dd>
+<dt id="ida_idd.PROCESS_EXITED"><code class="name">var <span class="ident">PROCESS_EXITED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PROCESS_EXITED = 2</div></div>
+</dd>
+<dt id="ida_idd.PROCESS_STARTED"><code class="name">var <span class="ident">PROCESS_STARTED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PROCESS_STARTED = 1</div></div>
+</dd>
+<dt id="ida_idd.PROCESS_SUSPENDED"><code class="name">var <span class="ident">PROCESS_SUSPENDED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+PROCESS_SUSPENDED = 4096</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_ADDRESS"><code class="name">var <span class="ident">REGISTER_ADDRESS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+may contain an address</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_CS"><code class="name">var <span class="ident">REGISTER_CS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+code segment</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_CUSTFMT"><code class="name">var <span class="ident">REGISTER_CUSTFMT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+register should be displayed using a custom data format. the format
+name is in bit_strings[0] the corresponding 'regval_t' will use
+'bytevec_t'</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_FP"><code class="name">var <span class="ident">REGISTER_FP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+frame pointer</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_IP"><code class="name">var <span class="ident">REGISTER_IP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+instruction pointer</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_NOLF"><code class="name">var <span class="ident">REGISTER_NOLF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+displays this register without returning to the next line allowing the
+next register to be displayed to its right (on the same line)</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_READONLY"><code class="name">var <span class="ident">REGISTER_READONLY</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+the user can't modify the current value of this register</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_SP"><code class="name">var <span class="ident">REGISTER_SP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+stack pointer</div></div>
+</dd>
+<dt id="ida_idd.REGISTER_SS"><code class="name">var <span class="ident">REGISTER_SS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+stack segment</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_HANDLE"><code class="name">var <span class="ident">RESMOD_HANDLE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_HANDLE = 8</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_INTO"><code class="name">var <span class="ident">RESMOD_INTO</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_INTO = 1</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_MAX"><code class="name">var <span class="ident">RESMOD_MAX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_MAX = 9</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_NONE"><code class="name">var <span class="ident">RESMOD_NONE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_NONE = 0</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_OUT"><code class="name">var <span class="ident">RESMOD_OUT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_OUT = 3</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_OVER"><code class="name">var <span class="ident">RESMOD_OVER</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_OVER = 2</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_SRCINTO"><code class="name">var <span class="ident">RESMOD_SRCINTO</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_SRCINTO = 4</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_SRCOUT"><code class="name">var <span class="ident">RESMOD_SRCOUT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_SRCOUT = 6</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_SRCOVER"><code class="name">var <span class="ident">RESMOD_SRCOVER</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_SRCOVER = 5</div></div>
+</dd>
+<dt id="ida_idd.RESMOD_USER"><code class="name">var <span class="ident">RESMOD_USER</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RESMOD_USER = 7</div></div>
+</dd>
+<dt id="ida_idd.RQ_IDAIDLE"><code class="name">var <span class="ident">RQ_IDAIDLE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_IDAIDLE = 128</div></div>
+</dd>
+<dt id="ida_idd.RQ_IGNWERR"><code class="name">var <span class="ident">RQ_IGNWERR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_IGNWERR = 4</div></div>
+</dd>
+<dt id="ida_idd.RQ_MASKING"><code class="name">var <span class="ident">RQ_MASKING</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_MASKING = 1</div></div>
+</dd>
+<dt id="ida_idd.RQ_NOSUSP"><code class="name">var <span class="ident">RQ_NOSUSP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_NOSUSP = 0</div></div>
+</dd>
+<dt id="ida_idd.RQ_PROCEXIT"><code class="name">var <span class="ident">RQ_PROCEXIT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_PROCEXIT = 64</div></div>
+</dd>
+<dt id="ida_idd.RQ_RESMOD"><code class="name">var <span class="ident">RQ_RESMOD</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_RESMOD = 61440</div></div>
+</dd>
+<dt id="ida_idd.RQ_RESMOD_SHIFT"><code class="name">var <span class="ident">RQ_RESMOD_SHIFT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_RESMOD_SHIFT = 12</div></div>
+</dd>
+<dt id="ida_idd.RQ_RESUME"><code class="name">var <span class="ident">RQ_RESUME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_RESUME = 512</div></div>
+</dd>
+<dt id="ida_idd.RQ_SILENT"><code class="name">var <span class="ident">RQ_SILENT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_SILENT = 8</div></div>
+</dd>
+<dt id="ida_idd.RQ_SUSPEND"><code class="name">var <span class="ident">RQ_SUSPEND</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_SUSPEND = 2</div></div>
+</dd>
+<dt id="ida_idd.RQ_SUSPRUN"><code class="name">var <span class="ident">RQ_SUSPRUN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_SUSPRUN = 256</div></div>
+</dd>
+<dt id="ida_idd.RQ_SWSCREEN"><code class="name">var <span class="ident">RQ_SWSCREEN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_SWSCREEN = 16</div></div>
+</dd>
+<dt id="ida_idd.RQ_VERBOSE"><code class="name">var <span class="ident">RQ_VERBOSE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ_VERBOSE = 0</div></div>
+</dd>
+<dt id="ida_idd.RQ__NOTHRRF"><code class="name">var <span class="ident">RQ__NOTHRRF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+RQ__NOTHRRF = 32</div></div>
+</dd>
+<dt id="ida_idd.RVT_FLOAT"><code class="name">var <span class="ident">RVT_FLOAT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+floating point</div></div>
+</dd>
+<dt id="ida_idd.RVT_INT"><code class="name">var <span class="ident">RVT_INT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+integer</div></div>
+</dd>
+<dt id="ida_idd.RVT_UNAVAILABLE"><code class="name">var <span class="ident">RVT_UNAVAILABLE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+unavailable other values mean custom data type</div></div>
+</dd>
+<dt id="ida_idd.STEP"><code class="name">var <span class="ident">STEP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STEP = 32</div></div>
+</dd>
+<dt id="ida_idd.STEP_TRACE"><code class="name">var <span class="ident">STEP_TRACE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STEP_TRACE = 1</div></div>
+</dd>
+<dt id="ida_idd.THREAD_EXITED"><code class="name">var <span class="ident">THREAD_EXITED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+THREAD_EXITED = 8</div></div>
+</dd>
+<dt id="ida_idd.THREAD_STARTED"><code class="name">var <span class="ident">THREAD_STARTED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+THREAD_STARTED = 4</div></div>
+</dd>
+<dt id="ida_idd.TRACE_FULL"><code class="name">var <span class="ident">TRACE_FULL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+TRACE_FULL = 8192</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_idd.appcall"><code class="name flex">
+<span>def <span class="ident">appcall</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">appcall(func_ea, tid, _type_or_none, _fields, arg_list) -&gt; PyObject *</strong><div class="epy_nested">
+func_ea: ea_t
+tid: thid_t
+_type_or_none: bytevec_t const &amp;
+_fields: bytevec_t const &amp;
+arg_list: PyObject *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.can_exc_continue"><code class="name flex">
+<span>def <span class="ident">can_exc_continue</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">can_exc_continue(ev) -&gt; bool</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.cleanup_appcall"><code class="name flex">
+<span>def <span class="ident">cleanup_appcall</span></span>(<span>*args) &#8209;&gt;&#160;error_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Cleanup after manual appcall.</div>
+<div class="epy_par">
+<strong class="epy_sig">cleanup_appcall(tid) -&gt; error_t</strong><div class="epy_nested">
+<strong class="epy_parameter">tid</strong>: thread to use.
+NO_THREAD
+means to use the current thread<div class="epy_nested">
+The application state is restored as it was before calling
+the last appcall(). Nested appcalls are supported. (C++:
+thid_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: eOk
+if successful, otherwise an error code</div>
+</div></div>
+</dd>
+<dt id="ida_idd.dbg_appcall"><code class="name flex">
+<span>def <span class="ident">dbg_appcall</span></span>(<span>*args) &#8209;&gt;&#160;error_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Call a function from the debugged application.</div>
+<div class="epy_par">
+<strong class="epy_sig">dbg_appcall(retval, func_ea, tid, ptif, argv, argnum) -&gt; error_t</strong><div class="epy_nested">
+<strong class="epy_parameter">retval</strong> (C++: idc_value_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">func_ea</strong>: address to call (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">tid</strong>: thread to use.
+NO_THREAD
+means to use the current thread<div class="epy_nested">
+(C++: thid_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ptif</strong>: pointer to type of the function to call (C++: const<div class="epy_nested">
+tinfo_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">argv</strong>: array of arguments (C++: idc_value_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">argnum</strong>: number of actual arguments (C++: size_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: eOk
+if successful, otherwise an error code</div>
+</div></div>
+</dd>
+<dt id="ida_idd.dbg_get_memory_info"><code class="name flex">
+<span>def <span class="ident">dbg_get_memory_info</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dbg_get_memory_info() -&gt; PyObject *</strong><div class="epy_nested">
+This function returns the memory configuration of a debugged process.</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>:<div class="epy_nested">
+None if no debugger is active</div>
+</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">tuple(start_ea, end_ea, name, sclass, sbase, bitness, perm)</strong></div></div>
+</dd>
+<dt id="ida_idd.dbg_get_name"><code class="name flex">
+<span>def <span class="ident">dbg_get_name</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dbg_get_name() -&gt; PyObject *</strong><div class="epy_nested">
+This function returns the current debugger's name.</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Debugger name or None if no debugger is active</div>
+</div></div>
+</dd>
+<dt id="ida_idd.dbg_get_registers"><code class="name flex">
+<span>def <span class="ident">dbg_get_registers</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dbg_get_registers() -&gt; PyObject *</strong><div class="epy_nested">
+This function returns the register definition from the currently loaded debugger.
+Basically, it returns an array of structure similar to to idd.hpp / register_info_t</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>:<div class="epy_nested">
+None if no debugger is loaded</div>
+</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">tuple(name, flags, class, dtype, bit_strings, default_bit_strings_mask)</strong><div class="epy_nested">
+The bit_strings can be a tuple of strings or None (if the register does not have bit_strings)</div>
+</div></div>
+</dd>
+<dt id="ida_idd.dbg_get_thread_sreg_base"><code class="name flex">
+<span>def <span class="ident">dbg_get_thread_sreg_base</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dbg_get_thread_sreg_base(tid, sreg_value) -&gt; PyObject *</strong><div class="epy_nested">
+Returns the segment register base value</div>
+<div class="epy_nested">
+<strong class="epy_parameter">tid</strong>: thread id</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sreg_value</strong>: segment register (selector) value</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>:<ul class="epy_ul">
+<li class="epy_li"><span class="epy_nested">
+The base as an 'ea'</span>
+</li>
+<li class="epy_li"><span class="epy_nested">
+Or None on failure</span>
+</li>
+</ul>
+</div>
+</div></div>
+</dd>
+<dt id="ida_idd.dbg_read_memory"><code class="name flex">
+<span>def <span class="ident">dbg_read_memory</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dbg_read_memory(ea, sz) -&gt; PyObject *</strong><div class="epy_nested">
+Reads from the debugee's memory at the specified ea</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>:<ul class="epy_ul">
+<li class="epy_li"><span class="epy_nested">
+The read buffer (as a string)</span>
+</li>
+<li class="epy_li"><span class="epy_nested">
+Or None on failure</span>
+</li>
+</ul>
+</div>
+</div></div>
+</dd>
+<dt id="ida_idd.dbg_write_memory"><code class="name flex">
+<span>def <span class="ident">dbg_write_memory</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dbg_write_memory(ea, buf) -&gt; PyObject *</strong><div class="epy_nested">
+Writes a buffer to the debugee's memory</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Boolean</div>
+</div></div>
+</dd>
+<dt id="ida_idd.get_event_bpt_hea"><code class="name flex">
+<span>def <span class="ident">get_event_bpt_hea</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_event_bpt_hea(ev) -&gt; ea_t</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.get_event_exc_code"><code class="name flex">
+<span>def <span class="ident">get_event_exc_code</span></span>(<span>*args) &#8209;&gt;&#160;uint</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_event_exc_code(ev) -&gt; uint</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.get_event_exc_ea"><code class="name flex">
+<span>def <span class="ident">get_event_exc_ea</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_event_exc_ea(ev) -&gt; ea_t</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.get_event_exc_info"><code class="name flex">
+<span>def <span class="ident">get_event_exc_info</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_event_exc_info(ev) -&gt; str</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.get_event_info"><code class="name flex">
+<span>def <span class="ident">get_event_info</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_event_info(ev) -&gt; str</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.get_event_module_base"><code class="name flex">
+<span>def <span class="ident">get_event_module_base</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_event_module_base(ev) -&gt; ea_t</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.get_event_module_name"><code class="name flex">
+<span>def <span class="ident">get_event_module_name</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_event_module_name(ev) -&gt; str</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.get_event_module_size"><code class="name flex">
+<span>def <span class="ident">get_event_module_size</span></span>(<span>*args) &#8209;&gt;&#160;asize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_event_module_size(ev) -&gt; asize_t</strong><div class="epy_nested">
+ev: debug_event_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_idd.set_debug_event_code"><code class="name flex">
+<span>def <span class="ident">set_debug_event_code</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_debug_event_code(ev, id)</strong><div class="epy_nested">
+<strong class="epy_parameter">ev</strong> (C++: debug_event_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: event_id_t)</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_idd.Appcall__"><code class="flex name class">
+<span>class <span class="ident">Appcall__</span></span>
+</code></dt>
+<dd>
+<div class="desc"/>
+<h3>Class variables</h3>
+<dl>
+<dt id="ida_idd.Appcall__.APPCALL_DEBEV"><code class="name">var <span class="ident">APPCALL_DEBEV</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Return debug event information
+If this bit is set, exceptions during appcall
+will generate idc exceptions with full
+information about the exception</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.APPCALL_MANUAL"><code class="name">var <span class="ident">APPCALL_MANUAL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Only set up the appcall, do not run it.
+you should call CleanupAppcall() when finished</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.APPCALL_TIMEOUT"><code class="name">var <span class="ident">APPCALL_TIMEOUT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Appcall with timeout
+The timeout value in milliseconds is specified
+in the high 2 bytes of the 'options' argument:
+If timed out, errbuf will contain "timeout".</div></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="ida_idd.Appcall__.UTF16"><code class="name flex">
+<span>def <span class="ident">UTF16</span></span>(<span>s)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.Appcall__.array"><code class="name flex">
+<span>def <span class="ident">array</span></span>(<span>type_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Defines an array type. Later you need to pack() / unpack()</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.buffer"><code class="name flex">
+<span>def <span class="ident">buffer</span></span>(<span>str=None, size=0, fill='\x00')</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Creates a string buffer. The returned value (r) will be a byref object.
+Use r.value to get the contents and r.size to get the buffer's size</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.byref"><code class="name flex">
+<span>def <span class="ident">byref</span></span>(<span>val)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Method to create references to immutable objects
+Currently we support references to int/strings
+Objects need not be passed by reference (this will be done automatically)</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.cleanup_appcall"><code class="name flex">
+<span>def <span class="ident">cleanup_appcall</span></span>(<span>tid=0)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Equivalent to IDC's CleanupAppcall()</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.cstr"><code class="name flex">
+<span>def <span class="ident">cstr</span></span>(<span>val)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.Appcall__.get_appcall_options"><code class="name flex">
+<span>def <span class="ident">get_appcall_options</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Return the global Appcall options</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.int64"><code class="name flex">
+<span>def <span class="ident">int64</span></span>(<span>v)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Whenever a 64bit number is needed use this method to construct an object</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.obj"><code class="name flex">
+<span>def <span class="ident">obj</span></span>(<span>**kwds)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Returns an empty object or objects with attributes as passed via its keywords arguments</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.proto"><code class="name flex">
+<span>def <span class="ident">proto</span></span>(<span>name_or_ea, proto_or_tinfo, flags=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Allows you to instantiate an appcall (callable object) with the desired prototype</div>
+<div class="epy_par">
+<strong class="epy_parameter">name_or_ea</strong>: The name of the function (will be resolved with LocByName())</div>
+<div class="epy_par">
+<strong class="epy_parameter">proto_or_tinfo</strong>: function prototype as a string or type of the function as tinfo_t object</div>
+<div class="epy_par">
+<strong class="epy_tag">return</strong>:<ul class="epy_ul">
+<li class="epy_li"><span class="epy_nested">
+On failure it raises an exception if the prototype could not be parsed<div class="epy_nested">
+or the address is not resolvable</div>
+</span>
+</li>
+</ul>
+<ul class="epy_ul">
+<li class="epy_li"><span class="epy_nested">
+Returns a callbable Appcall instance with the given prototypes and flags</span>
+</li>
+</ul>
+</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.set_appcall_options"><code class="name flex">
+<span>def <span class="ident">set_appcall_options</span></span>(<span>opt)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Method to change the Appcall options globally (not per Appcall)</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.typedobj"><code class="name flex">
+<span>def <span class="ident">typedobj</span></span>(<span>typedecl_or_tinfo, ea=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Returns an appcall object for a type (can be given as tinfo_t object or
+as a string declaration)
+One can then use retrieve() member method</div>
+<div class="epy_par">
+<strong class="epy_parameter">ea</strong>: Optional parameter that later can be used to retrieve the type</div>
+<div class="epy_par">
+<strong class="epy_tag">return</strong>: Appcall object or raises ValueError exception</div></div>
+</dd>
+<dt id="ida_idd.Appcall__.unicode"><code class="name flex">
+<span>def <span class="ident">unicode</span></span>(<span>s)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.Appcall__.valueof"><code class="name flex">
+<span>def <span class="ident">valueof</span></span>(<span>name, default=0)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Returns the numeric value of a given name string.
+If the name could not be resolved then the default value will be returned</div></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.Appcall__.Consts"><code class="name">var <span class="ident">Consts</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Use Appcall.Consts.CONST_NAME to access constants</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.Appcall_array__"><code class="flex name class">
+<span>class <span class="ident">Appcall_array__</span></span>
+<span>(</span><span>tp)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+This class is used with Appcall.array() method</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.Appcall_array__.pack"><code class="name flex">
+<span>def <span class="ident">pack</span></span>(<span>self, L)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Packs a list or tuple into a byref buffer</div></div>
+</dd>
+<dt id="ida_idd.Appcall_array__.try_to_convert_to_list"><code class="name flex">
+<span>def <span class="ident">try_to_convert_to_list</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is this object a list? We check for the existance of attribute zero and attribute self.size-1</div></div>
+</dd>
+<dt id="ida_idd.Appcall_array__.unpack"><code class="name flex">
+<span>def <span class="ident">unpack</span></span>(<span>self, buf, as_list=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Unpacks an array back into a list or an object</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.Appcall_callable__"><code class="flex name class">
+<span>class <span class="ident">Appcall_callable__</span></span>
+<span>(</span><span>ea, tinfo_or_typestr=None, fields=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Helper class to issue appcalls using a natural syntax:<div class="epy_nested">
+appcall.FunctionNameInTheDatabase(arguments, ....)</div>
+</div>
+<div class="epy_par">
+or<div class="epy_nested">
+appcall["Function@8"](arguments, ...)</div>
+</div>
+<div class="epy_par">
+or<div class="epy_nested">
+f8 = appcall["Function@8"]
+f8(arg1, arg2, ...)</div>
+</div>
+<div class="epy_par">
+or<div class="epy_nested">
+o = appcall.obj()
+i = byref(5)
+appcall.funcname(arg1, i, "hello", o)</div>
+</div>
+<div class="epy_par">
+Initializes an appcall with a given function ea</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.Appcall_callable__.ea"><code class="name">var <span class="ident">ea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Returns or sets the EA associated with this object</div></div>
+</dd>
+<dt id="ida_idd.Appcall_callable__.fields"><code class="name">var <span class="ident">fields</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Returns the field names</div></div>
+</dd>
+<dt id="ida_idd.Appcall_callable__.options"><code class="name">var <span class="ident">options</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Sets the Appcall options locally to this Appcall instance</div></div>
+</dd>
+<dt id="ida_idd.Appcall_callable__.size"><code class="name">var <span class="ident">size</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Returns the size of the type</div></div>
+</dd>
+<dt id="ida_idd.Appcall_callable__.tif"><code class="name">var <span class="ident">tif</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Returns the tinfo_t object</div></div>
+</dd>
+<dt id="ida_idd.Appcall_callable__.timeout"><code class="name">var <span class="ident">timeout</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+An Appcall instance can change its timeout value with this attribute</div></div>
+</dd>
+<dt id="ida_idd.Appcall_callable__.type"><code class="name">var <span class="ident">type</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Returns the typestring</div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.Appcall_callable__.retrieve"><code class="name flex">
+<span>def <span class="ident">retrieve</span></span>(<span>self, src=None, flags=0)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Unpacks a typed object from the database if an ea is given or from a string if a string was passed</div>
+<div class="epy_par">
+<strong class="epy_parameter">src</strong>: the address of the object or a string</div>
+<div class="epy_par">
+<strong class="epy_tag">return</strong>: Returns a tuple of boolean and object or error number (Bool, Error | Object).</div></div>
+</dd>
+<dt id="ida_idd.Appcall_callable__.store"><code class="name flex">
+<span>def <span class="ident">store</span></span>(<span>self, obj, dest_ea=None, base_ea=0, flags=0)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Packs an object into a given ea if provided or into a string if no address was passed.</div>
+<div class="epy_par">
+<strong class="epy_parameter">obj</strong>: The object to pack</div>
+<div class="epy_par">
+<strong class="epy_parameter">dest_ea</strong>: If packing to idb this will be the store location</div>
+<div class="epy_par">
+<strong class="epy_parameter">base_ea</strong>: If packing to a buffer, this will be the base that will be used to relocate the pointers</div>
+<div class="epy_par">
+<strong class="epy_tag">return</strong>:<ul class="epy_ul">
+<li class="epy_li"><span class="epy_nested">
+If packing to a string then a Tuple(Boolean, packed_string or error code)</span>
+</li>
+<li class="epy_li"><span class="epy_nested">
+If packing to the database then a return code is returned (0 is success)</span>
+</li>
+</ul>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.Appcall_consts__"><code class="flex name class">
+<span>class <span class="ident">Appcall_consts__</span></span>
+<span>(</span><span>default=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Helper class used by Appcall.Consts attribute
+It is used to retrieve constants via attribute access</div></div>
+</dd>
+<dt id="ida_idd.bptaddr_t"><code class="flex name class">
+<span>class <span class="ident">bptaddr_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ bptaddr_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; bptaddr_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.bptaddr_t.hea"><code class="name">var <span class="ident">hea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">bptaddr_t_hea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.bptaddr_t.kea"><code class="name">var <span class="ident">kea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">bptaddr_t_kea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.call_stack_info_t"><code class="flex name class">
+<span>class <span class="ident">call_stack_info_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ call_stack_info_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; call_stack_info_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.call_stack_info_t.callea"><code class="name">var <span class="ident">callea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">call_stack_info_t_callea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_t.fp"><code class="name">var <span class="ident">fp</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">call_stack_info_t_fp_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_t.funcea"><code class="name">var <span class="ident">funcea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">call_stack_info_t_funcea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_t.funcok"><code class="name">var <span class="ident">funcok</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">call_stack_info_t_funcok_get(self) -&gt; bool</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t"><code class="flex name class">
+<span>class <span class="ident">call_stack_info_vec_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ qvector&lt; call_stack_info_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; call_stack_info_vec_t</strong><div class="epy_nested">
+x: qvector&lt; call_stack_info_t &gt; const &amp;</div>
+</div></div>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="ida_idd.call_stack_t" href="#ida_idd.call_stack_t">call_stack_t</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.call_stack_info_vec_t.add_unique"><code class="name flex">
+<span>def <span class="ident">add_unique</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">add_unique(self, x) -&gt; bool</strong><div class="epy_nested">
+x: call_stack_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.at"><code class="name flex">
+<span>def <span class="ident">at</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.call_stack_info_t" href="#ida_idd.call_stack_info_t">call_stack_info_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">at(self, _idx) -&gt; call_stack_info_t</strong><div class="epy_nested">
+_idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.back"><code class="name flex">
+<span>def <span class="ident">back</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorcall_stack_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; call_stack_info_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; call_stack_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.capacity"><code class="name flex">
+<span>def <span class="ident">capacity</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">capacity(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">empty(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorcall_stack_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; call_stack_info_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; call_stack_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.erase"><code class="name flex">
+<span>def <span class="ident">erase</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorcall_stack_info_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">erase(self, it) -&gt; call_stack_info_t</strong><div class="epy_nested">
+it: qvector&lt; call_stack_info_t &gt;::iterator</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">erase(self, first, last) -&gt; call_stack_info_t</strong><div class="epy_nested">
+first: qvector&lt; call_stack_info_t &gt;::iterator
+last: qvector&lt; call_stack_info_t &gt;::iterator</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.extract"><code class="name flex">
+<span>def <span class="ident">extract</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.call_stack_info_t" href="#ida_idd.call_stack_info_t">call_stack_info_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">extract(self) -&gt; call_stack_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorcall_stack_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; call_stack_info_t</strong><div class="epy_nested">
+x: call_stack_info_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; call_stack_info_t</strong><div class="epy_nested">
+x: call_stack_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.front"><code class="name flex">
+<span>def <span class="ident">front</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.grow"><code class="name flex">
+<span>def <span class="ident">grow</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+grow(self, x=call_stack_info_t())<div class="epy_nested">
+x: call_stack_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.has"><code class="name flex">
+<span>def <span class="ident">has</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">has(self, x) -&gt; bool</strong><div class="epy_nested">
+x: call_stack_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.inject"><code class="name flex">
+<span>def <span class="ident">inject</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">inject(self, s, len)</strong><div class="epy_nested">
+s: call_stack_info_t *
+len: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.insert"><code class="name flex">
+<span>def <span class="ident">insert</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorcall_stack_info_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">insert(self, it, x) -&gt; call_stack_info_t</strong><div class="epy_nested">
+it: qvector&lt; call_stack_info_t &gt;::iterator
+x: call_stack_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.pop_back"><code class="name flex">
+<span>def <span class="ident">pop_back</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">pop_back(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.push_back"><code class="name flex">
+<span>def <span class="ident">push_back</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.call_stack_info_t" href="#ida_idd.call_stack_info_t">call_stack_info_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">push_back(self, x)</strong><div class="epy_nested">
+x: call_stack_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.qclear"><code class="name flex">
+<span>def <span class="ident">qclear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">qclear(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.reserve"><code class="name flex">
+<span>def <span class="ident">reserve</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reserve(self, cnt)</strong><div class="epy_nested">
+cnt: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.resize"><code class="name flex">
+<span>def <span class="ident">resize</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize, x)</strong><div class="epy_nested">
+_newsize: size_t
+x: call_stack_info_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize)</strong><div class="epy_nested">
+_newsize: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+r: qvector&lt; call_stack_info_t &gt; &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.call_stack_info_vec_t.truncate"><code class="name flex">
+<span>def <span class="ident">truncate</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">truncate(self)</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.call_stack_t"><code class="flex name class">
+<span>class <span class="ident">call_stack_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ call_stack_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; call_stack_t</strong></div></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="ida_idd.call_stack_info_vec_t" href="#ida_idd.call_stack_info_vec_t">call_stack_info_vec_t</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="ida_idd.call_stack_info_vec_t" href="#ida_idd.call_stack_info_vec_t">call_stack_info_vec_t</a></b></code>:
+<ul class="hlist">
+<li><code><a title="ida_idd.call_stack_info_vec_t.add_unique" href="#ida_idd.call_stack_info_vec_t.add_unique">add_unique</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.at" href="#ida_idd.call_stack_info_vec_t.at">at</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.begin" href="#ida_idd.call_stack_info_vec_t.begin">begin</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.capacity" href="#ida_idd.call_stack_info_vec_t.capacity">capacity</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.clear" href="#ida_idd.call_stack_info_vec_t.clear">clear</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.empty" href="#ida_idd.call_stack_info_vec_t.empty">empty</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.end" href="#ida_idd.call_stack_info_vec_t.end">end</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.erase" href="#ida_idd.call_stack_info_vec_t.erase">erase</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.extract" href="#ida_idd.call_stack_info_vec_t.extract">extract</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.find" href="#ida_idd.call_stack_info_vec_t.find">find</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.grow" href="#ida_idd.call_stack_info_vec_t.grow">grow</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.has" href="#ida_idd.call_stack_info_vec_t.has">has</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.inject" href="#ida_idd.call_stack_info_vec_t.inject">inject</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.insert" href="#ida_idd.call_stack_info_vec_t.insert">insert</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.pop_back" href="#ida_idd.call_stack_info_vec_t.pop_back">pop_back</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.push_back" href="#ida_idd.call_stack_info_vec_t.push_back">push_back</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.qclear" href="#ida_idd.call_stack_info_vec_t.qclear">qclear</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.reserve" href="#ida_idd.call_stack_info_vec_t.reserve">reserve</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.resize" href="#ida_idd.call_stack_info_vec_t.resize">resize</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.size" href="#ida_idd.call_stack_info_vec_t.size">size</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.swap" href="#ida_idd.call_stack_info_vec_t.swap">swap</a></code></li>
+<li><code><a title="ida_idd.call_stack_info_vec_t.truncate" href="#ida_idd.call_stack_info_vec_t.truncate">truncate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="ida_idd.debapp_attrs_t"><code class="flex name class">
+<span>class <span class="ident">debapp_attrs_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ debapp_attrs_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; debapp_attrs_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.debapp_attrs_t.addrsize"><code class="name">var <span class="ident">addrsize</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">debapp_attrs_t_addrsize_get(self) -&gt; int</strong></div></div>
+</dd>
+<dt id="ida_idd.debapp_attrs_t.cbsize"><code class="name">var <span class="ident">cbsize</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">debapp_attrs_t_cbsize_get(self) -&gt; int32</strong></div></div>
+</dd>
+<dt id="ida_idd.debapp_attrs_t.is_be"><code class="name">var <span class="ident">is_be</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">debapp_attrs_t_is_be_get(self) -&gt; int</strong></div></div>
+</dd>
+<dt id="ida_idd.debapp_attrs_t.platform"><code class="name">var <span class="ident">platform</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">debapp_attrs_t_platform_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.debug_event_t"><code class="flex name class">
+<span>class <span class="ident">debug_event_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ debug_event_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; debug_event_t</strong><div class="epy_nested">
+r: debug_event_t const &amp;</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.debug_event_t.ea"><code class="name">var <span class="ident">ea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">debug_event_t_ea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.handled"><code class="name">var <span class="ident">handled</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">debug_event_t_handled_get(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.pid"><code class="name">var <span class="ident">pid</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">debug_event_t_pid_get(self) -&gt; pid_t</strong></div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.tid"><code class="name">var <span class="ident">tid</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">debug_event_t_tid_get(self) -&gt; thid_t</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.debug_event_t.bpt"><code class="name flex">
+<span>def <span class="ident">bpt</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.bptaddr_t" href="#ida_idd.bptaddr_t">bptaddr_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'EXCEPTION'</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.bpt_ea"><code class="name flex">
+<span>def <span class="ident">bpt_ea</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+On some systems with special memory mappings the triggered ea might be
+different from the actual ea. Calculate the address to use.</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+clear the dependent information (see below), set event code to
+NO_EVENT</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.clear_all"><code class="name flex">
+<span>def <span class="ident">clear_all</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear_all(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.copy"><code class="name flex">
+<span>def <span class="ident">copy</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.debug_event_t" href="#ida_idd.debug_event_t">debug_event_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">copy(self, r) -&gt; debug_event_t</strong><div class="epy_nested">
+<strong class="epy_parameter">r</strong> (C++: const
+debug_event_t
+&amp;)</div>
+</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.eid"><code class="name flex">
+<span>def <span class="ident">eid</span></span>(<span>self, *args) &#8209;&gt;&#160;event_id_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Event code.</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.exc"><code class="name flex">
+<span>def <span class="ident">exc</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.excinfo_t" href="#ida_idd.excinfo_t">excinfo_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">exc(self) -&gt; excinfo_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">exc(self) -&gt; excinfo_t</strong></div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.exit_code"><code class="name flex">
+<span>def <span class="ident">exit_code</span></span>(<span>self, *args) &#8209;&gt;&#160;int&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'THREAD_STARTED' (thread name) 'LIB_UNLOADED' (unloaded library name)
+'INFORMATION' (will be displayed in the output window if not empty)</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.info"><code class="name flex">
+<span>def <span class="ident">info</span></span>(<span>self, *args) &#8209;&gt;&#160;qstring&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'BREAKPOINT'</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.modinfo"><code class="name flex">
+<span>def <span class="ident">modinfo</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.modinfo_t" href="#ida_idd.modinfo_t">modinfo_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Information that depends on the event code:</div>
+<div class="epy_par">
+&lt; 'PROCESS_STARTED' , 'PROCESS_ATTACHED' , 'LIB_LOADED'
+'PROCESS_EXITED' , 'THREAD_EXITED'</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.set_bpt"><code class="name flex">
+<span>def <span class="ident">set_bpt</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.bptaddr_t" href="#ida_idd.bptaddr_t">bptaddr_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_bpt(self) -&gt; bptaddr_t</strong></div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.set_eid"><code class="name flex">
+<span>def <span class="ident">set_eid</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set event code. If the new event code is compatible with the old one
+then the dependent information (see below) will be preserved.
+Otherwise the event will be cleared and the new event code will be
+set.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_eid(self, id)</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: event_id_t)</div>
+</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.set_exception"><code class="name flex">
+<span>def <span class="ident">set_exception</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.excinfo_t" href="#ida_idd.excinfo_t">excinfo_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_exception(self) -&gt; excinfo_t</strong></div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.set_exit_code"><code class="name flex">
+<span>def <span class="ident">set_exit_code</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_exit_code(self, id, code)</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: event_id_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">code</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.set_info"><code class="name flex">
+<span>def <span class="ident">set_info</span></span>(<span>self, *args) &#8209;&gt;&#160;qstring&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_info(self, id) -&gt; qstring &amp;</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: event_id_t)</div>
+</div></div>
+</dd>
+<dt id="ida_idd.debug_event_t.set_modinfo"><code class="name flex">
+<span>def <span class="ident">set_modinfo</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.modinfo_t" href="#ida_idd.modinfo_t">modinfo_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_modinfo(self, id) -&gt; modinfo_t</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: event_id_t)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.exception_info_t"><code class="flex name class">
+<span>class <span class="ident">exception_info_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ exception_info_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; exception_info_t</strong><div class="epy_nested">
+_code: uint
+_flags: uint32
+_name: char const *
+_desc: char const *</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.exception_info_t.code"><code class="name">var <span class="ident">code</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">exception_info_t_code_get(self) -&gt; uint</strong></div></div>
+</dd>
+<dt id="ida_idd.exception_info_t.desc"><code class="name">var <span class="ident">desc</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">exception_info_t_desc_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+<dt id="ida_idd.exception_info_t.flags"><code class="name">var <span class="ident">flags</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">exception_info_t_flags_get(self) -&gt; uint32</strong></div></div>
+</dd>
+<dt id="ida_idd.exception_info_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">exception_info_t_name_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.exception_info_t.break_on"><code class="name flex">
+<span>def <span class="ident">break_on</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Should we break on the exception?</div></div>
+</dd>
+<dt id="ida_idd.exception_info_t.handle"><code class="name flex">
+<span>def <span class="ident">handle</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Should we handle the exception?</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.excinfo_t"><code class="flex name class">
+<span>class <span class="ident">excinfo_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ excinfo_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; excinfo_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.excinfo_t.can_cont"><code class="name">var <span class="ident">can_cont</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">excinfo_t_can_cont_get(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_idd.excinfo_t.code"><code class="name">var <span class="ident">code</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">excinfo_t_code_get(self) -&gt; uint32</strong></div></div>
+</dd>
+<dt id="ida_idd.excinfo_t.ea"><code class="name">var <span class="ident">ea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">excinfo_t_ea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.excinfo_t.info"><code class="name">var <span class="ident">info</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">excinfo_t_info_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.excvec_t"><code class="flex name class">
+<span>class <span class="ident">excvec_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ qvector&lt; exception_info_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; excvec_t</strong><div class="epy_nested">
+x: qvector&lt; exception_info_t &gt; const &amp;</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.excvec_t.at"><code class="name flex">
+<span>def <span class="ident">at</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.exception_info_t" href="#ida_idd.exception_info_t">exception_info_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">at(self, _idx) -&gt; exception_info_t</strong><div class="epy_nested">
+_idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.back"><code class="name flex">
+<span>def <span class="ident">back</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.excvec_t.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorexception_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; exception_info_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; exception_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.capacity"><code class="name flex">
+<span>def <span class="ident">capacity</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">capacity(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">empty(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorexception_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; exception_info_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; exception_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.erase"><code class="name flex">
+<span>def <span class="ident">erase</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorexception_info_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">erase(self, it) -&gt; exception_info_t</strong><div class="epy_nested">
+it: qvector&lt; exception_info_t &gt;::iterator</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">erase(self, first, last) -&gt; exception_info_t</strong><div class="epy_nested">
+first: qvector&lt; exception_info_t &gt;::iterator
+last: qvector&lt; exception_info_t &gt;::iterator</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.extract"><code class="name flex">
+<span>def <span class="ident">extract</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.exception_info_t" href="#ida_idd.exception_info_t">exception_info_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">extract(self) -&gt; exception_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.front"><code class="name flex">
+<span>def <span class="ident">front</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.excvec_t.grow"><code class="name flex">
+<span>def <span class="ident">grow</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+grow(self, x=exception_info_t())<div class="epy_nested">
+x: exception_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.inject"><code class="name flex">
+<span>def <span class="ident">inject</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">inject(self, s, len)</strong><div class="epy_nested">
+s: exception_info_t *
+len: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.insert"><code class="name flex">
+<span>def <span class="ident">insert</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorexception_info_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">insert(self, it, x) -&gt; exception_info_t</strong><div class="epy_nested">
+it: qvector&lt; exception_info_t &gt;::iterator
+x: exception_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.pop_back"><code class="name flex">
+<span>def <span class="ident">pop_back</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">pop_back(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.push_back"><code class="name flex">
+<span>def <span class="ident">push_back</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.exception_info_t" href="#ida_idd.exception_info_t">exception_info_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">push_back(self, x)</strong><div class="epy_nested">
+x: exception_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.qclear"><code class="name flex">
+<span>def <span class="ident">qclear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">qclear(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.reserve"><code class="name flex">
+<span>def <span class="ident">reserve</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reserve(self, cnt)</strong><div class="epy_nested">
+cnt: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.resize"><code class="name flex">
+<span>def <span class="ident">resize</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize, x)</strong><div class="epy_nested">
+_newsize: size_t
+x: exception_info_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize)</strong><div class="epy_nested">
+_newsize: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.excvec_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+r: qvector&lt; exception_info_t &gt; &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.excvec_t.truncate"><code class="name flex">
+<span>def <span class="ident">truncate</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">truncate(self)</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.meminfo_vec_t"><code class="flex name class">
+<span>class <span class="ident">meminfo_vec_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ qvector&lt; memory_info_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; meminfo_vec_t</strong><div class="epy_nested">
+x: qvector&lt; memory_info_t &gt; const &amp;</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.meminfo_vec_t.add_unique"><code class="name flex">
+<span>def <span class="ident">add_unique</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">add_unique(self, x) -&gt; bool</strong><div class="epy_nested">
+x: memory_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.at"><code class="name flex">
+<span>def <span class="ident">at</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.memory_info_t" href="#ida_idd.memory_info_t">memory_info_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">at(self, _idx) -&gt; memory_info_t</strong><div class="epy_nested">
+_idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.back"><code class="name flex">
+<span>def <span class="ident">back</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectormemory_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; memory_info_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; memory_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.capacity"><code class="name flex">
+<span>def <span class="ident">capacity</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">capacity(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">empty(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectormemory_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; memory_info_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; memory_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.erase"><code class="name flex">
+<span>def <span class="ident">erase</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectormemory_info_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">erase(self, it) -&gt; memory_info_t</strong><div class="epy_nested">
+it: qvector&lt; memory_info_t &gt;::iterator</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">erase(self, first, last) -&gt; memory_info_t</strong><div class="epy_nested">
+first: qvector&lt; memory_info_t &gt;::iterator
+last: qvector&lt; memory_info_t &gt;::iterator</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.extract"><code class="name flex">
+<span>def <span class="ident">extract</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.memory_info_t" href="#ida_idd.memory_info_t">memory_info_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">extract(self) -&gt; memory_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectormemory_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; memory_info_t</strong><div class="epy_nested">
+x: memory_info_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; memory_info_t</strong><div class="epy_nested">
+x: memory_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.front"><code class="name flex">
+<span>def <span class="ident">front</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.grow"><code class="name flex">
+<span>def <span class="ident">grow</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+grow(self, x=memory_info_t())<div class="epy_nested">
+x: memory_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.has"><code class="name flex">
+<span>def <span class="ident">has</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">has(self, x) -&gt; bool</strong><div class="epy_nested">
+x: memory_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.inject"><code class="name flex">
+<span>def <span class="ident">inject</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">inject(self, s, len)</strong><div class="epy_nested">
+s: memory_info_t *
+len: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.insert"><code class="name flex">
+<span>def <span class="ident">insert</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectormemory_info_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">insert(self, it, x) -&gt; memory_info_t</strong><div class="epy_nested">
+it: qvector&lt; memory_info_t &gt;::iterator
+x: memory_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.pop_back"><code class="name flex">
+<span>def <span class="ident">pop_back</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">pop_back(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.push_back"><code class="name flex">
+<span>def <span class="ident">push_back</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.memory_info_t" href="#ida_idd.memory_info_t">memory_info_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">push_back(self, x)</strong><div class="epy_nested">
+x: memory_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.qclear"><code class="name flex">
+<span>def <span class="ident">qclear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">qclear(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.reserve"><code class="name flex">
+<span>def <span class="ident">reserve</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reserve(self, cnt)</strong><div class="epy_nested">
+cnt: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.resize"><code class="name flex">
+<span>def <span class="ident">resize</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize, x)</strong><div class="epy_nested">
+_newsize: size_t
+x: memory_info_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize)</strong><div class="epy_nested">
+_newsize: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+r: qvector&lt; memory_info_t &gt; &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.meminfo_vec_t.truncate"><code class="name flex">
+<span>def <span class="ident">truncate</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">truncate(self)</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.memory_info_t"><code class="flex name class">
+<span>class <span class="ident">memory_info_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ memory_info_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; memory_info_t</strong></div></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.memory_info_t.bitness"><code class="name">var <span class="ident">bitness</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">memory_info_t_bitness_get(self) -&gt; uchar</strong></div></div>
+</dd>
+<dt id="ida_idd.memory_info_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">memory_info_t_name_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+<dt id="ida_idd.memory_info_t.perm"><code class="name">var <span class="ident">perm</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">memory_info_t_perm_get(self) -&gt; uchar</strong></div></div>
+</dd>
+<dt id="ida_idd.memory_info_t.sbase"><code class="name">var <span class="ident">sbase</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">memory_info_t_sbase_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.memory_info_t.sclass"><code class="name">var <span class="ident">sclass</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">memory_info_t_sclass_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></b></code>:
+<ul class="hlist">
+<li><code><a title="ida_range.range_t.clear" href="ida_range.html#ida_range.range_t.clear">clear</a></code></li>
+<li><code><a title="ida_range.range_t.compare" href="ida_range.html#ida_range.range_t.compare">compare</a></code></li>
+<li><code><a title="ida_range.range_t.contains" href="ida_range.html#ida_range.range_t.contains">contains</a></code></li>
+<li><code><a title="ida_range.range_t.empty" href="ida_range.html#ida_range.range_t.empty">empty</a></code></li>
+<li><code><a title="ida_range.range_t.end_ea" href="ida_range.html#ida_range.range_t.end_ea">end_ea</a></code></li>
+<li><code><a title="ida_range.range_t.extend" href="ida_range.html#ida_range.range_t.extend">extend</a></code></li>
+<li><code><a title="ida_range.range_t.intersect" href="ida_range.html#ida_range.range_t.intersect">intersect</a></code></li>
+<li><code><a title="ida_range.range_t.overlaps" href="ida_range.html#ida_range.range_t.overlaps">overlaps</a></code></li>
+<li><code><a title="ida_range.range_t.size" href="ida_range.html#ida_range.range_t.size">size</a></code></li>
+<li><code><a title="ida_range.range_t.start_ea" href="ida_range.html#ida_range.range_t.start_ea">start_ea</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="ida_idd.modinfo_t"><code class="flex name class">
+<span>class <span class="ident">modinfo_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ modinfo_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; modinfo_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.modinfo_t.base"><code class="name">var <span class="ident">base</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">modinfo_t_base_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.modinfo_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">modinfo_t_name_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+<dt id="ida_idd.modinfo_t.rebase_to"><code class="name">var <span class="ident">rebase_to</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">modinfo_t_rebase_to_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_idd.modinfo_t.size"><code class="name">var <span class="ident">size</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">modinfo_t_size_get(self) -&gt; asize_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.process_info_t"><code class="flex name class">
+<span>class <span class="ident">process_info_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ process_info_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; process_info_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.process_info_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">process_info_t_name_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+<dt id="ida_idd.process_info_t.pid"><code class="name">var <span class="ident">pid</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">process_info_t_pid_get(self) -&gt; pid_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.procinfo_vec_t"><code class="flex name class">
+<span>class <span class="ident">procinfo_vec_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ qvector&lt; process_info_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; procinfo_vec_t</strong><div class="epy_nested">
+x: qvector&lt; process_info_t &gt; const &amp;</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.procinfo_vec_t.at"><code class="name flex">
+<span>def <span class="ident">at</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.process_info_t" href="#ida_idd.process_info_t">process_info_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">at(self, _idx) -&gt; process_info_t</strong><div class="epy_nested">
+_idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.back"><code class="name flex">
+<span>def <span class="ident">back</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorprocess_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; process_info_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; process_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.capacity"><code class="name flex">
+<span>def <span class="ident">capacity</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">capacity(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">empty(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorprocess_info_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; process_info_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; process_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.erase"><code class="name flex">
+<span>def <span class="ident">erase</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorprocess_info_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">erase(self, it) -&gt; process_info_t</strong><div class="epy_nested">
+it: qvector&lt; process_info_t &gt;::iterator</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">erase(self, first, last) -&gt; process_info_t</strong><div class="epy_nested">
+first: qvector&lt; process_info_t &gt;::iterator
+last: qvector&lt; process_info_t &gt;::iterator</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.extract"><code class="name flex">
+<span>def <span class="ident">extract</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.process_info_t" href="#ida_idd.process_info_t">process_info_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">extract(self) -&gt; process_info_t</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.front"><code class="name flex">
+<span>def <span class="ident">front</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.grow"><code class="name flex">
+<span>def <span class="ident">grow</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+grow(self, x=process_info_t())<div class="epy_nested">
+x: process_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.inject"><code class="name flex">
+<span>def <span class="ident">inject</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">inject(self, s, len)</strong><div class="epy_nested">
+s: process_info_t *
+len: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.insert"><code class="name flex">
+<span>def <span class="ident">insert</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectorprocess_info_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">insert(self, it, x) -&gt; process_info_t</strong><div class="epy_nested">
+it: qvector&lt; process_info_t &gt;::iterator
+x: process_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.pop_back"><code class="name flex">
+<span>def <span class="ident">pop_back</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">pop_back(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.push_back"><code class="name flex">
+<span>def <span class="ident">push_back</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_idd.process_info_t" href="#ida_idd.process_info_t">process_info_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">push_back(self, x)</strong><div class="epy_nested">
+x: process_info_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.qclear"><code class="name flex">
+<span>def <span class="ident">qclear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">qclear(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.reserve"><code class="name flex">
+<span>def <span class="ident">reserve</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reserve(self, cnt)</strong><div class="epy_nested">
+cnt: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.resize"><code class="name flex">
+<span>def <span class="ident">resize</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize, x)</strong><div class="epy_nested">
+_newsize: size_t
+x: process_info_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize)</strong><div class="epy_nested">
+_newsize: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+r: qvector&lt; process_info_t &gt; &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.procinfo_vec_t.truncate"><code class="name flex">
+<span>def <span class="ident">truncate</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">truncate(self)</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.register_info_t"><code class="flex name class">
+<span>class <span class="ident">register_info_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ register_info_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; register_info_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.register_info_t.bit_strings"><code class="name">var <span class="ident">bit_strings</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">register_info_t_bit_strings_get(self) -&gt; char const *const *</strong></div></div>
+</dd>
+<dt id="ida_idd.register_info_t.default_bit_strings_mask"><code class="name">var <span class="ident">default_bit_strings_mask</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">register_info_t_default_bit_strings_mask_get(self) -&gt; uval_t</strong></div></div>
+</dd>
+<dt id="ida_idd.register_info_t.dtype"><code class="name">var <span class="ident">dtype</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">register_info_t_dtype_get(self) -&gt; op_dtype_t</strong></div></div>
+</dd>
+<dt id="ida_idd.register_info_t.flags"><code class="name">var <span class="ident">flags</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">register_info_t_flags_get(self) -&gt; uint32</strong></div></div>
+</dd>
+<dt id="ida_idd.register_info_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">register_info_t_name_get(self) -&gt; char const *</strong></div></div>
+</dd>
+<dt id="ida_idd.register_info_t.register_class"><code class="name">var <span class="ident">register_class</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">register_info_t_register_class_get(self) -&gt; register_class_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.regval_t"><code class="flex name class">
+<span>class <span class="ident">regval_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ regval_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; regval_t</strong><div class="epy_nested">
+r: regval_t const &amp;</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.regval_t.fval"><code class="name">var <span class="ident">fval</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">regval_t_fval_get(self) -&gt; fpvalue_t</strong></div></div>
+</dd>
+<dt id="ida_idd.regval_t.ival"><code class="name">var <span class="ident">ival</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">regval_t_ival_get(self) -&gt; uint64</strong></div></div>
+</dd>
+<dt id="ida_idd.regval_t.rvtype"><code class="name">var <span class="ident">rvtype</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">regval_t_rvtype_get(self) -&gt; int32</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_idd.regval_t.bytes"><code class="name flex">
+<span>def <span class="ident">bytes</span></span>(<span>self, *args) &#8209;&gt;&#160;bytevec_t&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">bytes(self) -&gt; bytevec_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">bytes(self) -&gt; bytevec_t const &amp;</strong></div></div>
+</dd>
+<dt id="ida_idd.regval_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Clear register value.</div></div>
+</dd>
+<dt id="ida_idd.regval_t.get_data"><code class="name flex">
+<span>def <span class="ident">get_data</span></span>(<span>self, *args) &#8209;&gt;&#160;void&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_data(self)</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">get_data(self) -&gt; void const *</strong></div></div>
+</dd>
+<dt id="ida_idd.regval_t.get_data_size"><code class="name flex">
+<span>def <span class="ident">get_data_size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_data_size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_idd.regval_t.set_bytes"><code class="name flex">
+<span>def <span class="ident">set_bytes</span></span>(<span>self, *args) &#8209;&gt;&#160;bytevec_t&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_bytes(self, data, size)</strong><div class="epy_nested">
+data: uchar const *
+size: size_t</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">set_bytes(self, v)</strong><div class="epy_nested">
+v: bytevec_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.regval_t.set_float"><code class="name flex">
+<span>def <span class="ident">set_float</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_float(self, x)</strong><div class="epy_nested">
+x: fpvalue_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_idd.regval_t.set_int"><code class="name flex">
+<span>def <span class="ident">set_int</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_int(self, x)</strong><div class="epy_nested">
+x: uint64</div>
+</div></div>
+</dd>
+<dt id="ida_idd.regval_t.set_unavailable"><code class="name flex">
+<span>def <span class="ident">set_unavailable</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_unavailable(self)</strong></div></div>
+</dd>
+<dt id="ida_idd.regval_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set this = r and r = this.</div>
+<div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+<strong class="epy_parameter">r</strong> (C++: regval_t
+&amp;)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_idd.scattered_segm_t"><code class="flex name class">
+<span>class <span class="ident">scattered_segm_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ scattered_segm_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; scattered_segm_t</strong></div></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.scattered_segm_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">scattered_segm_t_name_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></b></code>:
+<ul class="hlist">
+<li><code><a title="ida_range.range_t.clear" href="ida_range.html#ida_range.range_t.clear">clear</a></code></li>
+<li><code><a title="ida_range.range_t.compare" href="ida_range.html#ida_range.range_t.compare">compare</a></code></li>
+<li><code><a title="ida_range.range_t.contains" href="ida_range.html#ida_range.range_t.contains">contains</a></code></li>
+<li><code><a title="ida_range.range_t.empty" href="ida_range.html#ida_range.range_t.empty">empty</a></code></li>
+<li><code><a title="ida_range.range_t.end_ea" href="ida_range.html#ida_range.range_t.end_ea">end_ea</a></code></li>
+<li><code><a title="ida_range.range_t.extend" href="ida_range.html#ida_range.range_t.extend">extend</a></code></li>
+<li><code><a title="ida_range.range_t.intersect" href="ida_range.html#ida_range.range_t.intersect">intersect</a></code></li>
+<li><code><a title="ida_range.range_t.overlaps" href="ida_range.html#ida_range.range_t.overlaps">overlaps</a></code></li>
+<li><code><a title="ida_range.range_t.size" href="ida_range.html#ida_range.range_t.size">size</a></code></li>
+<li><code><a title="ida_range.range_t.start_ea" href="ida_range.html#ida_range.range_t.start_ea">start_ea</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="ida_idd.thread_name_t"><code class="flex name class">
+<span>class <span class="ident">thread_name_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ thread_name_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; thread_name_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_idd.thread_name_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">thread_name_t_name_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+<dt id="ida_idd.thread_name_t.tid"><code class="name">var <span class="ident">tid</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">thread_name_t_tid_get(self) -&gt; thid_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

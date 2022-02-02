@@ -1,0 +1,1459 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_struct API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: struct"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_struct</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: struct</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_struct.MF_BASECLASS"><code class="name">var <span class="ident">MF_BASECLASS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+a special member representing base class</div></div>
+</dd>
+<dt id="ida_struct.MF_BYTIL"><code class="name">var <span class="ident">MF_BYTIL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+the member was created due to the type system</div></div>
+</dd>
+<dt id="ida_struct.MF_DTOR"><code class="name">var <span class="ident">MF_DTOR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+a special member representing destructor</div></div>
+</dd>
+<dt id="ida_struct.MF_DUPNAME"><code class="name">var <span class="ident">MF_DUPNAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+duplicate name resolved with _N suffix (N==soff)</div></div>
+</dd>
+<dt id="ida_struct.MF_HASTI"><code class="name">var <span class="ident">MF_HASTI</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+has type information?</div></div>
+</dd>
+<dt id="ida_struct.MF_HASUNI"><code class="name">var <span class="ident">MF_HASUNI</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+has members of type "union"?</div></div>
+</dd>
+<dt id="ida_struct.MF_OK"><code class="name">var <span class="ident">MF_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+is the member ok? (always yes)</div></div>
+</dd>
+<dt id="ida_struct.MF_UNIMEM"><code class="name">var <span class="ident">MF_UNIMEM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+is a member of a union?</div></div>
+</dd>
+<dt id="ida_struct.SET_MEMTI_BYTIL"><code class="name">var <span class="ident">SET_MEMTI_BYTIL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+new type was created by the type subsystem</div></div>
+</dd>
+<dt id="ida_struct.SET_MEMTI_COMPATIBLE"><code class="name">var <span class="ident">SET_MEMTI_COMPATIBLE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+new type must be compatible with the old</div></div>
+</dd>
+<dt id="ida_struct.SET_MEMTI_FUNCARG"><code class="name">var <span class="ident">SET_MEMTI_FUNCARG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+mptr is function argument (cannot create arrays)</div></div>
+</dd>
+<dt id="ida_struct.SET_MEMTI_MAY_DESTROY"><code class="name">var <span class="ident">SET_MEMTI_MAY_DESTROY</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+may destroy other members</div></div>
+</dd>
+<dt id="ida_struct.SET_MEMTI_USERTI"><code class="name">var <span class="ident">SET_MEMTI_USERTI</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+user-specified type</div></div>
+</dd>
+<dt id="ida_struct.SF_ALIGN"><code class="name">var <span class="ident">SF_ALIGN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+alignment (shift amount: 0..31)</div></div>
+</dd>
+<dt id="ida_struct.SF_FRAME"><code class="name">var <span class="ident">SF_FRAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+the structure is a function frame</div></div>
+</dd>
+<dt id="ida_struct.SF_GHOST"><code class="name">var <span class="ident">SF_GHOST</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+ghost copy of a local type</div></div>
+</dd>
+<dt id="ida_struct.SF_HASUNI"><code class="name">var <span class="ident">SF_HASUNI</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+has members of type "union"?</div></div>
+</dd>
+<dt id="ida_struct.SF_HIDDEN"><code class="name">var <span class="ident">SF_HIDDEN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+the structure is collapsed</div></div>
+</dd>
+<dt id="ida_struct.SF_NOLIST"><code class="name">var <span class="ident">SF_NOLIST</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+don't include in the chooser list</div></div>
+</dd>
+<dt id="ida_struct.SF_TYPLIB"><code class="name">var <span class="ident">SF_TYPLIB</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+the structure comes from type library</div></div>
+</dd>
+<dt id="ida_struct.SF_UNION"><code class="name">var <span class="ident">SF_UNION</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+is a union? varunions are prohibited!</div></div>
+</dd>
+<dt id="ida_struct.SF_VAR"><code class="name">var <span class="ident">SF_VAR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+is variable size structure (varstruct)? a variable size structure is
+one with the zero size last member. if the last member is a varstruct,
+then the current structure is a varstruct too.</div></div>
+</dd>
+<dt id="ida_struct.SMT_ARRAY"><code class="name">var <span class="ident">SMT_ARRAY</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_ARRAY = -2</div></div>
+</dd>
+<dt id="ida_struct.SMT_BADARG"><code class="name">var <span class="ident">SMT_BADARG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_BADARG = -6</div></div>
+</dd>
+<dt id="ida_struct.SMT_FAILED"><code class="name">var <span class="ident">SMT_FAILED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_FAILED = 0</div></div>
+</dd>
+<dt id="ida_struct.SMT_KEEP"><code class="name">var <span class="ident">SMT_KEEP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_KEEP = 2</div></div>
+</dd>
+<dt id="ida_struct.SMT_NOCOMPAT"><code class="name">var <span class="ident">SMT_NOCOMPAT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_NOCOMPAT = -5</div></div>
+</dd>
+<dt id="ida_struct.SMT_OK"><code class="name">var <span class="ident">SMT_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_OK = 1</div></div>
+</dd>
+<dt id="ida_struct.SMT_OVERLAP"><code class="name">var <span class="ident">SMT_OVERLAP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_OVERLAP = -1</div></div>
+</dd>
+<dt id="ida_struct.SMT_SIZE"><code class="name">var <span class="ident">SMT_SIZE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_SIZE = -3</div></div>
+</dd>
+<dt id="ida_struct.SMT_WORSE"><code class="name">var <span class="ident">SMT_WORSE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SMT_WORSE = -4</div></div>
+</dd>
+<dt id="ida_struct.STRNFL_REGEX"><code class="name">var <span class="ident">STRNFL_REGEX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+apply regular expressions to beautify the name</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_NAME"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_NAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_NAME = -1</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_NESTED"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_NESTED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_NESTED = -8</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_OFFSET"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_OFFSET</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_OFFSET = -2</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_OK"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_OK = 0</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_SIZE"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_SIZE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_SIZE = -3</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_STRUCT"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_STRUCT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_STRUCT = -5</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_TINFO"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_TINFO</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_TINFO = -4</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_UNIVAR"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_UNIVAR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_UNIVAR = -6</div></div>
+</dd>
+<dt id="ida_struct.STRUC_ERROR_MEMBER_VARLAST"><code class="name">var <span class="ident">STRUC_ERROR_MEMBER_VARLAST</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+STRUC_ERROR_MEMBER_VARLAST = -7</div></div>
+</dd>
+<dt id="ida_struct.STRUC_SEPARATOR"><code class="name">var <span class="ident">STRUC_SEPARATOR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+structname.fieldname</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_struct.add_struc"><code class="name flex">
+<span>def <span class="ident">add_struc</span></span>(<span>*args) &#8209;&gt;&#160;tid_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Create a structure type. if idx== 'BADADDR' then add as the last idx.
+if name==NULL then a name will be generated "struct_%d".</div>
+<div class="epy_par">
+<strong class="epy_sig">add_struc(idx, name, is_union=False) -&gt; tid_t</strong><div class="epy_nested">
+<strong class="epy_parameter">idx</strong> (C++: uval_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">name</strong> (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">is_union</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.add_struc_member"><code class="name flex">
+<span>def <span class="ident">add_struc_member</span></span>(<span>*args) &#8209;&gt;&#160;struc_error_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add member to existing structure.</div>
+<div class="epy_par">
+<strong class="epy_sig">add_struc_member(sptr, fieldname, offset, flag, mt, nbytes) -&gt; struc_error_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong>: structure to modify (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">fieldname</strong>: if NULL, then "anonymous_#" name will be generated<div class="epy_nested">
+(C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong>: BADADDR
+means add to the end of structure (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flag</strong>: type + representation bits (C++: flags_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mt</strong>: additional info about member type. must be present for<div class="epy_nested">
+structs, offsets, enums, strings, struct offsets. (C++:
+const
+opinfo_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">nbytes</strong>: if == 0 then the structure will be a varstruct. in this<div class="epy_nested">
+case the member should be the last member in the
+structure (C++: asize_t)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_struct.del_member_tinfo"><code class="name flex">
+<span>def <span class="ident">del_member_tinfo</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete tinfo for given member.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_member_tinfo(sptr, mptr) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: member_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.del_struc"><code class="name flex">
+<span>def <span class="ident">del_struc</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete a structure type.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_struc(sptr) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.del_struc_member"><code class="name flex">
+<span>def <span class="ident">del_struc_member</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete member at given offset.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_struc_member(sptr, offset) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.del_struc_members"><code class="name flex">
+<span>def <span class="ident">del_struc_members</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete members which occupy range of offsets (off1..off2).</div>
+<div class="epy_par">
+<strong class="epy_sig">del_struc_members(sptr, off1, off2) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">off1</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">off2</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: number of deleted members or -1 on error</div>
+</div></div>
+</dd>
+<dt id="ida_struct.expand_struc"><code class="name flex">
+<span>def <span class="ident">expand_struc</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Expand/Shrink structure type.</div>
+<div class="epy_par">
+<strong class="epy_sig">expand_struc(sptr, offset, delta, recalc=True) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">delta</strong> (C++: adiff_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">recalc</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_best_fit_member"><code class="name flex">
+<span>def <span class="ident">get_best_fit_member</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_struct.member_t" href="#ida_struct.member_t">member_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get member that is most likely referenced by the specified offset.
+Useful for offsets &gt; sizeof(struct).</div>
+<div class="epy_par">
+<strong class="epy_sig">get_best_fit_member(sptr, offset) -&gt; member_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_first_struc_idx"><code class="name flex">
+<span>def <span class="ident">get_first_struc_idx</span></span>(<span>*args) &#8209;&gt;&#160;uval_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get index of first structure.</div></div>
+</dd>
+<dt id="ida_struct.get_innermost_member"><code class="name flex">
+<span>def <span class="ident">get_innermost_member</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_innermost_member(sptr, offset) -&gt; PyObject *</strong><div class="epy_nested">
+Get the innermost member at the given offset</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sptr</strong>: the starting structure</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong>: offset into the starting structure</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>:<ul class="epy_ul">
+<li class="epy_li"><span class="epy_nested">
+None on failure</span>
+</li>
+<li class="epy_li"><span class="epy_nested">
+tuple(member_t, struct_t, offset)<div class="epy_nested">
+where member_t: a member in SPTR (it is not a structure),<div class="epy_nested">
+struct_t: the innermost structure,
+offset:
+remaining offset into the returned member</div>
+</div>
+</span>
+</li>
+</ul>
+</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_last_struc_idx"><code class="name flex">
+<span>def <span class="ident">get_last_struc_idx</span></span>(<span>*args) &#8209;&gt;&#160;uval_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get index of last structure.</div></div>
+</dd>
+<dt id="ida_struct.get_max_offset"><code class="name flex">
+<span>def <span class="ident">get_max_offset</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+For unions: returns number of members, for structs: returns size of
+structure.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_max_offset(sptr) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member"><code class="name flex">
+<span>def <span class="ident">get_member</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_struct.member_t" href="#ida_struct.member_t">member_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get member at given offset.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member(sptr, offset) -&gt; member_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_by_fullname"><code class="name flex">
+<span>def <span class="ident">get_member_by_fullname</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_struct.struc_t" href="#ida_struct.struc_t">struc_t</a>&#160;**</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get a member by its fully qualified name, "struct.field".</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_by_fullname(fullname) -&gt; member_t</strong><div class="epy_nested">
+<strong class="epy_parameter">fullname</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_by_id"><code class="name flex">
+<span>def <span class="ident">get_member_by_id</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*,&#160;<a title="ida_struct.struc_t" href="#ida_struct.struc_t">struc_t</a>&#160;**</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Check if the specified member id points to a struct member.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_by_id(mid) -&gt; member_t</strong><div class="epy_nested">
+<strong class="epy_parameter">mid</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_by_name"><code class="name flex">
+<span>def <span class="ident">get_member_by_name</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_struct.member_t" href="#ida_struct.member_t">member_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get a member by its name, like "field44".</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_by_name(sptr, membername) -&gt; member_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">membername</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_cmt"><code class="name flex">
+<span>def <span class="ident">get_member_cmt</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get comment of structure member.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_cmt(mid, repeatable) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">mid</strong> (C++: tid_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">repeatable</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_fullname"><code class="name flex">
+<span>def <span class="ident">get_member_fullname</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get a member's fully qualified name, "struct.field".</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_fullname(mid) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">mid</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_id"><code class="name flex">
+<span>def <span class="ident">get_member_id</span></span>(<span>*args) &#8209;&gt;&#160;tid_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get member id at given offset.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_id(sptr, offset) -&gt; tid_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_name"><code class="name flex">
+<span>def <span class="ident">get_member_name</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get name of structure member.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_name(mid) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">mid</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_size"><code class="name flex">
+<span>def <span class="ident">get_member_size</span></span>(<span>*args) &#8209;&gt;&#160;asize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get size of structure member. May return 0 for the last member of
+varstruct. For union members, returns 'member_t::eoff' .</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_size(mptr) -&gt; asize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: const
+member_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_struc"><code class="name flex">
+<span>def <span class="ident">get_member_struc</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_struct.struc_t" href="#ida_struct.struc_t">struc_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get containing structure of member by its full name "struct.field".</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_struc(fullname) -&gt; struc_t</strong><div class="epy_nested">
+<strong class="epy_parameter">fullname</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_member_tinfo"><code class="name flex">
+<span>def <span class="ident">get_member_tinfo</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get tinfo for given member.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_member_tinfo(tif, mptr) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">tif</strong> (C++: tinfo_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: const
+member_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_next_member_idx"><code class="name flex">
+<span>def <span class="ident">get_next_member_idx</span></span>(<span>*args) &#8209;&gt;&#160;ssize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the next member idx, if it does not exist, return -1.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_next_member_idx(sptr, off) -&gt; ssize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">off</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_next_struc_idx"><code class="name flex">
+<span>def <span class="ident">get_next_struc_idx</span></span>(<span>*args) &#8209;&gt;&#160;uval_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get next struct index.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_next_struc_idx(idx) -&gt; uval_t</strong><div class="epy_nested">
+<strong class="epy_parameter">idx</strong> (C++: uval_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: BADADDR
+if resulting index is out of bounds, otherwise idx++</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_or_guess_member_tinfo"><code class="name flex">
+<span>def <span class="ident">get_or_guess_member_tinfo</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Try to get tinfo for given member - if failed, generate a tinfo using
+information about the member id from the disassembly</div>
+<div class="epy_par">
+<strong class="epy_sig">get_or_guess_member_tinfo(tif, mptr) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">tif</strong> (C++: tinfo_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: const
+member_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_prev_member_idx"><code class="name flex">
+<span>def <span class="ident">get_prev_member_idx</span></span>(<span>*args) &#8209;&gt;&#160;ssize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the prev member idx, if it does not exist, return -1.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_prev_member_idx(sptr, off) -&gt; ssize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">off</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_prev_struc_idx"><code class="name flex">
+<span>def <span class="ident">get_prev_struc_idx</span></span>(<span>*args) &#8209;&gt;&#160;uval_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get previous struct index.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_prev_struc_idx(idx) -&gt; uval_t</strong><div class="epy_nested">
+<strong class="epy_parameter">idx</strong> (C++: uval_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: BADADDR
+if resulting index is negative, otherwise idx - 1</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_sptr"><code class="name flex">
+<span>def <span class="ident">get_sptr</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_struct.struc_t" href="#ida_struct.struc_t">struc_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get child struct if member is a struct.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_sptr(mptr) -&gt; struc_t</strong><div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: const
+member_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc"><code class="name flex">
+<span>def <span class="ident">get_struc</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_struct.struc_t" href="#ida_struct.struc_t">struc_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to struct type info.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc(id) -&gt; struc_t</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_by_idx"><code class="name flex">
+<span>def <span class="ident">get_struc_by_idx</span></span>(<span>*args) &#8209;&gt;&#160;tid_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get struct id by struct number.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_by_idx(idx) -&gt; tid_t</strong><div class="epy_nested">
+<strong class="epy_parameter">idx</strong> (C++: uval_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_cmt"><code class="name flex">
+<span>def <span class="ident">get_struc_cmt</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get struct comment.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_cmt(id, repeatable) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: tid_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">repeatable</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_first_offset"><code class="name flex">
+<span>def <span class="ident">get_struc_first_offset</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get offset of first member.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_first_offset(sptr) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: BADADDR
+if memqty == 0</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_id"><code class="name flex">
+<span>def <span class="ident">get_struc_id</span></span>(<span>*args) &#8209;&gt;&#160;tid_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get struct id by name.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_id(name) -&gt; tid_t</strong><div class="epy_nested">
+<strong class="epy_parameter">name</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_idx"><code class="name flex">
+<span>def <span class="ident">get_struc_idx</span></span>(<span>*args) &#8209;&gt;&#160;uval_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get internal number of the structure.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_idx(id) -&gt; uval_t</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_last_offset"><code class="name flex">
+<span>def <span class="ident">get_struc_last_offset</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get offset of last member.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_last_offset(sptr) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: BADADDR
+if memqty == 0</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_name"><code class="name flex">
+<span>def <span class="ident">get_struc_name</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get struct name by id</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_name(id, flags=0) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong>: struct id (C++: tid_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Struct name flags (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_next_offset"><code class="name flex">
+<span>def <span class="ident">get_struc_next_offset</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get offset of member with smallest offset larger than 'offset'.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_next_offset(sptr, offset) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: BADADDR
+if no next offset</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_prev_offset"><code class="name flex">
+<span>def <span class="ident">get_struc_prev_offset</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get offset of member with largest offset less than 'offset'.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_prev_offset(sptr, offset) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: BADADDR
+if no prev offset</div>
+</div></div>
+</dd>
+<dt id="ida_struct.get_struc_qty"><code class="name flex">
+<span>def <span class="ident">get_struc_qty</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of known structures.</div></div>
+</dd>
+<dt id="ida_struct.get_struc_size"><code class="name flex">
+<span>def <span class="ident">get_struc_size</span></span>(<span>*args) &#8209;&gt;&#160;asize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get struct size (also see 'get_struc_size(tid_t)' )</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_size(sptr) -&gt; asize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">get_struc_size(id) -&gt; asize_t</strong><div class="epy_nested">
+id: tid_t</div>
+</div></div>
+</dd>
+<dt id="ida_struct.is_anonymous_member_name"><code class="name flex">
+<span>def <span class="ident">is_anonymous_member_name</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is member name prefixed with "anonymous"?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_anonymous_member_name(name) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">name</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.is_dummy_member_name"><code class="name flex">
+<span>def <span class="ident">is_dummy_member_name</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is member name an auto-generated name?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_dummy_member_name(name) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">name</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.is_member_id"><code class="name flex">
+<span>def <span class="ident">is_member_id</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a member id?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_member_id(mid) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">mid</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.is_special_member"><code class="name flex">
+<span>def <span class="ident">is_special_member</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a special member with the name beginning with ' '?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_special_member(id) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.is_union"><code class="name flex">
+<span>def <span class="ident">is_union</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a union?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_union(id) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.is_varmember"><code class="name flex">
+<span>def <span class="ident">is_varmember</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is variable size member?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_varmember(mptr) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: const
+member_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.is_varstr"><code class="name flex">
+<span>def <span class="ident">is_varstr</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is variable size structure?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_varstr(id) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: tid_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.retrieve_member_info"><code class="name flex">
+<span>def <span class="ident">retrieve_member_info</span></span>(<span>*args) &#8209;&gt;&#160;opinfo_t&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get operand type info for member.</div>
+<div class="epy_par">
+<strong class="epy_sig">retrieve_member_info(buf, mptr) -&gt; opinfo_t</strong><div class="epy_nested">
+<strong class="epy_parameter">buf</strong> (C++: opinfo_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: const
+member_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.save_struc"><code class="name flex">
+<span>def <span class="ident">save_struc</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Update struct information in the database (internal function)</div>
+<div class="epy_par">
+<strong class="epy_sig">save_struc(sptr, may_update_ltypes=True)</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">may_update_ltypes</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_member_cmt"><code class="name flex">
+<span>def <span class="ident">set_member_cmt</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set member comment.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_member_cmt(mptr, cmt, repeatable) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: member_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">cmt</strong> (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">repeatable</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_member_name"><code class="name flex">
+<span>def <span class="ident">set_member_name</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set name of member at given offset.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_member_name(sptr, offset, name) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">name</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_member_tinfo"><code class="name flex">
+<span>def <span class="ident">set_member_tinfo</span></span>(<span>*args) &#8209;&gt;&#160;smt_code_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set tinfo for given member.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_member_tinfo(sptr, mptr, memoff, tif, flags) -&gt; smt_code_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong>: containing struct (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mptr</strong>: target member (C++: member_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">memoff</strong>: offset within member (C++: uval_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">tif</strong>: type info (C++: const
+tinfo_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Set member tinfo flags (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_member_type"><code class="name flex">
+<span>def <span class="ident">set_member_type</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set type of member at given offset (also see 'add_struc_member()' )</div>
+<div class="epy_par">
+<strong class="epy_sig">set_member_type(sptr, offset, flag, mt, nbytes) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">offset</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flag</strong> (C++: flags_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mt</strong> (C++: const
+opinfo_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">nbytes</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_struc_align"><code class="name flex">
+<span>def <span class="ident">set_struc_align</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set structure alignment ( 'SF_ALIGN' )</div>
+<div class="epy_par">
+<strong class="epy_sig">set_struc_align(sptr, shift) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">shift</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_struc_cmt"><code class="name flex">
+<span>def <span class="ident">set_struc_cmt</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set structure comment.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_struc_cmt(id, cmt, repeatable) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: tid_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">cmt</strong> (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">repeatable</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_struc_hidden"><code class="name flex">
+<span>def <span class="ident">set_struc_hidden</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Hide/unhide a struct type.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_struc_hidden(sptr, is_hidden)</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">is_hidden</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_struc_idx"><code class="name flex">
+<span>def <span class="ident">set_struc_idx</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set internal number of struct. Also see 'get_struc_idx()' ,
+'get_struc_by_idx()' .</div>
+<div class="epy_par">
+<strong class="epy_sig">set_struc_idx(sptr, idx) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">idx</strong> (C++: uval_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_struc_listed"><code class="name flex">
+<span>def <span class="ident">set_struc_listed</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add/remove a struct type from the struct list.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_struc_listed(sptr, is_listed)</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">is_listed</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.set_struc_name"><code class="name flex">
+<span>def <span class="ident">set_struc_name</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set structure name.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_struc_name(id, name) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: tid_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">name</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.stroff_as_size"><code class="name flex">
+<span>def <span class="ident">stroff_as_size</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Should display a structure offset expression as the structure size?</div>
+<div class="epy_par">
+<strong class="epy_sig">stroff_as_size(plen, sptr, value) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">plen</strong> (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: const
+struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">value</strong> (C++: asize_t)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.visit_stroff_fields"><code class="name flex">
+<span>def <span class="ident">visit_stroff_fields</span></span>(<span>*args) &#8209;&gt;&#160;adiff_t&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Visit structure fields in a stroff expression or in a reference to a
+struct data variable. This function can be used to enumerate all
+components of an expression like 'a.b.c'.</div>
+<div class="epy_par">
+<strong class="epy_sig">visit_stroff_fields(sfv, path, disp, appzero) -&gt; flags_t</strong><div class="epy_nested">
+<strong class="epy_parameter">sfv</strong>: visitor object (C++: struct_field_visitor_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">path</strong>: struct path (path[0] contains the initial struct id)<div class="epy_nested">
+(C++: const
+tid_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">disp</strong>: offset into structure (C++: adiff_t *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">appzero</strong>: should visit field at offset zero? (C++: bool)</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_struct.dyn_member_ref_array"><code class="flex name class">
+<span>class <span class="ident">dyn_member_ref_array</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dynamic_wrapped_array_t&lt; member_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, _data, _count) -&gt; dyn_member_ref_array</strong><div class="epy_nested">
+_data: member_t *
+_count: size_t</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_struct.dyn_member_ref_array.count"><code class="name">var <span class="ident">count</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_member_ref_array_count_get(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_struct.dyn_member_ref_array.data"><code class="name">var <span class="ident">data</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_member_ref_array_data_get(self) -&gt; member_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_struct.member_t"><code class="flex name class">
+<span>class <span class="ident">member_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ member_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; member_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_struct.member_t.eoff"><code class="name">var <span class="ident">eoff</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">member_t_eoff_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_struct.member_t.flag"><code class="name">var <span class="ident">flag</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">member_t_flag_get(self) -&gt; flags_t</strong></div></div>
+</dd>
+<dt id="ida_struct.member_t.id"><code class="name">var <span class="ident">id</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">member_t_id_get(self) -&gt; tid_t</strong></div></div>
+</dd>
+<dt id="ida_struct.member_t.props"><code class="name">var <span class="ident">props</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">member_t_props_get(self) -&gt; uint32</strong></div></div>
+</dd>
+<dt id="ida_struct.member_t.soff"><code class="name">var <span class="ident">soff</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">member_t_soff_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_struct.member_t.by_til"><code class="name flex">
+<span>def <span class="ident">by_til</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Was the member created due to the type system?</div></div>
+</dd>
+<dt id="ida_struct.member_t.get_soff"><code class="name flex">
+<span>def <span class="ident">get_soff</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get start offset (for unions - returns 0)</div></div>
+</dd>
+<dt id="ida_struct.member_t.has_ti"><code class="name flex">
+<span>def <span class="ident">has_ti</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Has type information?</div></div>
+</dd>
+<dt id="ida_struct.member_t.has_union"><code class="name flex">
+<span>def <span class="ident">has_union</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Has members of type "union"?</div></div>
+</dd>
+<dt id="ida_struct.member_t.is_baseclass"><code class="name flex">
+<span>def <span class="ident">is_baseclass</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a base class member?</div></div>
+</dd>
+<dt id="ida_struct.member_t.is_destructor"><code class="name flex">
+<span>def <span class="ident">is_destructor</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a virtual destructor?</div></div>
+</dd>
+<dt id="ida_struct.member_t.is_dupname"><code class="name flex">
+<span>def <span class="ident">is_dupname</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Duplicate name was resolved during import?</div></div>
+</dd>
+<dt id="ida_struct.member_t.unimem"><code class="name flex">
+<span>def <span class="ident">unimem</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a member of a union?</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_struct.struc_t"><code class="flex name class">
+<span>class <span class="ident">struc_t</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ struc_t class.</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_struct.struc_t.age"><code class="name">var <span class="ident">age</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">struc_t_age_get(self) -&gt; ushort</strong></div></div>
+</dd>
+<dt id="ida_struct.struc_t.id"><code class="name">var <span class="ident">id</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">struc_t_id_get(self) -&gt; tid_t</strong></div></div>
+</dd>
+<dt id="ida_struct.struc_t.members"><code class="name">var <span class="ident">members</span> :&#160;dynamic_wrapped_array_tmember_t&#160;&gt;</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__get_members__(self) -&gt; dyn_member_ref_array</strong></div></div>
+</dd>
+<dt id="ida_struct.struc_t.memqty"><code class="name">var <span class="ident">memqty</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">struc_t_memqty_get(self) -&gt; uint32</strong></div></div>
+</dd>
+<dt id="ida_struct.struc_t.ordinal"><code class="name">var <span class="ident">ordinal</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">struc_t_ordinal_get(self) -&gt; int32</strong></div></div>
+</dd>
+<dt id="ida_struct.struc_t.props"><code class="name">var <span class="ident">props</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">struc_t_props_get(self) -&gt; uint32</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_struct.struc_t.from_til"><code class="name flex">
+<span>def <span class="ident">from_til</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does structure come from a type library?</div></div>
+</dd>
+<dt id="ida_struct.struc_t.get_alignment"><code class="name flex">
+<span>def <span class="ident">get_alignment</span></span>(<span>self, *args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+See 'SF_ALIGN' .</div></div>
+</dd>
+<dt id="ida_struct.struc_t.get_member"><code class="name flex">
+<span>def <span class="ident">get_member</span></span>(<span>self, index)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_struct.struc_t.has_union"><code class="name flex">
+<span>def <span class="ident">has_union</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Has members of type "union"?</div></div>
+</dd>
+<dt id="ida_struct.struc_t.is_choosable"><code class="name flex">
+<span>def <span class="ident">is_choosable</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is included in chooser list? Use 'set_struc_listed' to change the
+listed status</div></div>
+</dd>
+<dt id="ida_struct.struc_t.is_frame"><code class="name flex">
+<span>def <span class="ident">is_frame</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is this structure a function frame?</div></div>
+</dd>
+<dt id="ida_struct.struc_t.is_ghost"><code class="name flex">
+<span>def <span class="ident">is_ghost</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a ghost copy of a local type?</div></div>
+</dd>
+<dt id="ida_struct.struc_t.is_hidden"><code class="name flex">
+<span>def <span class="ident">is_hidden</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the structure collapsed? Use 'set_struc_hidden' to change the
+hidden status</div></div>
+</dd>
+<dt id="ida_struct.struc_t.is_union"><code class="name flex">
+<span>def <span class="ident">is_union</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a union?</div></div>
+</dd>
+<dt id="ida_struct.struc_t.is_varstr"><code class="name flex">
+<span>def <span class="ident">is_varstr</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is variable size structure?</div></div>
+</dd>
+<dt id="ida_struct.struc_t.set_alignment"><code class="name flex">
+<span>def <span class="ident">set_alignment</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Do not use; use 'set_struc_align()'</div>
+<div class="epy_par">
+<strong class="epy_sig">set_alignment(self, shift)</strong><div class="epy_nested">
+<strong class="epy_parameter">shift</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_struct.struc_t.set_ghost"><code class="name flex">
+<span>def <span class="ident">set_ghost</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_ghost(self, _is_ghost)</strong><div class="epy_nested">
+<strong class="epy_parameter">_is_ghost</strong> (C++: bool)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_struct.struct_field_visitor_t"><code class="flex name class">
+<span>class <span class="ident">struct_field_visitor_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ struct_field_visitor_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; struct_field_visitor_t</strong><div class="epy_nested">
+self: PyObject *</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_struct.struct_field_visitor_t.visit_field"><code class="name flex">
+<span>def <span class="ident">visit_field</span></span>(<span>self, *args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">visit_field(self, sptr, mptr) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">sptr</strong> (C++: struc_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mptr</strong> (C++: member_t
+*)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

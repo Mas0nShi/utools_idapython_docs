@@ -1,0 +1,313 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_search API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: search"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_search</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: search</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_search.SEARCH_BRK"><code class="name">var <span class="ident">SEARCH_BRK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+return 'BADADDR' if the search was cancelled.</div></div>
+</dd>
+<dt id="ida_search.SEARCH_CASE"><code class="name">var <span class="ident">SEARCH_CASE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+case-sensitive search (case-insensitive otherwise)</div></div>
+</dd>
+<dt id="ida_search.SEARCH_DEF"><code class="name">var <span class="ident">SEARCH_DEF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+find_reg_access: search for a definition (write access)</div></div>
+</dd>
+<dt id="ida_search.SEARCH_DOWN"><code class="name">var <span class="ident">SEARCH_DOWN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+search towards higher addresses</div></div>
+</dd>
+<dt id="ida_search.SEARCH_IDENT"><code class="name">var <span class="ident">SEARCH_IDENT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+search for an identifier (text search). it means that the characters
+before and after the match cannot be is_visible_char().</div></div>
+</dd>
+<dt id="ida_search.SEARCH_NEXT"><code class="name">var <span class="ident">SEARCH_NEXT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+skip the starting address when searching. this bit is useful only for
+'search()' , 'bin_search2()' , 'find_reg_access()' . find_.. functions
+skip the starting address automatically.</div></div>
+</dd>
+<dt id="ida_search.SEARCH_NOBRK"><code class="name">var <span class="ident">SEARCH_NOBRK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+do not test if the user clicked cancel to interrupt the search</div></div>
+</dd>
+<dt id="ida_search.SEARCH_NOSHOW"><code class="name">var <span class="ident">SEARCH_NOSHOW</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+do not display the search progress/refresh screen</div></div>
+</dd>
+<dt id="ida_search.SEARCH_REGEX"><code class="name">var <span class="ident">SEARCH_REGEX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+regular expressions in search string (supported only for the text
+search)</div></div>
+</dd>
+<dt id="ida_search.SEARCH_UNICODE"><code class="name">var <span class="ident">SEARCH_UNICODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SEARCH_UNICODE = 64</div></div>
+</dd>
+<dt id="ida_search.SEARCH_UP"><code class="name">var <span class="ident">SEARCH_UP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+search towards lower addresses</div></div>
+</dd>
+<dt id="ida_search.SEARCH_USE"><code class="name">var <span class="ident">SEARCH_USE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+find_reg_access: search for a use (read access)</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_search.find_binary"><code class="name flex">
+<span>def <span class="ident">find_binary</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">find_binary(arg1, arg2, arg3, arg4, arg5) -&gt; ea_t</strong><div class="epy_nested">
+Deprecated. Please use ida_bytes.bin_search() instead.</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_code"><code class="name flex">
+<span>def <span class="ident">find_code</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next code address.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_code(ea, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_data"><code class="name flex">
+<span>def <span class="ident">find_data</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next data address.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_data(ea, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_defined"><code class="name flex">
+<span>def <span class="ident">find_defined</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next ea that is the start of an instruction or data.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_defined(ea, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_error"><code class="name flex">
+<span>def <span class="ident">find_error</span></span>(<span>*args) &#8209;&gt;&#160;int&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next error or problem.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_error(ea, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_imm"><code class="name flex">
+<span>def <span class="ident">find_imm</span></span>(<span>*args) &#8209;&gt;&#160;int&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next immediate operand with the given value.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_imm(ea, sflag, search_value) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">search_value</strong> (C++: uval_t)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_not_func"><code class="name flex">
+<span>def <span class="ident">find_not_func</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next code address that does not belong to a function.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_not_func(ea, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_notype"><code class="name flex">
+<span>def <span class="ident">find_notype</span></span>(<span>*args) &#8209;&gt;&#160;int&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next operand without any type info.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_notype(ea, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_reg_access"><code class="name flex">
+<span>def <span class="ident">find_reg_access</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find access to a register.This function does not care about the
+control flow and probes all instructions in the specified range,
+starting from START_EA. Only direct references to registers are
+detected. Function calls and system traps are ignored.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_reg_access(out, start_ea, end_ea, regname, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">out</strong>: pointer to the output buffer. must be non-null. upon<div class="epy_nested">
+success contains info about the found register. upon
+failed search for a read access out-&gt;range contains the
+info about the non-redefined parts of the register. (C++:
+struct
+reg_access_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">start_ea</strong>: starting address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">end_ea</strong>: ending address. BADADDR means that the end limit is<div class="epy_nested">
+missing. otherwise, if the search direction is
+SEARCH_UP, END_EA must be lower than START_EA. (C++:
+ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">regname</strong>: the register to search for. (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong>: combination of
+Search flags
+bits. (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the found address. BADADDR if not found or error.</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_suspop"><code class="name flex">
+<span>def <span class="ident">find_suspop</span></span>(<span>*args) &#8209;&gt;&#160;int&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next suspicious operand.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_suspop(ea, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_text"><code class="name flex">
+<span>def <span class="ident">find_text</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+See 'search()'</div>
+<div class="epy_par">
+<strong class="epy_sig">find_text(start_ea, y, x, ustr, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">start_ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">y</strong> (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">x</strong> (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ustr</strong> (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.find_unknown"><code class="name flex">
+<span>def <span class="ident">find_unknown</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find next unexplored address.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_unknown(ea, sflag) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_search.search_down"><code class="name flex">
+<span>def <span class="ident">search_down</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the 'SEARCH_DOWN' bit set?</div>
+<div class="epy_par">
+<strong class="epy_sig">search_down(sflag) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sflag</strong> (C++: int)</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

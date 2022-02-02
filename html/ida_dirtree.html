@@ -1,0 +1,1316 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_dirtree API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: dirtree"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_dirtree</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: dirtree</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_dirtree.DIRTREE_END"><code class="name">var <span class="ident">DIRTREE_END</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_END = 9</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_ENUMS"><code class="name">var <span class="ident">DIRTREE_ENUMS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_ENUMS = 2</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_ENUMS_BOOKMARKS"><code class="name">var <span class="ident">DIRTREE_ENUMS_BOOKMARKS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_ENUMS_BOOKMARKS = 8</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_FUNCS"><code class="name">var <span class="ident">DIRTREE_FUNCS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_FUNCS = 3</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_IDAPLACE_BOOKMARKS"><code class="name">var <span class="ident">DIRTREE_IDAPLACE_BOOKMARKS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_IDAPLACE_BOOKMARKS = 6</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_IMPORTS"><code class="name">var <span class="ident">DIRTREE_IMPORTS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_IMPORTS = 5</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_LOCAL_TYPES"><code class="name">var <span class="ident">DIRTREE_LOCAL_TYPES</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_LOCAL_TYPES = 0</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_NAMES"><code class="name">var <span class="ident">DIRTREE_NAMES</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_NAMES = 4</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_STRUCTS"><code class="name">var <span class="ident">DIRTREE_STRUCTS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_STRUCTS = 1</div></div>
+</dd>
+<dt id="ida_dirtree.DIRTREE_STRUCTS_BOOKMARKS"><code class="name">var <span class="ident">DIRTREE_STRUCTS_BOOKMARKS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DIRTREE_STRUCTS_BOOKMARKS = 7</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_ALREADY_EXISTS"><code class="name">var <span class="ident">DTE_ALREADY_EXISTS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_ALREADY_EXISTS = 1</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_BAD_PATH"><code class="name">var <span class="ident">DTE_BAD_PATH</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_BAD_PATH = 5</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_CANT_RENAME"><code class="name">var <span class="ident">DTE_CANT_RENAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_CANT_RENAME = 6</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_LAST"><code class="name">var <span class="ident">DTE_LAST</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_LAST = 9</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_MAX_DIR"><code class="name">var <span class="ident">DTE_MAX_DIR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_MAX_DIR = 8</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_NOT_DIRECTORY"><code class="name">var <span class="ident">DTE_NOT_DIRECTORY</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_NOT_DIRECTORY = 3</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_NOT_EMPTY"><code class="name">var <span class="ident">DTE_NOT_EMPTY</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_NOT_EMPTY = 4</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_NOT_FOUND"><code class="name">var <span class="ident">DTE_NOT_FOUND</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_NOT_FOUND = 2</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_OK"><code class="name">var <span class="ident">DTE_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_OK = 0</div></div>
+</dd>
+<dt id="ida_dirtree.DTE_OWN_CHILD"><code class="name">var <span class="ident">DTE_OWN_CHILD</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+DTE_OWN_CHILD = 7</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_dirtree.dirtree_cursor_t_root_cursor"><code class="name flex">
+<span>def <span class="ident">dirtree_cursor_t_root_cursor</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_dirtree.dirtree_cursor_t" href="#ida_dirtree.dirtree_cursor_t">dirtree_cursor_t</a></span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dirtree_cursor_t_root_cursor() -&gt; dirtree_cursor_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t_errstr"><code class="name flex">
+<span>def <span class="ident">dirtree_t_errstr</span></span>(<span>*args) &#8209;&gt;&#160;char&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dirtree_t_errstr(err) -&gt; char const *</strong><div class="epy_nested">
+err: enum dterr_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.get_std_dirtree"><code class="name flex">
+<span>def <span class="ident">get_std_dirtree</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_dirtree.dirtree_t" href="#ida_dirtree.dirtree_t">dirtree_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_std_dirtree(id) -&gt; dirtree_t</strong><div class="epy_nested">
+<strong class="epy_parameter">id</strong> (C++: dirtree_id_t)</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_dirtree.direntry_t"><code class="flex name class">
+<span>class <span class="ident">direntry_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ direntry_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, i=BADIDX, d=False) -&gt; direntry_t</strong><div class="epy_nested">
+i: uval_t
+d: bool</div>
+</div></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="ida_dirtree.direntry_t.BADIDX"><code class="name">var <span class="ident">BADIDX</span></code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_dirtree.direntry_t.ROOTIDX"><code class="name">var <span class="ident">ROOTIDX</span></code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_dirtree.direntry_t.idx"><code class="name">var <span class="ident">idx</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">direntry_t_idx_get(self) -&gt; uval_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_t.isdir"><code class="name">var <span class="ident">isdir</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">direntry_t_isdir_get(self) -&gt; bool</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_dirtree.direntry_t.valid"><code class="name flex">
+<span>def <span class="ident">valid</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">valid(self) -&gt; bool</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t"><code class="flex name class">
+<span>class <span class="ident">direntry_vec_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ qvector&lt; direntry_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; direntry_vec_t</strong><div class="epy_nested">
+x: qvector&lt; direntry_t &gt; const &amp;</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_dirtree.direntry_vec_t.add_unique"><code class="name flex">
+<span>def <span class="ident">add_unique</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">add_unique(self, x) -&gt; bool</strong><div class="epy_nested">
+x: direntry_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.at"><code class="name flex">
+<span>def <span class="ident">at</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.direntry_t" href="#ida_dirtree.direntry_t">direntry_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">at(self, _idx) -&gt; direntry_t</strong><div class="epy_nested">
+_idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.back"><code class="name flex">
+<span>def <span class="ident">back</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirentry_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; direntry_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; direntry_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.capacity"><code class="name flex">
+<span>def <span class="ident">capacity</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">capacity(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear(self)</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">empty(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirentry_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; direntry_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; direntry_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.erase"><code class="name flex">
+<span>def <span class="ident">erase</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirentry_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">erase(self, it) -&gt; direntry_t</strong><div class="epy_nested">
+it: qvector&lt; direntry_t &gt;::iterator</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">erase(self, first, last) -&gt; direntry_t</strong><div class="epy_nested">
+first: qvector&lt; direntry_t &gt;::iterator
+last: qvector&lt; direntry_t &gt;::iterator</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.extract"><code class="name flex">
+<span>def <span class="ident">extract</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.direntry_t" href="#ida_dirtree.direntry_t">direntry_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">extract(self) -&gt; direntry_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirentry_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; direntry_t</strong><div class="epy_nested">
+x: direntry_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; direntry_t</strong><div class="epy_nested">
+x: direntry_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.front"><code class="name flex">
+<span>def <span class="ident">front</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.grow"><code class="name flex">
+<span>def <span class="ident">grow</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+grow(self, x=direntry_t())<div class="epy_nested">
+x: direntry_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.has"><code class="name flex">
+<span>def <span class="ident">has</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">has(self, x) -&gt; bool</strong><div class="epy_nested">
+x: direntry_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.inject"><code class="name flex">
+<span>def <span class="ident">inject</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">inject(self, s, len)</strong><div class="epy_nested">
+s: direntry_t *
+len: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.insert"><code class="name flex">
+<span>def <span class="ident">insert</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirentry_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">insert(self, it, x) -&gt; direntry_t</strong><div class="epy_nested">
+it: qvector&lt; direntry_t &gt;::iterator
+x: direntry_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.pop_back"><code class="name flex">
+<span>def <span class="ident">pop_back</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">pop_back(self)</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.push_back"><code class="name flex">
+<span>def <span class="ident">push_back</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.direntry_t" href="#ida_dirtree.direntry_t">direntry_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">push_back(self, x)</strong><div class="epy_nested">
+x: direntry_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.qclear"><code class="name flex">
+<span>def <span class="ident">qclear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">qclear(self)</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.reserve"><code class="name flex">
+<span>def <span class="ident">reserve</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reserve(self, cnt)</strong><div class="epy_nested">
+cnt: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.resize"><code class="name flex">
+<span>def <span class="ident">resize</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize, x)</strong><div class="epy_nested">
+_newsize: size_t
+x: direntry_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize)</strong><div class="epy_nested">
+_newsize: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+r: qvector&lt; direntry_t &gt; &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.direntry_vec_t.truncate"><code class="name flex">
+<span>def <span class="ident">truncate</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">truncate(self)</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_dirtree.dirspec_t"><code class="flex name class">
+<span>class <span class="ident">dirspec_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dirspec_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, nm=None, f=0) -&gt; dirspec_t</strong><div class="epy_nested">
+nm: char const *
+f: uint32</div>
+</div></div>
+<h3>Class variables</h3>
+<dl>
+<dt id="ida_dirtree.dirspec_t.DSF_INODE_EA"><code class="name">var <span class="ident">DSF_INODE_EA</span></code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_dirtree.dirspec_t.DSF_PRIVRANGE"><code class="name">var <span class="ident">DSF_PRIVRANGE</span></code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_dirtree.dirspec_t.flags"><code class="name">var <span class="ident">flags</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dirspec_t_flags_get(self) -&gt; uint32</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirspec_t.nodename"><code class="name">var <span class="ident">nodename</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dirspec_t_nodename_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_dirtree.dirspec_t.get_attrs"><code class="name flex">
+<span>def <span class="ident">get_attrs</span></span>(<span>self, *args) &#8209;&gt;&#160;qstring</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_attrs(self, inode) -&gt; qstring</strong><div class="epy_nested">
+<strong class="epy_parameter">inode</strong> (C++: inode_t)</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirspec_t.get_inode"><code class="name flex">
+<span>def <span class="ident">get_inode</span></span>(<span>self, *args) &#8209;&gt;&#160;inode_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+get the entry inode in the specified directory</div>
+<div class="epy_par">
+<strong class="epy_sig">get_inode(self, diridx, name) -&gt; inode_t</strong><div class="epy_nested">
+<strong class="epy_parameter">diridx</strong> (C++: diridx_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">name</strong> (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the entry inode</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirspec_t.get_name"><code class="name flex">
+<span>def <span class="ident">get_name</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+get the entry name. for example, the structure name</div>
+<div class="epy_par">
+<strong class="epy_sig">get_name(self, inode) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">inode</strong> (C++: inode_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: false if the entry does not exist.</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirspec_t.rename_inode"><code class="name flex">
+<span>def <span class="ident">rename_inode</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+rename the entry</div>
+<div class="epy_par">
+<strong class="epy_sig">rename_inode(self, inode, newname) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">inode</strong> (C++: inode_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">newname</strong> (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirspec_t.unlink_inode"><code class="name flex">
+<span>def <span class="ident">unlink_inode</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+event: unlinked an inode</div>
+<div class="epy_par">
+<strong class="epy_sig">unlink_inode(self, inode)</strong><div class="epy_nested">
+<strong class="epy_parameter">inode</strong> (C++: inode_t)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_t"><code class="flex name class">
+<span>class <span class="ident">dirtree_cursor_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dirtree_cursor_t class.</div>
+<div class="epy_par">
+__init__(self, _parent=BADIDX, _rank=size_t(-1)) -&gt; dirtree_cursor_t<div class="epy_nested">
+_parent: diridx_t
+_rank: size_t</div>
+</div></div>
+<h3>Static methods</h3>
+<dl>
+<dt id="ida_dirtree.dirtree_cursor_t.root_cursor"><code class="name flex">
+<span>def <span class="ident">root_cursor</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_dirtree.dirtree_cursor_t" href="#ida_dirtree.dirtree_cursor_t">dirtree_cursor_t</a></span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">root_cursor() -&gt; dirtree_cursor_t</strong></div></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_dirtree.dirtree_cursor_t.parent"><code class="name">var <span class="ident">parent</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dirtree_cursor_t_parent_get(self) -&gt; diridx_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_t.rank"><code class="name">var <span class="ident">rank</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dirtree_cursor_t_rank_get(self) -&gt; size_t</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_dirtree.dirtree_cursor_t.compare"><code class="name flex">
+<span>def <span class="ident">compare</span></span>(<span>self, *args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">compare(self, r) -&gt; int</strong><div class="epy_nested">
+r: dirtree_cursor_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_t.is_root_cursor"><code class="name flex">
+<span>def <span class="ident">is_root_cursor</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">is_root_cursor(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_t.set_root_cursor"><code class="name flex">
+<span>def <span class="ident">set_root_cursor</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_root_cursor(self)</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_t.valid"><code class="name flex">
+<span>def <span class="ident">valid</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">valid(self) -&gt; bool</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t"><code class="flex name class">
+<span>class <span class="ident">dirtree_cursor_vec_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ qvector&lt; dirtree_cursor_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; dirtree_cursor_vec_t</strong><div class="epy_nested">
+x: qvector&lt; dirtree_cursor_t &gt; const &amp;</div>
+</div></div>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="ida_dirtree.dirtree_selection_t" href="#ida_dirtree.dirtree_selection_t">dirtree_selection_t</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.add_unique"><code class="name flex">
+<span>def <span class="ident">add_unique</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">add_unique(self, x) -&gt; bool</strong><div class="epy_nested">
+x: dirtree_cursor_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.at"><code class="name flex">
+<span>def <span class="ident">at</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.dirtree_cursor_t" href="#ida_dirtree.dirtree_cursor_t">dirtree_cursor_t</a>&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">at(self, _idx) -&gt; dirtree_cursor_t</strong><div class="epy_nested">
+_idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.back"><code class="name flex">
+<span>def <span class="ident">back</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.begin"><code class="name flex">
+<span>def <span class="ident">begin</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirtree_cursor_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; dirtree_cursor_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">begin(self) -&gt; dirtree_cursor_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.capacity"><code class="name flex">
+<span>def <span class="ident">capacity</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">capacity(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clear(self)</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">empty(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.end"><code class="name flex">
+<span>def <span class="ident">end</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirtree_cursor_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; dirtree_cursor_t</strong></div>
+<div class="epy_par">
+<strong class="epy_sig">end(self) -&gt; dirtree_cursor_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.erase"><code class="name flex">
+<span>def <span class="ident">erase</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirtree_cursor_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">erase(self, it) -&gt; dirtree_cursor_t</strong><div class="epy_nested">
+it: qvector&lt; dirtree_cursor_t &gt;::iterator</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">erase(self, first, last) -&gt; dirtree_cursor_t</strong><div class="epy_nested">
+first: qvector&lt; dirtree_cursor_t &gt;::iterator
+last: qvector&lt; dirtree_cursor_t &gt;::iterator</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.extract"><code class="name flex">
+<span>def <span class="ident">extract</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.dirtree_cursor_t" href="#ida_dirtree.dirtree_cursor_t">dirtree_cursor_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">extract(self) -&gt; dirtree_cursor_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.find"><code class="name flex">
+<span>def <span class="ident">find</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirtree_cursor_t&#160;&gt;::const_iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; dirtree_cursor_t</strong><div class="epy_nested">
+x: dirtree_cursor_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">find(self, x) -&gt; dirtree_cursor_t</strong><div class="epy_nested">
+x: dirtree_cursor_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.front"><code class="name flex">
+<span>def <span class="ident">front</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"/>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.grow"><code class="name flex">
+<span>def <span class="ident">grow</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+grow(self, x=dirtree_cursor_t())<div class="epy_nested">
+x: dirtree_cursor_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.has"><code class="name flex">
+<span>def <span class="ident">has</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">has(self, x) -&gt; bool</strong><div class="epy_nested">
+x: dirtree_cursor_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.inject"><code class="name flex">
+<span>def <span class="ident">inject</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">inject(self, s, len)</strong><div class="epy_nested">
+s: dirtree_cursor_t *
+len: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.insert"><code class="name flex">
+<span>def <span class="ident">insert</span></span>(<span>self, *args) &#8209;&gt;&#160;qvectordirtree_cursor_t&#160;&gt;::iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">insert(self, it, x) -&gt; dirtree_cursor_t</strong><div class="epy_nested">
+it: qvector&lt; dirtree_cursor_t &gt;::iterator
+x: dirtree_cursor_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.pop_back"><code class="name flex">
+<span>def <span class="ident">pop_back</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">pop_back(self)</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.push_back"><code class="name flex">
+<span>def <span class="ident">push_back</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.dirtree_cursor_t" href="#ida_dirtree.dirtree_cursor_t">dirtree_cursor_t</a>&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">push_back(self, x)</strong><div class="epy_nested">
+x: dirtree_cursor_t const &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.qclear"><code class="name flex">
+<span>def <span class="ident">qclear</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">qclear(self)</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.reserve"><code class="name flex">
+<span>def <span class="ident">reserve</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reserve(self, cnt)</strong><div class="epy_nested">
+cnt: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.resize"><code class="name flex">
+<span>def <span class="ident">resize</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize, x)</strong><div class="epy_nested">
+_newsize: size_t
+x: dirtree_cursor_t const &amp;</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">resize(self, _newsize)</strong><div class="epy_nested">
+_newsize: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.size"><code class="name flex">
+<span>def <span class="ident">size</span></span>(<span>self, *args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">size(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+r: qvector&lt; dirtree_cursor_t &gt; &amp;</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_cursor_vec_t.truncate"><code class="name flex">
+<span>def <span class="ident">truncate</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">truncate(self)</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_dirtree.dirtree_iterator_t"><code class="flex name class">
+<span>class <span class="ident">dirtree_iterator_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dirtree_iterator_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; dirtree_iterator_t</strong></div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_dirtree.dirtree_iterator_t.cursor"><code class="name">var <span class="ident">cursor</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dirtree_iterator_t_cursor_get(self) -&gt; dirtree_cursor_t</strong></div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_iterator_t.pattern"><code class="name">var <span class="ident">pattern</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dirtree_iterator_t_pattern_get(self) -&gt; qstring *</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_dirtree.dirtree_selection_t"><code class="flex name class">
+<span>class <span class="ident">dirtree_selection_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dirtree_selection_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; dirtree_selection_t</strong></div></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="ida_dirtree.dirtree_cursor_vec_t" href="#ida_dirtree.dirtree_cursor_vec_t">dirtree_cursor_vec_t</a></li>
+</ul>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="ida_dirtree.dirtree_cursor_vec_t" href="#ida_dirtree.dirtree_cursor_vec_t">dirtree_cursor_vec_t</a></b></code>:
+<ul class="hlist">
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.add_unique" href="#ida_dirtree.dirtree_cursor_vec_t.add_unique">add_unique</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.at" href="#ida_dirtree.dirtree_cursor_vec_t.at">at</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.begin" href="#ida_dirtree.dirtree_cursor_vec_t.begin">begin</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.capacity" href="#ida_dirtree.dirtree_cursor_vec_t.capacity">capacity</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.clear" href="#ida_dirtree.dirtree_cursor_vec_t.clear">clear</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.empty" href="#ida_dirtree.dirtree_cursor_vec_t.empty">empty</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.end" href="#ida_dirtree.dirtree_cursor_vec_t.end">end</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.erase" href="#ida_dirtree.dirtree_cursor_vec_t.erase">erase</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.extract" href="#ida_dirtree.dirtree_cursor_vec_t.extract">extract</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.find" href="#ida_dirtree.dirtree_cursor_vec_t.find">find</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.grow" href="#ida_dirtree.dirtree_cursor_vec_t.grow">grow</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.has" href="#ida_dirtree.dirtree_cursor_vec_t.has">has</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.inject" href="#ida_dirtree.dirtree_cursor_vec_t.inject">inject</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.insert" href="#ida_dirtree.dirtree_cursor_vec_t.insert">insert</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.pop_back" href="#ida_dirtree.dirtree_cursor_vec_t.pop_back">pop_back</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.push_back" href="#ida_dirtree.dirtree_cursor_vec_t.push_back">push_back</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.qclear" href="#ida_dirtree.dirtree_cursor_vec_t.qclear">qclear</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.reserve" href="#ida_dirtree.dirtree_cursor_vec_t.reserve">reserve</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.resize" href="#ida_dirtree.dirtree_cursor_vec_t.resize">resize</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.size" href="#ida_dirtree.dirtree_cursor_vec_t.size">size</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.swap" href="#ida_dirtree.dirtree_cursor_vec_t.swap">swap</a></code></li>
+<li><code><a title="ida_dirtree.dirtree_cursor_vec_t.truncate" href="#ida_dirtree.dirtree_cursor_vec_t.truncate">truncate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="ida_dirtree.dirtree_t"><code class="flex name class">
+<span>class <span class="ident">dirtree_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dirtree_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, ds) -&gt; dirtree_t</strong><div class="epy_nested">
+ds: dirspec_t *</div>
+</div></div>
+<h3>Static methods</h3>
+<dl>
+<dt id="ida_dirtree.dirtree_t.errstr"><code class="name flex">
+<span>def <span class="ident">errstr</span></span>(<span>*args) &#8209;&gt;&#160;char&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">errstr(err) -&gt; char const *</strong><div class="epy_nested">
+err: enum dterr_t</div>
+</div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_dirtree.dirtree_t.change_rank"><code class="name flex">
+<span>def <span class="ident">change_rank</span></span>(<span>self, *args) &#8209;&gt;&#160;dterr_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Change ordering rank of an item.All subdirectories go before all file
+entries.</div>
+<div class="epy_par">
+<strong class="epy_sig">change_rank(self, path, rank_delta) -&gt; dterr_t</strong><div class="epy_nested">
+<strong class="epy_parameter">path</strong>: path to the item (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rank_delta</strong> (C++: ssize_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.chdir"><code class="name flex">
+<span>def <span class="ident">chdir</span></span>(<span>self, *args) &#8209;&gt;&#160;dterr_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Change current directory</div>
+<div class="epy_par">
+<strong class="epy_sig">chdir(self, path) -&gt; dterr_t</strong><div class="epy_nested">
+<strong class="epy_parameter">path</strong>: new current directory (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.findfirst"><code class="name flex">
+<span>def <span class="ident">findfirst</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Start iterating over files in a directory</div>
+<div class="epy_par">
+<strong class="epy_sig">findfirst(self, ff, pattern) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ff</strong>: directory iterator. it will be initialized by the function<div class="epy_nested">
+(C++: dirtree_iterator_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">pattern</strong>: pattern to search for (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.findnext"><code class="name flex">
+<span>def <span class="ident">findnext</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Continue iterating over files in a directory</div>
+<div class="epy_par">
+<strong class="epy_sig">findnext(self, ff) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ff</strong>: directory iterator (C++: dirtree_iterator_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.get_abspath"><code class="name flex">
+<span>def <span class="ident">get_abspath</span></span>(<span>self, *args) &#8209;&gt;&#160;qstring</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get absolute path pointed by the cursorsee also 'resolve_cursor()'</div>
+<div class="epy_par">
+<strong class="epy_sig">get_abspath(self, cursor) -&gt; qstring</strong><div class="epy_nested">
+<strong class="epy_parameter">cursor</strong> (C++: const
+dirtree_cursor_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: path. empty path means wrong directory part of RELPATH</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">get_abspath(self, relpath) -&gt; qstring</strong><div class="epy_nested">
+relpath: char const *</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: path. empty path means wrong directory part of RELPATH</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.get_dir_size"><code class="name flex">
+<span>def <span class="ident">get_dir_size</span></span>(<span>self, *args) &#8209;&gt;&#160;ssize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get dir size</div>
+<div class="epy_par">
+<strong class="epy_sig">get_dir_size(self, diridx) -&gt; ssize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">diridx</strong>: directory index (C++: diridx_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: number of entries under this directory; if error, return -1</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.get_entry_attrs"><code class="name flex">
+<span>def <span class="ident">get_entry_attrs</span></span>(<span>self, *args) &#8209;&gt;&#160;qstring</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get entry attributes</div>
+<div class="epy_par">
+<strong class="epy_sig">get_entry_attrs(self, de) -&gt; qstring</strong><div class="epy_nested">
+<strong class="epy_parameter">de</strong>: directory entry (C++: const
+direntry_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: name</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.get_entry_name"><code class="name flex">
+<span>def <span class="ident">get_entry_name</span></span>(<span>self, *args) &#8209;&gt;&#160;qstring</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get entry name</div>
+<div class="epy_par">
+<strong class="epy_sig">get_entry_name(self, de) -&gt; qstring</strong><div class="epy_nested">
+<strong class="epy_parameter">de</strong>: directory entry (C++: const
+direntry_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: name</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.get_nodename"><code class="name flex">
+<span>def <span class="ident">get_nodename</span></span>(<span>self, *args) &#8209;&gt;&#160;char&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+netnode name</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.get_parent_cursor"><code class="name flex">
+<span>def <span class="ident">get_parent_cursor</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.dirtree_cursor_t" href="#ida_dirtree.dirtree_cursor_t">dirtree_cursor_t</a></span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get parent cursor.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_parent_cursor(self, cursor) -&gt; dirtree_cursor_t</strong><div class="epy_nested">
+<strong class="epy_parameter">cursor</strong>: a valid ditree cursor (C++: const
+dirtree_cursor_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: cursor's parent</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.get_rank"><code class="name flex">
+<span>def <span class="ident">get_rank</span></span>(<span>self, *args) &#8209;&gt;&#160;ssize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get ordering rank of an item.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_rank(self, diridx, de) -&gt; ssize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">diridx</strong>: index of the parent directory (C++: diridx_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">de</strong>: directory entry (C++: const
+direntry_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: number in a range of [0..n) where n is the number of entries<div class="epy_nested">
+in the parent directory. -1 if error</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.getcwd"><code class="name flex">
+<span>def <span class="ident">getcwd</span></span>(<span>self, *args) &#8209;&gt;&#160;qstring</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get current directory</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.isdir"><code class="name flex">
+<span>def <span class="ident">isdir</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a directory?</div>
+<div class="epy_par">
+<strong class="epy_sig">isdir(self, de) -&gt; bool</strong><div class="epy_nested">
+de: direntry_t const &amp;</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if the specified path is a directory</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">isdir(self, path) -&gt; bool</strong><div class="epy_nested">
+path: char const *</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if the specified path is a directory</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.isfile"><code class="name flex">
+<span>def <span class="ident">isfile</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a file?</div>
+<div class="epy_par">
+<strong class="epy_sig">isfile(self, de) -&gt; bool</strong><div class="epy_nested">
+de: direntry_t const &amp;</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if the specified path is a file</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">isfile(self, path) -&gt; bool</strong><div class="epy_nested">
+path: char const *</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if the specified path is a file</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.link"><code class="name flex">
+<span>def <span class="ident">link</span></span>(<span>self, *args) &#8209;&gt;&#160;dterr_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add a file item into a directory.</div>
+<div class="epy_par">
+<strong class="epy_sig">link(self, path) -&gt; dterr_t</strong><div class="epy_nested">
+<strong class="epy_parameter">path</strong>: path to item to add to a directory (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">link(self, inode) -&gt; dterr_t</strong><div class="epy_nested">
+inode: inode_t</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.load"><code class="name flex">
+<span>def <span class="ident">load</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Load the tree structure from the netnode. If dirspec_t::nodename is
+empty, the operation will be considered a success. In addition,
+calling 'load()' more than once will not do anything, and will be
+considered a success.dirspec_t::nodename.</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.mkdir"><code class="name flex">
+<span>def <span class="ident">mkdir</span></span>(<span>self, *args) &#8209;&gt;&#160;dterr_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Create a directory.</div>
+<div class="epy_par">
+<strong class="epy_sig">mkdir(self, path) -&gt; dterr_t</strong><div class="epy_nested">
+<strong class="epy_parameter">path</strong>: directory to create (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.notify_dirtree"><code class="name flex">
+<span>def <span class="ident">notify_dirtree</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Notify dirtree about a change of an inode.</div>
+<div class="epy_par">
+<strong class="epy_sig">notify_dirtree(self, added, inode)</strong><div class="epy_nested">
+<strong class="epy_parameter">added</strong> (C++: bool)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">inode</strong>: inode in question (C++: inode_t)</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.rename"><code class="name flex">
+<span>def <span class="ident">rename</span></span>(<span>self, *args) &#8209;&gt;&#160;dterr_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Rename a directory entry.This function can also rename the item</div>
+<div class="epy_par">
+<strong class="epy_sig">rename(self, _from, to) -&gt; dterr_t</strong><div class="epy_nested">
+<strong class="epy_parameter">_from</strong>: source path (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">to</strong>: destination path (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.resolve_cursor"><code class="name flex">
+<span>def <span class="ident">resolve_cursor</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.direntry_t" href="#ida_dirtree.direntry_t">direntry_t</a></span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Resolve cursorsee also 'get_abspath()'</div>
+<div class="epy_par">
+<strong class="epy_sig">resolve_cursor(self, cursor) -&gt; direntry_t</strong><div class="epy_nested">
+<strong class="epy_parameter">cursor</strong>: to analyze (C++: const
+dirtree_cursor_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: directory entry; if the cursor is bad, the resolved entry<div class="epy_nested">
+will be invalid.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.resolve_path"><code class="name flex">
+<span>def <span class="ident">resolve_path</span></span>(<span>self, *args) &#8209;&gt;&#160;<a title="ida_dirtree.direntry_t" href="#ida_dirtree.direntry_t">direntry_t</a></span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Resolve path</div>
+<div class="epy_par">
+<strong class="epy_sig">resolve_path(self, path) -&gt; direntry_t</strong><div class="epy_nested">
+<strong class="epy_parameter">path</strong>: to analyze (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: directory entry</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.rmdir"><code class="name flex">
+<span>def <span class="ident">rmdir</span></span>(<span>self, *args) &#8209;&gt;&#160;dterr_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Remove a directory.</div>
+<div class="epy_par">
+<strong class="epy_sig">rmdir(self, path) -&gt; dterr_t</strong><div class="epy_nested">
+<strong class="epy_parameter">path</strong>: directory to delete (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Save the tree structure to the netnode.dirspec_t::nodename.</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.set_nodename"><code class="name flex">
+<span>def <span class="ident">set_nodename</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_nodename(self, nm)</strong><div class="epy_nested">
+<strong class="epy_parameter">nm</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_dirtree.dirtree_t.unlink"><code class="name flex">
+<span>def <span class="ident">unlink</span></span>(<span>self, *args) &#8209;&gt;&#160;dterr_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Remove a file item from a directory.</div>
+<div class="epy_par">
+<strong class="epy_sig">unlink(self, path) -&gt; dterr_t</strong><div class="epy_nested">
+<strong class="epy_parameter">path</strong>: path to item remove from a directory (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div>
+<div class="epy_par">
+<strong class="epy_sig">unlink(self, inode) -&gt; dterr_t</strong><div class="epy_nested">
+inode: inode_t</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: dterr_t
+error code</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

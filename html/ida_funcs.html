@@ -1,0 +1,1937 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_funcs API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: funcs"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_funcs</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: funcs</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_funcs.FIND_FUNC_DEFINE"><code class="name">var <span class="ident">FIND_FUNC_DEFINE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+create instruction if undefined byte is encountered</div></div>
+</dd>
+<dt id="ida_funcs.FIND_FUNC_EXIST"><code class="name">var <span class="ident">FIND_FUNC_EXIST</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+function exists already. its bounds are returned in 'nfn'.</div></div>
+</dd>
+<dt id="ida_funcs.FIND_FUNC_IGNOREFN"><code class="name">var <span class="ident">FIND_FUNC_IGNOREFN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+ignore existing function boundaries. by default the function returns
+function boundaries if ea belongs to a function.</div></div>
+</dd>
+<dt id="ida_funcs.FIND_FUNC_KEEPBD"><code class="name">var <span class="ident">FIND_FUNC_KEEPBD</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+do not modify incoming function boundaries, just create instructions
+inside the boundaries.</div></div>
+</dd>
+<dt id="ida_funcs.FIND_FUNC_NORMAL"><code class="name">var <span class="ident">FIND_FUNC_NORMAL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+stop processing if undefined byte is encountered</div></div>
+</dd>
+<dt id="ida_funcs.FIND_FUNC_OK"><code class="name">var <span class="ident">FIND_FUNC_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+ok, 'nfn' is ready for 'add_func()'</div></div>
+</dd>
+<dt id="ida_funcs.FIND_FUNC_UNDEF"><code class="name">var <span class="ident">FIND_FUNC_UNDEF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+function has instructions that pass execution flow to unexplored
+bytes. nfn-&gt;end_ea will have the address of the unexplored byte.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_BOTTOMBP"><code class="name">var <span class="ident">FUNC_BOTTOMBP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+BP points to the bottom of the stack frame.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_FAR"><code class="name">var <span class="ident">FUNC_FAR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Far function.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_FRAME"><code class="name">var <span class="ident">FUNC_FRAME</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Function uses frame pointer (BP)</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_FUZZY_SP"><code class="name">var <span class="ident">FUNC_FUZZY_SP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Function changes SP in untraceable way, for example: and esp,
+0FFFFFFF0h</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_HIDDEN"><code class="name">var <span class="ident">FUNC_HIDDEN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+A hidden function chunk.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_LIB"><code class="name">var <span class="ident">FUNC_LIB</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Library function.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_LUMINA"><code class="name">var <span class="ident">FUNC_LUMINA</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Function info is provided by Lumina.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_NORET"><code class="name">var <span class="ident">FUNC_NORET</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Function doesn't return.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_NORET_PENDING"><code class="name">var <span class="ident">FUNC_NORET_PENDING</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Function 'non-return' analysis must be performed. This flag is
+verified upon 'func_does_return()'</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_PROLOG_OK"><code class="name">var <span class="ident">FUNC_PROLOG_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Prolog analysis has be performed by last SP-analysis</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_PURGED_OK"><code class="name">var <span class="ident">FUNC_PURGED_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'argsize' field has been validated. If this bit is clear and 'argsize'
+is 0, then we do not known the real number of bytes removed from the
+stack. This bit is handled by the processor module.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_SP_READY"><code class="name">var <span class="ident">FUNC_SP_READY</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SP-analysis has been performed. If this flag is on, the stack change
+points should not be not modified anymore. Currently this analysis is
+performed only for PC</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_STATICDEF"><code class="name">var <span class="ident">FUNC_STATICDEF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Static function.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_TAIL"><code class="name">var <span class="ident">FUNC_TAIL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+This is a function tail. Other bits must be clear (except
+'FUNC_HIDDEN' ).</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_THUNK"><code class="name">var <span class="ident">FUNC_THUNK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Thunk (jump) function.</div></div>
+</dd>
+<dt id="ida_funcs.FUNC_USERFAR"><code class="name">var <span class="ident">FUNC_USERFAR</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+User has specified far-ness of the function</div></div>
+</dd>
+<dt id="ida_funcs.IDASGN_APPLIED"><code class="name">var <span class="ident">IDASGN_APPLIED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+signature is already applied</div></div>
+</dd>
+<dt id="ida_funcs.IDASGN_BADARG"><code class="name">var <span class="ident">IDASGN_BADARG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+bad number of signature</div></div>
+</dd>
+<dt id="ida_funcs.IDASGN_CURRENT"><code class="name">var <span class="ident">IDASGN_CURRENT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+signature is currently being applied</div></div>
+</dd>
+<dt id="ida_funcs.IDASGN_OK"><code class="name">var <span class="ident">IDASGN_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+ok</div></div>
+</dd>
+<dt id="ida_funcs.IDASGN_PLANNED"><code class="name">var <span class="ident">IDASGN_PLANNED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+signature is planned to be applied</div></div>
+</dd>
+<dt id="ida_funcs.LIBFUNC_DELAY"><code class="name">var <span class="ident">LIBFUNC_DELAY</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+no decision because of lack of information</div></div>
+</dd>
+<dt id="ida_funcs.LIBFUNC_FOUND"><code class="name">var <span class="ident">LIBFUNC_FOUND</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+ok, library function is found</div></div>
+</dd>
+<dt id="ida_funcs.LIBFUNC_NONE"><code class="name">var <span class="ident">LIBFUNC_NONE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+no, this is not a library function</div></div>
+</dd>
+<dt id="ida_funcs.MOVE_FUNC_BADSTART"><code class="name">var <span class="ident">MOVE_FUNC_BADSTART</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+bad new start address</div></div>
+</dd>
+<dt id="ida_funcs.MOVE_FUNC_NOCODE"><code class="name">var <span class="ident">MOVE_FUNC_NOCODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+no instruction at 'newstart'</div></div>
+</dd>
+<dt id="ida_funcs.MOVE_FUNC_NOFUNC"><code class="name">var <span class="ident">MOVE_FUNC_NOFUNC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+no function at 'ea'</div></div>
+</dd>
+<dt id="ida_funcs.MOVE_FUNC_OK"><code class="name">var <span class="ident">MOVE_FUNC_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+ok</div></div>
+</dd>
+<dt id="ida_funcs.MOVE_FUNC_REFUSED"><code class="name">var <span class="ident">MOVE_FUNC_REFUSED</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+a plugin refused the action</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_funcs.add_func"><code class="name flex">
+<span>def <span class="ident">add_func</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add a new function. If the function end address is 'BADADDR' , then
+IDA will try to determine the function bounds by calling
+find_func_bounds(..., 'FIND_FUNC_DEFINE' ).</div>
+<div class="epy_par">
+<strong class="epy_sig">add_func(ea1, ea2=BADADDR) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea1</strong>: start address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea2</strong>: end address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.add_func_ex"><code class="name flex">
+<span>def <span class="ident">add_func_ex</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add a new function. If the fn-&gt;end_ea is 'BADADDR' , then IDA will try
+to determine the function bounds by calling find_func_bounds(...,
+'FIND_FUNC_DEFINE' ).</div>
+<div class="epy_par">
+<strong class="epy_sig">add_func_ex(pfn) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: ptr to filled function structure (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.add_regarg"><code class="name flex">
+<span>def <span class="ident">add_regarg</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">add_regarg(pfn, reg, tif, name)</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">reg</strong> (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">tif</strong> (C++: const
+tinfo_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">name</strong> (C++: const char *)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.append_func_tail"><code class="name flex">
+<span>def <span class="ident">append_func_tail</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Append a new tail chunk to the function definition. If the tail
+already exists, then it will simply be added to the function tail list
+Otherwise a new tail will be created and its owner will be set to be
+our function If a new tail cannot be created, then this function will
+fail.</div>
+<div class="epy_par">
+<strong class="epy_sig">append_func_tail(pfn, ea1, ea2) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea1</strong>: start of the tail. If a tail already exists at the<div class="epy_nested">
+specified address it must start at 'ea1' (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea2</strong>: end of the tail. If a tail already exists at the specified<div class="epy_nested">
+address it must end at 'ea2'. If specified as BADADDR, IDA
+will determine the end address itself. (C++: ea_t)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.apply_idasgn_to"><code class="name flex">
+<span>def <span class="ident">apply_idasgn_to</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Apply a signature file to the specified address.</div>
+<div class="epy_par">
+<strong class="epy_sig">apply_idasgn_to(signame, ea, is_startup) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">signame</strong>: short name of signature file (the file name without<div class="epy_nested">
+path) (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: address to apply the signature (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">is_startup</strong>: if set, then the signature is treated as a startup<div class="epy_nested">
+one for startup signature ida doesn't rename the
+first function of the applied module. (C++: bool)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Library function codes</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.apply_startup_sig"><code class="name flex">
+<span>def <span class="ident">apply_startup_sig</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Apply a startup signature file to the specified address.</div>
+<div class="epy_par">
+<strong class="epy_sig">apply_startup_sig(ea, startup) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: address to apply the signature to; usually \inf{start_ea}<div class="epy_nested">
+(C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">startup</strong>: the name of the signature file without path and<div class="epy_nested">
+extension (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if successfully applied the signature</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.calc_func_size"><code class="name flex">
+<span>def <span class="ident">calc_func_size</span></span>(<span>*args) &#8209;&gt;&#160;asize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Calculate function size. This function takes into account all
+fragments of the function.</div>
+<div class="epy_par">
+<strong class="epy_sig">calc_func_size(pfn) -&gt; asize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: ptr to function structure (C++: func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.calc_idasgn_state"><code class="name flex">
+<span>def <span class="ident">calc_idasgn_state</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get state of a signature in the list of planned signatures</div>
+<div class="epy_par">
+<strong class="epy_sig">calc_idasgn_state(n) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">n</strong>: number of signature in the list (0.. get_idasgn_qty() -1)<div class="epy_nested">
+(C++: int)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: state of signature or
+IDASGN_BADARG</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.calc_thunk_func_target"><code class="name flex">
+<span>def <span class="ident">calc_thunk_func_target</span></span>(<span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Calculate target of a thunk function.</div>
+<div class="epy_par">
+<strong class="epy_sig">calc_thunk_func_target(pfn) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: pointer to function (may not be nullptr) (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the target function or
+BADADDR</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.del_func"><code class="name flex">
+<span>def <span class="ident">del_func</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete a function.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_func(ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the function entry chunk (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.del_idasgn"><code class="name flex">
+<span>def <span class="ident">del_idasgn</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Remove signature from the list of planned signatures.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_idasgn(n) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">n</strong>: number of signature in the list (0.. get_idasgn_qty() -1)<div class="epy_nested">
+(C++: int)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: IDASGN_OK ,
+IDASGN_BADARG ,
+IDASGN_APPLIED</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.f_any"><code class="name flex">
+<span>def <span class="ident">f_any</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Helper function to accept any address.</div>
+<div class="epy_par">
+<strong class="epy_sig">f_any(arg1, arg2) -&gt; bool</strong><div class="epy_nested">
+arg1: flags_t
+arg2: void *</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.find_func_bounds"><code class="name flex">
+<span>def <span class="ident">find_func_bounds</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Determine the boundaries of a new function. This function tries to
+find the start and end addresses of a new function. It calls the
+module with \ph{func_bounds}
+in order to fine tune the function
+boundaries.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_func_bounds(nfn, flags) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">nfn</strong>: structure to fill with information \ nfn-&gt;start_ea points<div class="epy_nested">
+to the start address of the new function. (C++: func_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Find function bounds flags (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Find function bounds result codes</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.free_regarg"><code class="name flex">
+<span>def <span class="ident">free_regarg</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">free_regarg(v)</strong><div class="epy_nested">
+<strong class="epy_parameter">v</strong> (C++: struct
+regarg_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_contains"><code class="name flex">
+<span>def <span class="ident">func_contains</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does the given function contain the given address?</div>
+<div class="epy_par">
+<strong class="epy_sig">func_contains(pfn, ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_does_return"><code class="name flex">
+<span>def <span class="ident">func_does_return</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does the function return?. To calculate the answer, 'FUNC_NORET' flag
+and is_noret() are consulted The latter is required for imported
+functions in the .idata section. Since in .idata we have only function
+pointers but not functions, we have to introduce a special flag for
+them.</div>
+<div class="epy_par">
+<strong class="epy_sig">func_does_return(callee) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">callee</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_parent_iterator_set"><code class="name flex">
+<span>def <span class="ident">func_parent_iterator_set</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_parent_iterator_set(fpi, pfn) -&gt; bool</strong><div class="epy_nested">
+fpi: func_parent_iterator_t *
+pfn: func_t *</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_t__from_ptrval__"><code class="name flex">
+<span>def <span class="ident">func_t__from_ptrval__</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t__from_ptrval__(ptrval) -&gt; func_t</strong><div class="epy_nested">
+ptrval: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_set"><code class="name flex">
+<span>def <span class="ident">func_tail_iterator_set</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_tail_iterator_set(fti, pfn, ea) -&gt; bool</strong><div class="epy_nested">
+fti: func_tail_iterator_t *
+pfn: func_t *
+ea: ea_t</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_set_ea"><code class="name flex">
+<span>def <span class="ident">func_tail_iterator_set_ea</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_tail_iterator_set_ea(fti, ea) -&gt; bool</strong><div class="epy_nested">
+fti: func_tail_iterator_t *
+ea: ea_t</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_current_idasgn"><code class="name flex">
+<span>def <span class="ident">get_current_idasgn</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of the the current signature.</div></div>
+</dd>
+<dt id="ida_funcs.get_fchunk"><code class="name flex">
+<span>def <span class="ident">get_fchunk</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to function chunk structure by address.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_fchunk(ea) -&gt; func_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in a function chunk (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: ptr to a function chunk or nullptr. This function may return<div class="epy_nested">
+a function entry as well as a function tail.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_fchunk_num"><code class="name flex">
+<span>def <span class="ident">get_fchunk_num</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get ordinal number of a function chunk in the global list of function
+chunks.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_fchunk_num(ea) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the function chunk (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: number of function chunk (0.. get_fchunk_qty() -1). -1 means<div class="epy_nested">
+'no function chunk at the specified address'.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_fchunk_qty"><code class="name flex">
+<span>def <span class="ident">get_fchunk_qty</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get total number of function chunks in the program.</div></div>
+</dd>
+<dt id="ida_funcs.get_fchunk_referer"><code class="name flex">
+<span>def <span class="ident">get_fchunk_referer</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_fchunk_referer(ea, idx) -&gt; ea_t</strong><div class="epy_nested">
+ea: ea_t
+idx: size_t</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func"><code class="name flex">
+<span>def <span class="ident">get_func</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to function structure by address.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func(ea) -&gt; func_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in a function (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: ptr to a function or nullptr. This function returns a<div class="epy_nested">
+function entry chunk.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func_bitness"><code class="name flex">
+<span>def <span class="ident">get_func_bitness</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get function bitness (which is equal to the function segment bitness).
+pfn==nullptr =&gt; returns 0</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func_bitness(pfn) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: const
+func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - 16</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - 32</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 2 - 64</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func_bits"><code class="name flex">
+<span>def <span class="ident">get_func_bits</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of bits in the function addressing.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func_bits(pfn) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: const
+func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func_bytes"><code class="name flex">
+<span>def <span class="ident">get_func_bytes</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of bytes in the function addressing.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func_bytes(pfn) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: const
+func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func_chunknum"><code class="name flex">
+<span>def <span class="ident">get_func_chunknum</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get the containing tail chunk of 'ea'.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func_chunknum(pfn, ea) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: -1 - means 'does not contain ea'</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - means the 'pfn' itself contains ea</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: &gt;0 - the number of the containing function tail chunk</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func_cmt"><code class="name flex">
+<span>def <span class="ident">get_func_cmt</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get function comment.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func_cmt(pfn, repeatable) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: ptr to function structure (C++: const
+func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">repeatable</strong>: get repeatable comment? (C++: bool)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: size of comment or -1 In fact this function works with<div class="epy_nested">
+function chunks too.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func_name"><code class="name flex">
+<span>def <span class="ident">get_func_name</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get function name.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func_name(ea) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the function (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: length of the function name</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func_num"><code class="name flex">
+<span>def <span class="ident">get_func_num</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get ordinal number of a function.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func_num(ea) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the function (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: number of function (0.. get_func_qty() -1). -1 means 'no<div class="epy_nested">
+function at the specified address'.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_func_qty"><code class="name flex">
+<span>def <span class="ident">get_func_qty</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get total number of functions in the program.</div></div>
+</dd>
+<dt id="ida_funcs.get_func_ranges"><code class="name flex">
+<span>def <span class="ident">get_func_ranges</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get function ranges.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_func_ranges(ranges, pfn) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ranges</strong>: buffer to receive the range info (C++: rangeset_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: ptr to function structure (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: end address of the last function range (BADADDR-error)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_idasgn_desc"><code class="name flex">
+<span>def <span class="ident">get_idasgn_desc</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_idasgn_desc(n) -&gt; PyObject *</strong><div class="epy_nested">
+Get information about a signature in the list.
+It returns: (name of signature, names of optional libraries)</div>
+<div class="epy_nested">
+See also: get_idasgn_desc_with_matches</div>
+<div class="epy_nested">
+<strong class="epy_parameter">n</strong>: number of signature in the list (0..get_idasgn_qty()-1)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: None on failure or tuple(signame, optlibs)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_idasgn_desc_with_matches"><code class="name flex">
+<span>def <span class="ident">get_idasgn_desc_with_matches</span></span>(<span>*args) &#8209;&gt;&#160;PyObject&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_idasgn_desc_with_matches(n) -&gt; PyObject *</strong><div class="epy_nested">
+Get information about a signature in the list.
+It returns: (name of signature, names of optional libraries, number of matches)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">n</strong>: number of signature in the list (0..get_idasgn_qty()-1)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: None on failure or tuple(signame, optlibs, nmatches)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_idasgn_qty"><code class="name flex">
+<span>def <span class="ident">get_idasgn_qty</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of signatures in the list of planned and applied
+signatures.</div></div>
+</dd>
+<dt id="ida_funcs.get_idasgn_title"><code class="name flex">
+<span>def <span class="ident">get_idasgn_title</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get full description of the signature by its short name.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_idasgn_title(name) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">name</strong>: short name of a signature (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: size of signature description or -1</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_next_fchunk"><code class="name flex">
+<span>def <span class="ident">get_next_fchunk</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to the next function chunk in the global list.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_next_fchunk(ea) -&gt; func_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the program (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: ptr to function chunk or nullptr if next function chunk<div class="epy_nested">
+doesn't exist</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_next_func"><code class="name flex">
+<span>def <span class="ident">get_next_func</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to the next function.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_next_func(ea) -&gt; func_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the program (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: ptr to function or nullptr if next function doesn't exist</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_next_func_addr"><code class="name flex">
+<span>def <span class="ident">get_next_func_addr</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_next_func_addr(pfn, ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_prev_fchunk"><code class="name flex">
+<span>def <span class="ident">get_prev_fchunk</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to the previous function chunk in the global list.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_prev_fchunk(ea) -&gt; func_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the program (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: ptr to function chunk or nullptr if previous function chunk<div class="epy_nested">
+doesn't exist</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_prev_func"><code class="name flex">
+<span>def <span class="ident">get_prev_func</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to the previous function.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_prev_func(ea) -&gt; func_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the program (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: ptr to function or nullptr if previous function doesn't exist</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.get_prev_func_addr"><code class="name flex">
+<span>def <span class="ident">get_prev_func_addr</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_prev_func_addr(pfn, ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.getn_fchunk"><code class="name flex">
+<span>def <span class="ident">getn_fchunk</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to function chunk structure by number.</div>
+<div class="epy_par">
+<strong class="epy_sig">getn_fchunk(n) -&gt; func_t</strong><div class="epy_nested">
+<strong class="epy_parameter">n</strong>: number of function chunk, is in range 0.. get_fchunk_qty()<div class="epy_nested">
+-1 (C++: int)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: ptr to a function chunk or nullptr. This function may return<div class="epy_nested">
+a function entry as well as a function tail.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.getn_func"><code class="name flex">
+<span>def <span class="ident">getn_func</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_funcs.func_t" href="#ida_funcs.func_t">func_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to function structure by number.</div>
+<div class="epy_par">
+<strong class="epy_sig">getn_func(n) -&gt; func_t</strong><div class="epy_nested">
+<strong class="epy_parameter">n</strong>: number of function, is in range 0.. get_func_qty() -1 (C++:<div class="epy_nested">
+size_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: ptr to a function or nullptr. This function returns a<div class="epy_nested">
+function entry chunk.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.is_finally_visible_func"><code class="name flex">
+<span>def <span class="ident">is_finally_visible_func</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the function visible (event after considering 'SCF_SHHID_FUNC' )?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_finally_visible_func(pfn) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.is_func_entry"><code class="name flex">
+<span>def <span class="ident">is_func_entry</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does function describe a function entry chunk?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_func_entry(pfn) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: const
+func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.is_func_locked"><code class="name flex">
+<span>def <span class="ident">is_func_locked</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the function pointer locked?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_func_locked(pfn) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: const
+func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.is_func_tail"><code class="name flex">
+<span>def <span class="ident">is_func_tail</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does function describe a function tail chunk?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_func_tail(pfn) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: const
+func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.is_same_func"><code class="name flex">
+<span>def <span class="ident">is_same_func</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Do two addresses belong to the same function?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_same_func(ea1, ea2) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea1</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea2</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.is_visible_func"><code class="name flex">
+<span>def <span class="ident">is_visible_func</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the function visible (not hidden)?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_visible_func(pfn) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.lock_func_range"><code class="name flex">
+<span>def <span class="ident">lock_func_range</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Lock function pointer Locked pointers are guaranteed to remain valid
+until they are unlocked. Ranges with locked pointers cannot be deleted
+or moved.</div>
+<div class="epy_par">
+<strong class="epy_sig">lock_func_range(pfn, lock)</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: const
+func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">lock</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.plan_to_apply_idasgn"><code class="name flex">
+<span>def <span class="ident">plan_to_apply_idasgn</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add a signature file to the list of planned signature files.</div>
+<div class="epy_par">
+<strong class="epy_sig">plan_to_apply_idasgn(fname) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">fname</strong>: file name. should not contain directory part. (C++:<div class="epy_nested">
+const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: 0 if failed, otherwise number of planned (and applied)<div class="epy_nested">
+signatures</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.read_regargs"><code class="name flex">
+<span>def <span class="ident">read_regargs</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">read_regargs(pfn)</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.reanalyze_function"><code class="name flex">
+<span>def <span class="ident">reanalyze_function</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Reanalyze a function. This function plans to analyzes all chunks of
+the given function. Optional parameters (ea1, ea2) may be used to
+narrow the analyzed range.</div>
+<div class="epy_par">
+<strong class="epy_sig">reanalyze_function(pfn, ea1=0, ea2=BADADDR, analyze_parents=False)</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: pointer to a function (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea1</strong>: start of the range to analyze (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea2</strong>: end of range to analyze (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">analyze_parents</strong>: meaningful only if pfn points to a function<div class="epy_nested">
+tail. if true, all tail parents will be
+reanalyzed. if false, only the given tail will
+be reanalyzed. (C++: bool)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.reanalyze_noret_flag"><code class="name flex">
+<span>def <span class="ident">reanalyze_noret_flag</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Plan to reanalyze noret flag. This function does not remove FUNC_NORET
+if it is already present. It just plans to reanalysis.</div>
+<div class="epy_par">
+<strong class="epy_sig">reanalyze_noret_flag(ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.remove_func_tail"><code class="name flex">
+<span>def <span class="ident">remove_func_tail</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Remove a function tail. If the tail belongs only to one function, it
+will be completely removed. Otherwise if the function was the tail
+owner, the first function using this tail becomes the owner of the
+tail.</div>
+<div class="epy_par">
+<strong class="epy_sig">remove_func_tail(pfn, tail_ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">tail_ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.set_func_cmt"><code class="name flex">
+<span>def <span class="ident">set_func_cmt</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set function comment. This function works with function chunks too.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_func_cmt(pfn, cmt, repeatable) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: ptr to function structure (C++: const
+func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">cmt</strong>: comment string, may be multiline (with '
+'). Use empty<div class="epy_nested">
+str ("") to delete comment (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">repeatable</strong>: set repeatable comment? (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.set_func_end"><code class="name flex">
+<span>def <span class="ident">set_func_end</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Move function chunk end address.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_func_end(ea, newend) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the function (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">newend</strong>: new end address of the function (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.set_func_name_if_jumpfunc"><code class="name flex">
+<span>def <span class="ident">set_func_name_if_jumpfunc</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Give a meaningful name to function if it consists of only 'jump'
+instruction.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_func_name_if_jumpfunc(pfn, oldname) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: pointer to function (may be nullptr) (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">oldname</strong>: old name of function. if old name was in "j_..." form,<div class="epy_nested">
+then we may discard it and set a new name. if oldname
+is not known, you may pass nullptr. (C++: const char
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.set_func_start"><code class="name flex">
+<span>def <span class="ident">set_func_start</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Move function chunk start address.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_func_start(ea, newstart) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the function (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">newstart</strong>: new end address of the function (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Function move result codes</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.set_noret_insn"><code class="name flex">
+<span>def <span class="ident">set_noret_insn</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Signal a non-returning instruction. This function can be used by the
+processor module to tell the kernel about non-returning instructions
+(like call exit). The kernel will perform the global function analysis
+and find out if the function returns at all. This analysis will be
+done at the first call to 'func_does_return()'</div>
+<div class="epy_par">
+<strong class="epy_sig">set_noret_insn(insn_ea, noret) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">insn_ea</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">noret</strong> (C++: bool)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: true if the instruction 'noret' flag has been changed</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.set_tail_owner"><code class="name flex">
+<span>def <span class="ident">set_tail_owner</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set a function as the possessing function of a function tail. The
+function should already refer to the tail (after append_func_tail).</div>
+<div class="epy_par">
+<strong class="epy_sig">set_tail_owner(fnt, func_start) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">fnt</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">func_start</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.set_visible_func"><code class="name flex">
+<span>def <span class="ident">set_visible_func</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set visibility of function.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_visible_func(pfn, visible)</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">visible</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.try_to_add_libfunc"><code class="name flex">
+<span>def <span class="ident">try_to_add_libfunc</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Apply the currently loaded signature file to the specified address. If
+a library function is found, then create a function and name it
+accordingly.</div>
+<div class="epy_par">
+<strong class="epy_sig">try_to_add_libfunc(ea) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the program (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Library function codes</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.update_func"><code class="name flex">
+<span>def <span class="ident">update_func</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Update information about a function in the database ( 'func_t' ). You
+must not change the function start and end addresses using this
+function. Use 'set_func_start()' and 'set_func_end()' for it.</div>
+<div class="epy_par">
+<strong class="epy_sig">update_func(pfn) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong>: ptr to function structure (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_funcs.dyn_ea_array"><code class="flex name class">
+<span>class <span class="ident">dyn_ea_array</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dynamic_wrapped_array_t&lt; ea_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, _data, _count) -&gt; dyn_ea_array</strong><div class="epy_nested">
+_data: unsigned int *
+_count: size_t</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_funcs.dyn_ea_array.count"><code class="name">var <span class="ident">count</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_ea_array_count_get(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.dyn_ea_array.data"><code class="name">var <span class="ident">data</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_ea_array_data_get(self) -&gt; unsigned int *</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_funcs.dyn_range_array"><code class="flex name class">
+<span>class <span class="ident">dyn_range_array</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dynamic_wrapped_array_t&lt; range_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, _data, _count) -&gt; dyn_range_array</strong><div class="epy_nested">
+_data: range_t *
+_count: size_t</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_funcs.dyn_range_array.count"><code class="name">var <span class="ident">count</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_range_array_count_get(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.dyn_range_array.data"><code class="name">var <span class="ident">data</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_range_array_data_get(self) -&gt; range_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_funcs.dyn_regarg_array"><code class="flex name class">
+<span>class <span class="ident">dyn_regarg_array</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dynamic_wrapped_array_t&lt; regarg_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, _data, _count) -&gt; dyn_regarg_array</strong><div class="epy_nested">
+_data: regarg_t *
+_count: size_t</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_funcs.dyn_regarg_array.count"><code class="name">var <span class="ident">count</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_regarg_array_count_get(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.dyn_regarg_array.data"><code class="name">var <span class="ident">data</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_regarg_array_data_get(self) -&gt; regarg_t</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_funcs.dyn_regvar_array"><code class="flex name class">
+<span>class <span class="ident">dyn_regvar_array</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dynamic_wrapped_array_t&lt; regvar_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, _data, _count) -&gt; dyn_regvar_array</strong><div class="epy_nested">
+_data: regvar_t *
+_count: size_t</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_funcs.dyn_regvar_array.count"><code class="name">var <span class="ident">count</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_regvar_array_count_get(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.dyn_regvar_array.data"><code class="name">var <span class="ident">data</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_regvar_array_data_get(self) -&gt; regvar_t *</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_funcs.dyn_stkpnt_array"><code class="flex name class">
+<span>class <span class="ident">dyn_stkpnt_array</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ dynamic_wrapped_array_t&lt; stkpnt_t &gt; class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, _data, _count) -&gt; dyn_stkpnt_array</strong><div class="epy_nested">
+_data: stkpnt_t *
+_count: size_t</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_funcs.dyn_stkpnt_array.count"><code class="name">var <span class="ident">count</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_stkpnt_array_count_get(self) -&gt; size_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.dyn_stkpnt_array.data"><code class="name">var <span class="ident">data</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">dyn_stkpnt_array_data_get(self) -&gt; stkpnt_t *</strong></div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t"><code class="flex name class">
+<span>class <span class="ident">func_item_iterator_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ func_item_iterator_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; func_item_iterator_t</strong><div class="epy_nested">
+pfn: func_t *
+_ea: ea_t</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_funcs.func_item_iterator_t.chunk"><code class="name flex">
+<span>def <span class="ident">chunk</span></span>(<span>self, *args) &#8209;&gt;&#160;range_t&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">chunk(self) -&gt; range_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.current"><code class="name flex">
+<span>def <span class="ident">current</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">current(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.decode_preceding_insn"><code class="name flex">
+<span>def <span class="ident">decode_preceding_insn</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">decode_preceding_insn(self, visited, p_farref, out) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">visited</strong> (C++: eavec_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">p_farref</strong> (C++: bool *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">out</strong> (C++: insn_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.decode_prev_insn"><code class="name flex">
+<span>def <span class="ident">decode_prev_insn</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">decode_prev_insn(self, out) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">out</strong> (C++: insn_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.first"><code class="name flex">
+<span>def <span class="ident">first</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">first(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.last"><code class="name flex">
+<span>def <span class="ident">last</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">last(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.next"><code class="name flex">
+<span>def <span class="ident">next</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__next__(self, func) -&gt; bool</strong><div class="epy_nested">
+func: testf_t *</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.next_addr"><code class="name flex">
+<span>def <span class="ident">next_addr</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">next_addr(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.next_code"><code class="name flex">
+<span>def <span class="ident">next_code</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">next_code(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.next_data"><code class="name flex">
+<span>def <span class="ident">next_data</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">next_data(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.next_head"><code class="name flex">
+<span>def <span class="ident">next_head</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">next_head(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.next_not_tail"><code class="name flex">
+<span>def <span class="ident">next_not_tail</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">next_not_tail(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.prev"><code class="name flex">
+<span>def <span class="ident">prev</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">prev(self, func) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">func</strong> (C++: testf_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.prev_addr"><code class="name flex">
+<span>def <span class="ident">prev_addr</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">prev_addr(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.prev_code"><code class="name flex">
+<span>def <span class="ident">prev_code</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">prev_code(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.prev_data"><code class="name flex">
+<span>def <span class="ident">prev_data</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">prev_data(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.prev_head"><code class="name flex">
+<span>def <span class="ident">prev_head</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">prev_head(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.prev_not_tail"><code class="name flex">
+<span>def <span class="ident">prev_not_tail</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">prev_not_tail(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.set"><code class="name flex">
+<span>def <span class="ident">set</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set a function range. if pfn == nullptr then a segment range will be
+set.</div>
+<div class="epy_par">
+<strong class="epy_sig">set(self, pfn, _ea=BADADDR) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">_ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_item_iterator_t.set_range"><code class="name flex">
+<span>def <span class="ident">set_range</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set an arbitrary range.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_range(self, ea1, ea2) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea1</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea2</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_funcs.func_parent_iterator_t"><code class="flex name class">
+<span>class <span class="ident">func_parent_iterator_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ func_parent_iterator_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; func_parent_iterator_t</strong><div class="epy_nested">
+_fnt: func_t *</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_funcs.func_parent_iterator_t.first"><code class="name flex">
+<span>def <span class="ident">first</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">first(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_parent_iterator_t.last"><code class="name flex">
+<span>def <span class="ident">last</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">last(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_parent_iterator_t.next"><code class="name flex">
+<span>def <span class="ident">next</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__next__(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_parent_iterator_t.parent"><code class="name flex">
+<span>def <span class="ident">parent</span></span>(<span>self, *args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">parent(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_parent_iterator_t.prev"><code class="name flex">
+<span>def <span class="ident">prev</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">prev(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_parent_iterator_t.reset_fnt"><code class="name flex">
+<span>def <span class="ident">reset_fnt</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">reset_fnt(self, _fnt)</strong><div class="epy_nested">
+<strong class="epy_parameter">_fnt</strong> (C++: func_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_parent_iterator_t.set"><code class="name flex">
+<span>def <span class="ident">set</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set(self, _fnt) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">_fnt</strong> (C++: func_t
+*)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_funcs.func_t"><code class="flex name class">
+<span>class <span class="ident">func_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ func_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, start=0, end=0, f=0) -&gt; func_t</strong><div class="epy_nested">
+start: ea_t
+end: ea_t
+f: flags_t</div>
+</div></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_funcs.func_t.argsize"><code class="name">var <span class="ident">argsize</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_argsize_get(self) -&gt; asize_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.color"><code class="name">var <span class="ident">color</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_color_get(self) -&gt; bgcolor_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.flags"><code class="name">var <span class="ident">flags</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_flags_get(self) -&gt; uint64</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.fpd"><code class="name">var <span class="ident">fpd</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_fpd_get(self) -&gt; asize_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.frame"><code class="name">var <span class="ident">frame</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_frame_get(self) -&gt; uval_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.frregs"><code class="name">var <span class="ident">frregs</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_frregs_get(self) -&gt; ushort</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.frsize"><code class="name">var <span class="ident">frsize</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_frsize_get(self) -&gt; asize_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.owner"><code class="name">var <span class="ident">owner</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_owner_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.pntqty"><code class="name">var <span class="ident">pntqty</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_pntqty_get(self) -&gt; uint32</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.points"><code class="name">var <span class="ident">points</span> :&#160;dynamic_wrapped_array_t</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__get_points__(self) -&gt; dyn_stkpnt_array</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.referers"><code class="name">var <span class="ident">referers</span> :&#160;dynamic_wrapped_array_t</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__get_referers__(self) -&gt; dyn_ea_array</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.refqty"><code class="name">var <span class="ident">refqty</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_refqty_get(self) -&gt; int</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.regargqty"><code class="name">var <span class="ident">regargqty</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_regargqty_get(self) -&gt; int</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.regargs"><code class="name">var <span class="ident">regargs</span> :&#160;dynamic_wrapped_array_tregarg_t&#160;&gt;</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__get_regargs__(self) -&gt; dyn_regarg_array</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.regvarqty"><code class="name">var <span class="ident">regvarqty</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_regvarqty_get(self) -&gt; int</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.regvars"><code class="name">var <span class="ident">regvars</span> :&#160;dynamic_wrapped_array_t</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__get_regvars__(self) -&gt; dyn_regvar_array</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.tailqty"><code class="name">var <span class="ident">tailqty</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">func_t_tailqty_get(self) -&gt; int</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_t.tails"><code class="name">var <span class="ident">tails</span> :&#160;dynamic_wrapped_array_t</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__get_tails__(self) -&gt; dyn_range_array</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_funcs.func_t.analyzed_sp"><code class="name flex">
+<span>def <span class="ident">analyzed_sp</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Has SP-analysis been performed?</div></div>
+</dd>
+<dt id="ida_funcs.func_t.does_return"><code class="name flex">
+<span>def <span class="ident">does_return</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does function return?</div></div>
+</dd>
+<dt id="ida_funcs.func_t.is_far"><code class="name flex">
+<span>def <span class="ident">is_far</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a far function?</div></div>
+</dd>
+<dt id="ida_funcs.func_t.need_prolog_analysis"><code class="name flex">
+<span>def <span class="ident">need_prolog_analysis</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Needs prolog analysis?</div></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></b></code>:
+<ul class="hlist">
+<li><code><a title="ida_range.range_t.clear" href="ida_range.html#ida_range.range_t.clear">clear</a></code></li>
+<li><code><a title="ida_range.range_t.compare" href="ida_range.html#ida_range.range_t.compare">compare</a></code></li>
+<li><code><a title="ida_range.range_t.contains" href="ida_range.html#ida_range.range_t.contains">contains</a></code></li>
+<li><code><a title="ida_range.range_t.empty" href="ida_range.html#ida_range.range_t.empty">empty</a></code></li>
+<li><code><a title="ida_range.range_t.end_ea" href="ida_range.html#ida_range.range_t.end_ea">end_ea</a></code></li>
+<li><code><a title="ida_range.range_t.extend" href="ida_range.html#ida_range.range_t.extend">extend</a></code></li>
+<li><code><a title="ida_range.range_t.intersect" href="ida_range.html#ida_range.range_t.intersect">intersect</a></code></li>
+<li><code><a title="ida_range.range_t.overlaps" href="ida_range.html#ida_range.range_t.overlaps">overlaps</a></code></li>
+<li><code><a title="ida_range.range_t.size" href="ida_range.html#ida_range.range_t.size">size</a></code></li>
+<li><code><a title="ida_range.range_t.start_ea" href="ida_range.html#ida_range.range_t.start_ea">start_ea</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t"><code class="flex name class">
+<span>class <span class="ident">func_tail_iterator_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ func_tail_iterator_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; func_tail_iterator_t</strong><div class="epy_nested">
+_pfn: func_t *
+ea: ea_t</div>
+</div></div>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_funcs.func_tail_iterator_t.chunk"><code class="name flex">
+<span>def <span class="ident">chunk</span></span>(<span>self, *args) &#8209;&gt;&#160;range_t&#160;const&#160;&amp;</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">chunk(self) -&gt; range_t</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t.first"><code class="name flex">
+<span>def <span class="ident">first</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">first(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t.last"><code class="name flex">
+<span>def <span class="ident">last</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">last(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">main(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t.next"><code class="name flex">
+<span>def <span class="ident">next</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">__next__(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t.prev"><code class="name flex">
+<span>def <span class="ident">prev</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">prev(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t.set"><code class="name flex">
+<span>def <span class="ident">set</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set(self, _pfn, ea=BADADDR) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">_pfn</strong> (C++: func_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t.set_ea"><code class="name flex">
+<span>def <span class="ident">set_ea</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_ea(self, ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.func_tail_iterator_t.set_range"><code class="name flex">
+<span>def <span class="ident">set_range</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_range(self, ea1, ea2) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea1</strong> (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea2</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+<dt id="ida_funcs.lock_func"><code class="flex name class">
+<span>class <span class="ident">lock_func</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ lock_func class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, _pfn) -&gt; lock_func</strong><div class="epy_nested">
+_pfn: func_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_funcs.regarg_t"><code class="flex name class">
+<span>class <span class="ident">regarg_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ regarg_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; regarg_t</strong><div class="epy_nested">
+r: regarg_t const &amp;</div>
+</div></div>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_funcs.regarg_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">regarg_t_name_get(self) -&gt; char *</strong></div></div>
+</dd>
+<dt id="ida_funcs.regarg_t.reg"><code class="name">var <span class="ident">reg</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">regarg_t_reg_get(self) -&gt; int</strong></div></div>
+</dd>
+<dt id="ida_funcs.regarg_t.type"><code class="name">var <span class="ident">type</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">regarg_t_type_get(self) -&gt; type_t *</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_funcs.regarg_t.swap"><code class="name flex">
+<span>def <span class="ident">swap</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">swap(self, r)</strong><div class="epy_nested">
+<strong class="epy_parameter">r</strong> (C++: regarg_t
+&amp;)</div>
+</div></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

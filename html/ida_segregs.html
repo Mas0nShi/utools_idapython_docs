@@ -1,0 +1,379 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_segregs API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: segregs"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_segregs</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: segregs</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_segregs.R_cs"><code class="name">var <span class="ident">R_cs</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+R_cs = 30</div></div>
+</dd>
+<dt id="ida_segregs.R_ds"><code class="name">var <span class="ident">R_ds</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+R_ds = 32</div></div>
+</dd>
+<dt id="ida_segregs.R_es"><code class="name">var <span class="ident">R_es</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+R_es = 29</div></div>
+</dd>
+<dt id="ida_segregs.R_fs"><code class="name">var <span class="ident">R_fs</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+R_fs = 33</div></div>
+</dd>
+<dt id="ida_segregs.R_gs"><code class="name">var <span class="ident">R_gs</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+R_gs = 34</div></div>
+</dd>
+<dt id="ida_segregs.R_ss"><code class="name">var <span class="ident">R_ss</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+R_ss = 31</div></div>
+</dd>
+<dt id="ida_segregs.SR_auto"><code class="name">var <span class="ident">SR_auto</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+the value is determined by IDA</div></div>
+</dd>
+<dt id="ida_segregs.SR_autostart"><code class="name">var <span class="ident">SR_autostart</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+used as 'SR_auto' for segment starting address</div></div>
+</dd>
+<dt id="ida_segregs.SR_inherit"><code class="name">var <span class="ident">SR_inherit</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+the value is inherited from the previous range</div></div>
+</dd>
+<dt id="ida_segregs.SR_user"><code class="name">var <span class="ident">SR_user</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+the value is specified by the user</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_segregs.copy_sreg_ranges"><code class="name flex">
+<span>def <span class="ident">copy_sreg_ranges</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Duplicate segment register ranges.</div>
+<div class="epy_par">
+<strong class="epy_sig">copy_sreg_ranges(dst_rg, src_rg, map_selector=False)</strong><div class="epy_nested">
+<strong class="epy_parameter">dst_rg</strong>: number of destination segment register (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">src_rg</strong>: copy ranges from (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">map_selector</strong>: map selectors to linear addresses using
+sel2ea()<div class="epy_nested">
+(C++: bool)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.del_sreg_range"><code class="name flex">
+<span>def <span class="ident">del_sreg_range</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete segment register range started at ea. When a segment register
+range is deleted, the previous range is extended to cover the empty
+space. The segment register range at the beginning of a segment cannot
+be deleted.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_sreg_range(ea, rg) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: start_ea of the deleted range (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: the segment register number (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.get_prev_sreg_range"><code class="name flex">
+<span>def <span class="ident">get_prev_sreg_range</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment register range previous to one with address.more efficient
+then get_sreg_range(reg, ea-1)</div>
+<div class="epy_par">
+<strong class="epy_sig">get_prev_sreg_range(out, ea, rg) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">out</strong>: segment register range (C++: sreg_range_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any linear address in the program (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: the segment register number (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.get_sreg"><code class="name flex">
+<span>def <span class="ident">get_sreg</span></span>(<span>*args) &#8209;&gt;&#160;sel_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get value of a segment register. This function uses segment register
+range and default segment register values stored in the segment
+structure.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_sreg(ea, rg) -&gt; sel_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address in the program (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: number of the segment register (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: value of the segment register,
+BADSEL
+if value is unknown.</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.get_sreg_range"><code class="name flex">
+<span>def <span class="ident">get_sreg_range</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment register range by linear address.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_sreg_range(out, ea, rg) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">out</strong>: segment register range (C++: sreg_range_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any linear address in the program (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: the segment register number (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.get_sreg_range_num"><code class="name flex">
+<span>def <span class="ident">get_sreg_range_num</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of segment register range by address.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_sreg_range_num(ea, rg) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address in the range (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: the segment register number (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: -1 if no range occupies the specified address. otherwise<div class="epy_nested">
+returns number of the specified range
+(0..get_srranges_qty()-1)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.get_sreg_ranges_qty"><code class="name flex">
+<span>def <span class="ident">get_sreg_ranges_qty</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of segment register ranges.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_sreg_ranges_qty(rg) -&gt; size_t</strong><div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: the segment register number (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.getn_sreg_range"><code class="name flex">
+<span>def <span class="ident">getn_sreg_range</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment register range by its number.</div>
+<div class="epy_par">
+<strong class="epy_sig">getn_sreg_range(out, rg, n) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">out</strong>: segment register range (C++: sreg_range_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: the segment register number (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">n</strong>: number of range (0..qty()-1) (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.set_default_dataseg"><code class="name flex">
+<span>def <span class="ident">set_default_dataseg</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set default value of DS register for all segments.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_default_dataseg(ds_sel)</strong><div class="epy_nested">
+<strong class="epy_parameter">ds_sel</strong> (C++: sel_t)</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.set_default_sreg_value"><code class="name flex">
+<span>def <span class="ident">set_default_sreg_value</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set default value of a segment register for a segment.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_default_sreg_value(sg, rg, value) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">sg</strong>: pointer to segment structure if NULL, then set the register<div class="epy_nested">
+for all segments (C++: segment_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: number of segment register (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">value</strong>: its default value. this value will be used by<div class="epy_nested">
+get_sreg()
+if value of the register is unknown at the
+specified address. (C++: sel_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.set_sreg_at_next_code"><code class="name flex">
+<span>def <span class="ident">set_sreg_at_next_code</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set the segment register value at the next instruction. This function
+is designed to be called from 'idb_event::sgr_changed' handler in
+order to contain the effect of changing a segment register value only
+until the next instruction.It is useful, for example, in the ARM
+module: the modification of the T register does not affect existing
+instructions later in the code.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_sreg_at_next_code(ea1, ea2, rg, value)</strong><div class="epy_nested">
+<strong class="epy_parameter">ea1</strong>: address to start to search for an instruction (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea2</strong>: the maximal address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: the segment register number (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">value</strong>: the segment register value (C++: sel_t)</div>
+</div></div>
+</dd>
+<dt id="ida_segregs.split_sreg_range"><code class="name flex">
+<span>def <span class="ident">split_sreg_range</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Create a new segment register range. This function is used when the
+IDP emulator detects that a segment register changes its value.</div>
+<div class="epy_par">
+<strong class="epy_sig">split_sreg_range(ea, rg, v, tag, silent=False) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address where the segment register will have a new<div class="epy_nested">
+value. if ea== BADADDR , nothing to do. (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">rg</strong>: the number of the segment register (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">v</strong>: the new value of the segment register. If the value is<div class="epy_nested">
+unknown, you should specify
+BADSEL . (C++: sel_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">tag</strong>: the register info tag. see
+Segment register range tags<div class="epy_nested">
+(C++: uchar)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">silent</strong>: if false, display a warning() in the case of failure<div class="epy_nested">
+(C++: bool)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_segregs.sreg_range_t"><code class="flex name class">
+<span>class <span class="ident">sreg_range_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ sreg_range_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; sreg_range_t</strong></div></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_segregs.sreg_range_t.tag"><code class="name">var <span class="ident">tag</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">sreg_range_t_tag_get(self) -&gt; uchar</strong></div></div>
+</dd>
+<dt id="ida_segregs.sreg_range_t.val"><code class="name">var <span class="ident">val</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">sreg_range_t_val_get(self) -&gt; sel_t</strong></div></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></b></code>:
+<ul class="hlist">
+<li><code><a title="ida_range.range_t.clear" href="ida_range.html#ida_range.range_t.clear">clear</a></code></li>
+<li><code><a title="ida_range.range_t.compare" href="ida_range.html#ida_range.range_t.compare">compare</a></code></li>
+<li><code><a title="ida_range.range_t.contains" href="ida_range.html#ida_range.range_t.contains">contains</a></code></li>
+<li><code><a title="ida_range.range_t.empty" href="ida_range.html#ida_range.range_t.empty">empty</a></code></li>
+<li><code><a title="ida_range.range_t.end_ea" href="ida_range.html#ida_range.range_t.end_ea">end_ea</a></code></li>
+<li><code><a title="ida_range.range_t.extend" href="ida_range.html#ida_range.range_t.extend">extend</a></code></li>
+<li><code><a title="ida_range.range_t.intersect" href="ida_range.html#ida_range.range_t.intersect">intersect</a></code></li>
+<li><code><a title="ida_range.range_t.overlaps" href="ida_range.html#ida_range.range_t.overlaps">overlaps</a></code></li>
+<li><code><a title="ida_range.range_t.size" href="ida_range.html#ida_range.range_t.size">size</a></code></li>
+<li><code><a title="ida_range.range_t.start_ea" href="ida_range.html#ida_range.range_t.start_ea">start_ea</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+</main>
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</body>
+</html>

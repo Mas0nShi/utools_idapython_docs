@@ -1,0 +1,2163 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+<meta name="generator" content="pdoc ???"/>
+<title>ida_segment API documentation</title>
+<meta name="description" content="IDA Plugin SDK API wrapper: segment"/>
+<link rel="preload stylesheet" as="style" href="assets/sanitize.min.css"/>
+<link rel="preload stylesheet" as="style" href="assets/typography.min.css"/>
+<link rel="stylesheet preload" as="style" href="assets/github.min.css"/>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar &amp;gt; *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl &amp;gt; dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:-webkit-fill-available}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name &amp;gt; span:first-child{white-space:nowrap}.name.class &amp;gt; span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary &amp;gt; *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content: ',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width: 700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content padding:3em 4em;border-left:1px solid #ddd;lid #ddd;}pre code{font-size:1em}.item .name{font-size:1em}main{/* display:flex; *//* flex-direction:row-reverse; *//* justify-content:flex-end; */}.toc ul ul,#index ul{padding-left:1.5em}.toc &gt; ul &gt; li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="defer" src="assets/highlight.min.js"/>
+<script>window.addEventListener('DOMContentLoaded', () =&gt; hljs.initHighlighting())</script>
+<style>
+#section-intro .epy_par
+{
+margin-top: 18px;
+}
+</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ida_segment</code></h1>
+</header>
+<section id="section-intro">
+<div class="epy_par">
+IDA Plugin SDK API wrapper: segment</div>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-variables">Global variables</h2>
+<dl>
+<dt id="ida_segment.ADDSEG_FILLGAP"><code class="name">var <span class="ident">ADDSEG_FILLGAP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+fill gap between new segment and previous one. i.e. if such a gap
+exists, and this gap is less than 64K, then fill the gap by extending
+the previous segment and adding .align directive to it. This way we
+avoid gaps between segments. too many gaps lead to a virtual array
+failure. it cannot hold more than ~1000 gaps.</div></div>
+</dd>
+<dt id="ida_segment.ADDSEG_IDBENC"><code class="name">var <span class="ident">ADDSEG_IDBENC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'name' and 'sclass' are given in the IDB encoding; non-ASCII bytes
+will be decoded accordingly</div></div>
+</dd>
+<dt id="ida_segment.ADDSEG_NOAA"><code class="name">var <span class="ident">ADDSEG_NOAA</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+do not mark new segment for auto-analysis</div></div>
+</dd>
+<dt id="ida_segment.ADDSEG_NOSREG"><code class="name">var <span class="ident">ADDSEG_NOSREG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+set all default segment register values to 'BADSEL' (undefine all
+default segment registers)</div></div>
+</dd>
+<dt id="ida_segment.ADDSEG_NOTRUNC"><code class="name">var <span class="ident">ADDSEG_NOTRUNC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+don't truncate the new segment at the beginning of the next segment if
+they overlap. destroy/truncate old segments instead.</div></div>
+</dd>
+<dt id="ida_segment.ADDSEG_OR_DIE"><code class="name">var <span class="ident">ADDSEG_OR_DIE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+'qexit()' if can't add a segment</div></div>
+</dd>
+<dt id="ida_segment.ADDSEG_QUIET"><code class="name">var <span class="ident">ADDSEG_QUIET</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+silent mode, no "Adding segment..." in the messages window</div></div>
+</dd>
+<dt id="ida_segment.ADDSEG_SPARSE"><code class="name">var <span class="ident">ADDSEG_SPARSE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+use sparse storage method for the new ranges of the created segment.
+please note that the ranges that were already enabled before creating
+the segment will not change their storage type.</div></div>
+</dd>
+<dt id="ida_segment.CSS_BREAK"><code class="name">var <span class="ident">CSS_BREAK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+memory reading process stopped by user</div></div>
+</dd>
+<dt id="ida_segment.CSS_NODBG"><code class="name">var <span class="ident">CSS_NODBG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+debugger is not running</div></div>
+</dd>
+<dt id="ida_segment.CSS_NOMEM"><code class="name">var <span class="ident">CSS_NOMEM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+not enough memory (might be because the segment is too big)</div></div>
+</dd>
+<dt id="ida_segment.CSS_NORANGE"><code class="name">var <span class="ident">CSS_NORANGE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+could not find corresponding memory range</div></div>
+</dd>
+<dt id="ida_segment.CSS_OK"><code class="name">var <span class="ident">CSS_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+ok</div></div>
+</dd>
+<dt id="ida_segment.MAX_GROUPS"><code class="name">var <span class="ident">MAX_GROUPS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+max number of segment groups</div></div>
+</dd>
+<dt id="ida_segment.MAX_SEGM_TRANSLATIONS"><code class="name">var <span class="ident">MAX_SEGM_TRANSLATIONS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+max number of segment translations</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_CHUNK"><code class="name">var <span class="ident">MOVE_SEGM_CHUNK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Too many chunks are defined, can't move.</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_DEBUG"><code class="name">var <span class="ident">MOVE_SEGM_DEBUG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Debugger segments cannot be moved.</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_IDP"><code class="name">var <span class="ident">MOVE_SEGM_IDP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+IDP module forbids moving the segment.</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_LOADER"><code class="name">var <span class="ident">MOVE_SEGM_LOADER</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+The segment has been moved but the loader complained.</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_ODD"><code class="name">var <span class="ident">MOVE_SEGM_ODD</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Cannot move segments by an odd number of bytes.</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_OK"><code class="name">var <span class="ident">MOVE_SEGM_OK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+all ok</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_ORPHAN"><code class="name">var <span class="ident">MOVE_SEGM_ORPHAN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Orphan bytes hinder segment movement.</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_PARAM"><code class="name">var <span class="ident">MOVE_SEGM_PARAM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+The specified segment does not exist.</div></div>
+</dd>
+<dt id="ida_segment.MOVE_SEGM_ROOM"><code class="name">var <span class="ident">MOVE_SEGM_ROOM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Not enough free room at the target address.</div></div>
+</dd>
+<dt id="ida_segment.MSF_FIXONCE"><code class="name">var <span class="ident">MSF_FIXONCE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+call loader only once with the special calling method. valid for
+'rebase_program()' . see 'loader_t::move_segm' .</div></div>
+</dd>
+<dt id="ida_segment.MSF_LDKEEP"><code class="name">var <span class="ident">MSF_LDKEEP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+keep the loader in the memory (optimization)</div></div>
+</dd>
+<dt id="ida_segment.MSF_NETNODES"><code class="name">var <span class="ident">MSF_NETNODES</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+move netnodes instead of changing inf.netdelta (this is slower) valid
+for 'rebase_program()'</div></div>
+</dd>
+<dt id="ida_segment.MSF_NOFIX"><code class="name">var <span class="ident">MSF_NOFIX</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+don't call the loader to fix relocations</div></div>
+</dd>
+<dt id="ida_segment.MSF_PRIORITY"><code class="name">var <span class="ident">MSF_PRIORITY</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+loader segments will overwrite any existing debugger segments when
+moved. valid for 'move_segm()'</div></div>
+</dd>
+<dt id="ida_segment.MSF_SILENT"><code class="name">var <span class="ident">MSF_SILENT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+don't display a "please wait" box on the screen</div></div>
+</dd>
+<dt id="ida_segment.SEGMOD_KEEP"><code class="name">var <span class="ident">SEGMOD_KEEP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+keep information (code &amp; data, etc)</div></div>
+</dd>
+<dt id="ida_segment.SEGMOD_KEEP0"><code class="name">var <span class="ident">SEGMOD_KEEP0</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+flag for internal use, don't set</div></div>
+</dd>
+<dt id="ida_segment.SEGMOD_KEEPSEL"><code class="name">var <span class="ident">SEGMOD_KEEPSEL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+do not try to delete unused selector</div></div>
+</dd>
+<dt id="ida_segment.SEGMOD_KILL"><code class="name">var <span class="ident">SEGMOD_KILL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+disable addresses if segment gets shrinked or deleted</div></div>
+</dd>
+<dt id="ida_segment.SEGMOD_NOMOVE"><code class="name">var <span class="ident">SEGMOD_NOMOVE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+don't move info from the start of segment to the new start address
+(for 'set_segm_start()' )</div></div>
+</dd>
+<dt id="ida_segment.SEGMOD_SILENT"><code class="name">var <span class="ident">SEGMOD_SILENT</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+be silent</div></div>
+</dd>
+<dt id="ida_segment.SEGMOD_SPARSE"><code class="name">var <span class="ident">SEGMOD_SPARSE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+use sparse storage if extending the segment (for 'set_segm_start()' ,
+'set_segm_end()' )</div></div>
+</dd>
+<dt id="ida_segment.SEGPERM_EXEC"><code class="name">var <span class="ident">SEGPERM_EXEC</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Execute.</div></div>
+</dd>
+<dt id="ida_segment.SEGPERM_MAXVAL"><code class="name">var <span class="ident">SEGPERM_MAXVAL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SEGPERM_MAXVAL = 7</div></div>
+</dd>
+<dt id="ida_segment.SEGPERM_READ"><code class="name">var <span class="ident">SEGPERM_READ</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Read.</div></div>
+</dd>
+<dt id="ida_segment.SEGPERM_WRITE"><code class="name">var <span class="ident">SEGPERM_WRITE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Write.</div></div>
+</dd>
+<dt id="ida_segment.SEG_ABSSYM"><code class="name">var <span class="ident">SEG_ABSSYM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+segment with definitions of absolute symbols</div></div>
+</dd>
+<dt id="ida_segment.SEG_BSS"><code class="name">var <span class="ident">SEG_BSS</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+uninitialized segment</div></div>
+</dd>
+<dt id="ida_segment.SEG_CODE"><code class="name">var <span class="ident">SEG_CODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+code segment</div></div>
+</dd>
+<dt id="ida_segment.SEG_COMM"><code class="name">var <span class="ident">SEG_COMM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+segment with communal definitions</div></div>
+</dd>
+<dt id="ida_segment.SEG_DATA"><code class="name">var <span class="ident">SEG_DATA</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+data segment</div></div>
+</dd>
+<dt id="ida_segment.SEG_GRP"><code class="name">var <span class="ident">SEG_GRP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+group of segments</div></div>
+</dd>
+<dt id="ida_segment.SEG_IMEM"><code class="name">var <span class="ident">SEG_IMEM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+internal processor memory &amp; sfr (8051)</div></div>
+</dd>
+<dt id="ida_segment.SEG_IMP"><code class="name">var <span class="ident">SEG_IMP</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+java: implementation segment</div></div>
+</dd>
+<dt id="ida_segment.SEG_MAX_BITNESS_CODE"><code class="name">var <span class="ident">SEG_MAX_BITNESS_CODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SEG_MAX_BITNESS_CODE = 2</div></div>
+</dd>
+<dt id="ida_segment.SEG_MAX_SEGTYPE_CODE"><code class="name">var <span class="ident">SEG_MAX_SEGTYPE_CODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+SEG_MAX_SEGTYPE_CODE = 12</div></div>
+</dd>
+<dt id="ida_segment.SEG_NORM"><code class="name">var <span class="ident">SEG_NORM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+unknown type, no assumptions</div></div>
+</dd>
+<dt id="ida_segment.SEG_NULL"><code class="name">var <span class="ident">SEG_NULL</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+zero-length segment</div></div>
+</dd>
+<dt id="ida_segment.SEG_UNDF"><code class="name">var <span class="ident">SEG_UNDF</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+undefined segment type (not used)</div></div>
+</dd>
+<dt id="ida_segment.SEG_XTRN"><code class="name">var <span class="ident">SEG_XTRN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+segment with 'extern' definitions. no instructions are allowed</div></div>
+</dd>
+<dt id="ida_segment.SFL_COMORG"><code class="name">var <span class="ident">SFL_COMORG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+IDP dependent field (IBM PC: if set, ORG directive is not commented
+out)</div></div>
+</dd>
+<dt id="ida_segment.SFL_DEBUG"><code class="name">var <span class="ident">SFL_DEBUG</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the segment created for the debugger?. Such segments are temporary
+and do not have permanent flags.</div></div>
+</dd>
+<dt id="ida_segment.SFL_HEADER"><code class="name">var <span class="ident">SFL_HEADER</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Header segment (do not create offsets to it in the disassembly)</div></div>
+</dd>
+<dt id="ida_segment.SFL_HIDDEN"><code class="name">var <span class="ident">SFL_HIDDEN</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the segment hidden?</div></div>
+</dd>
+<dt id="ida_segment.SFL_HIDETYPE"><code class="name">var <span class="ident">SFL_HIDETYPE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Hide segment type (do not print it in the listing)</div></div>
+</dd>
+<dt id="ida_segment.SFL_LOADER"><code class="name">var <span class="ident">SFL_LOADER</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the segment created by the loader?</div></div>
+</dd>
+<dt id="ida_segment.SFL_OBOK"><code class="name">var <span class="ident">SFL_OBOK</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Orgbase is present? (IDP dependent field)</div></div>
+</dd>
+<dt id="ida_segment.SREG_NUM"><code class="name">var <span class="ident">SREG_NUM</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Maximum number of segment registers is 16 (see 'segregs.hpp' )</div></div>
+</dd>
+<dt id="ida_segment.saAbs"><code class="name">var <span class="ident">saAbs</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Absolute segment.</div></div>
+</dd>
+<dt id="ida_segment.saGroup"><code class="name">var <span class="ident">saGroup</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Segment group.</div></div>
+</dd>
+<dt id="ida_segment.saRel1024Bytes"><code class="name">var <span class="ident">saRel1024Bytes</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+1024 bytes</div></div>
+</dd>
+<dt id="ida_segment.saRel128Bytes"><code class="name">var <span class="ident">saRel128Bytes</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+128 bytes</div></div>
+</dd>
+<dt id="ida_segment.saRel2048Bytes"><code class="name">var <span class="ident">saRel2048Bytes</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+2048 bytes</div></div>
+</dd>
+<dt id="ida_segment.saRel32Bytes"><code class="name">var <span class="ident">saRel32Bytes</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+32 bytes</div></div>
+</dd>
+<dt id="ida_segment.saRel4K"><code class="name">var <span class="ident">saRel4K</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+This value is used by the PharLap OMF for page (4K) alignment. It is
+not supported by LINK.</div></div>
+</dd>
+<dt id="ida_segment.saRel512Bytes"><code class="name">var <span class="ident">saRel512Bytes</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+512 bytes</div></div>
+</dd>
+<dt id="ida_segment.saRel64Bytes"><code class="name">var <span class="ident">saRel64Bytes</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+64 bytes</div></div>
+</dd>
+<dt id="ida_segment.saRelByte"><code class="name">var <span class="ident">saRelByte</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Relocatable, byte aligned.</div></div>
+</dd>
+<dt id="ida_segment.saRelDble"><code class="name">var <span class="ident">saRelDble</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Relocatable, aligned on a double word (4-byte) boundary.</div></div>
+</dd>
+<dt id="ida_segment.saRelPage"><code class="name">var <span class="ident">saRelPage</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Relocatable, aligned on 256-byte boundary.</div></div>
+</dd>
+<dt id="ida_segment.saRelPara"><code class="name">var <span class="ident">saRelPara</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Relocatable, paragraph (16-byte) aligned.</div></div>
+</dd>
+<dt id="ida_segment.saRelQword"><code class="name">var <span class="ident">saRelQword</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+8 bytes</div></div>
+</dd>
+<dt id="ida_segment.saRelWord"><code class="name">var <span class="ident">saRelWord</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Relocatable, word (2-byte) aligned.</div></div>
+</dd>
+<dt id="ida_segment.saRel_MAX_ALIGN_CODE"><code class="name">var <span class="ident">saRel_MAX_ALIGN_CODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+saRel_MAX_ALIGN_CODE = 14</div></div>
+</dd>
+<dt id="ida_segment.scCommon"><code class="name">var <span class="ident">scCommon</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Common. Combine by overlay using maximum size.</div></div>
+</dd>
+<dt id="ida_segment.scGroup"><code class="name">var <span class="ident">scGroup</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Segment group.</div></div>
+</dd>
+<dt id="ida_segment.scPriv"><code class="name">var <span class="ident">scPriv</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Private. Do not combine with any other program segment.</div></div>
+</dd>
+<dt id="ida_segment.scPub"><code class="name">var <span class="ident">scPub</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Public. Combine by appending at an offset that meets the alignment
+requirement.</div></div>
+</dd>
+<dt id="ida_segment.scPub2"><code class="name">var <span class="ident">scPub2</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+As defined by Microsoft, same as C=2 (public).</div></div>
+</dd>
+<dt id="ida_segment.scPub3"><code class="name">var <span class="ident">scPub3</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+As defined by Microsoft, same as C=2 (public).</div></div>
+</dd>
+<dt id="ida_segment.scStack"><code class="name">var <span class="ident">scStack</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Stack. Combine as for C=2. This combine type forces byte alignment.</div></div>
+</dd>
+<dt id="ida_segment.sc_MAX_COMB_CODE"><code class="name">var <span class="ident">sc_MAX_COMB_CODE</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+sc_MAX_COMB_CODE = 7</div></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ida_segment.add_segm"><code class="name flex">
+<span>def <span class="ident">add_segm</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add a new segment, second form. Segment alignment is set to
+'saRelByte' . Segment combination is "public" or "stack" (if segment
+class is "STACK"). Addressing mode of segment is taken as default
+(16bit or 32bit). Default segment registers are set to 'BADSEL' . If a
+segment already exists at the specified range of addresses, this
+segment will be truncated. Instructions and data in the old segment
+will be deleted if the new segment has another addressing mode or
+another segment base address.</div>
+<div class="epy_par">
+<strong class="epy_sig">add_segm(para, start, end, name, sclass, flags=0) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">para</strong>: segment base paragraph. if paragraph can't fit in 16bit,<div class="epy_nested">
+then a new selector is allocated and mapped to the
+paragraph. (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">start</strong>: start address of the segment. if start== BADADDR
+then<div class="epy_nested">
+start 
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">end</strong>: end address of the segment. end address should be higher<div class="epy_nested">
+than start address. For emulate empty segments, use
+SEG_NULL
+segment type. If the end address is lower than
+start address, then fail. If end== BADADDR , then a
+segment up to the next segment will be created (if the
+next segment doesn't exist, then 1 byte segment will be
+created). If 'end' is too high and the new segment would
+overlap the next segment, 'end' is adjusted properly.
+(C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">name</strong>: name of new segment. may be NULL (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sclass</strong>: class of the segment. may be NULL. type of the new<div class="epy_nested">
+segment is modified if class is one of predefined
+names:
+"CODE" -&gt;
+SEG_CODE
+"DATA" -&gt;
+SEG_DATA
+"CONST" -&gt;
+SEG_DATA
+"STACK" -&gt;
+SEG_BSS
+"BSS" -&gt;
+SEG_BSS
+"XTRN" -&gt;
+SEG_XTRN
+"COMM" -&gt;
+SEG_COMM
+"ABS" -&gt;
+SEG_ABSSYM (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong> (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failed, a warning message is displayed</div>
+</div></div>
+
+<dt id="ida_segment.add_segm_ex"><code class="name flex">
+<span>def <span class="ident">add_segm_ex</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add a new segment. If a segment already exists at the specified range
+of addresses, this segment will be truncated. Instructions and data in
+the old segment will be deleted if the new segment has another
+addressing mode or another segment base address.</div>
+<div class="epy_par">
+<strong class="epy_sig">add_segm_ex(s, name, sclass, flags) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to filled segment structure. segment<div class="epy_nested">
+selector should have proper mapping (see
+set_selector() ).
+if s.start_ea== BADADDR
+then
+s.start_ea 
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">name</strong>: name of new segment. may be NULL. if specified, the<div class="epy_nested">
+segment is immediately renamed (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sclass</strong>: class of the segment. may be NULL. if specified, the<div class="epy_nested">
+segment class is immediately changed (C++: const char
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Add segment flags (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failed, a warning message is displayed</div>
+</div></div>
+
+<dt id="ida_segment.add_segment_translation"><code class="name flex">
+<span>def <span class="ident">add_segment_translation</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Add segment translation.</div>
+<div class="epy_par">
+<strong class="epy_sig">add_segment_translation(segstart, mappedseg) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">segstart</strong>: start address of the segment to add translation to<div class="epy_nested">
+(C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mappedseg</strong>: start address of the overlayed segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - too many translations or bad segstart</div>
+</div></div>
+</dd>
+<dt id="ida_segment.allocate_selector"><code class="name flex">
+<span>def <span class="ident">allocate_selector</span></span>(<span>*args) &#8209;&gt;&#160;sel_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Allocate a selector for a segment unconditionally. You must call this
+function before calling 'add_segm_ex()' . 'add_segm()' calls this
+function itself, so you don't need to allocate a selector. This
+function will allocate a new free selector and setup its mapping using
+'find_free_selector()' and 'set_selector()' functions.</div>
+<div class="epy_par">
+<strong class="epy_sig">allocate_selector(segbase) -&gt; sel_t</strong><div class="epy_nested">
+<strong class="epy_parameter">segbase</strong>: a new segment base paragraph (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the allocated selector number</div>
+</div></div>
+</dd>
+<dt id="ida_segment.change_segment_status"><code class="name flex">
+<span>def <span class="ident">change_segment_status</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Convert a debugger segment to a regular segment and vice versa. When
+converting debug-&gt;regular, the memory contents will be copied to the
+database.</div>
+<div class="epy_par">
+<strong class="epy_sig">change_segment_status(s, is_deb_segm) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: segment to modify (C++: segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">is_deb_segm</strong>: new status of the segment (C++: bool)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Change segment status result codes</div>
+</div></div>
+</dd>
+<dt id="ida_segment.del_segm"><code class="name flex">
+<span>def <span class="ident">del_segm</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete a segment.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_segm(ea, flags) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address belonging to the segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Segment modification flags (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failed, no segment at 'ea'.</div>
+</div></div>
+</dd>
+<dt id="ida_segment.del_segment_translations"><code class="name flex">
+<span>def <span class="ident">del_segment_translations</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete the translation list</div>
+<div class="epy_par">
+<strong class="epy_sig">del_segment_translations(segstart)</strong><div class="epy_nested">
+<strong class="epy_parameter">segstart</strong>: start address of the segment to delete translation<div class="epy_nested">
+list (C++: ea_t)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segment.del_selector"><code class="name flex">
+<span>def <span class="ident">del_selector</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Delete mapping of a selector. Be wary of deleting selectors that are
+being used in the program, this can make a mess in the segments.</div>
+<div class="epy_par">
+<strong class="epy_sig">del_selector(selector)</strong><div class="epy_nested">
+<strong class="epy_parameter">selector</strong>: number of selector to remove from the translation<div class="epy_nested">
+table (C++: sel_t)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segment.find_free_selector"><code class="name flex">
+<span>def <span class="ident">find_free_selector</span></span>(<span>*args) &#8209;&gt;&#160;sel_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find first unused selector.</div></div>
+</dd>
+<dt id="ida_segment.find_selector"><code class="name flex">
+<span>def <span class="ident">find_selector</span></span>(<span>*args) &#8209;&gt;&#160;sel_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Find a selector that has mapping to the specified paragraph.</div>
+<div class="epy_par">
+<strong class="epy_sig">find_selector(base) -&gt; sel_t</strong><div class="epy_nested">
+<strong class="epy_parameter">base</strong>: paragraph to search in the translation table (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: selector value or base</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_defsr"><code class="name flex">
+<span>def <span class="ident">get_defsr</span></span>(<span>*args) &#8209;&gt;&#160;sel_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">get_defsr(s, reg) -&gt; sel_t</strong><div class="epy_nested">
+s: segment_t *
+reg: int</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_first_seg"><code class="name flex">
+<span>def <span class="ident">get_first_seg</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to the first segment.</div></div>
+</dd>
+<dt id="ida_segment.get_group_selector"><code class="name flex">
+<span>def <span class="ident">get_group_selector</span></span>(<span>*args) &#8209;&gt;&#160;sel_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get common selector for a group of segments.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_group_selector(grpsel) -&gt; sel_t</strong><div class="epy_nested">
+<strong class="epy_parameter">grpsel</strong>: selector of group segment (C++: sel_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: common selector of the group or 'grpsel' if no such group is<div class="epy_nested">
+found</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_last_seg"><code class="name flex">
+<span>def <span class="ident">get_last_seg</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to the last segment.</div></div>
+</dd>
+<dt id="ida_segment.get_next_seg"><code class="name flex">
+<span>def <span class="ident">get_next_seg</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to the next segment.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_next_seg(ea) -&gt; segment_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_prev_seg"><code class="name flex">
+<span>def <span class="ident">get_prev_seg</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to the previous segment.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_prev_seg(ea) -&gt; segment_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segm_base"><code class="name flex">
+<span>def <span class="ident">get_segm_base</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment base linear address. Segment base linear address is used
+to calculate virtual addresses. The virtual address of the first byte
+of the segment will be (start address of segment - segment base linear
+address)</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segm_base(s) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: 0 if s == NULL, otherwise segment base linear address</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segm_by_name"><code class="name flex">
+<span>def <span class="ident">get_segm_by_name</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to segment by its name. If there are several segments with
+the same name, returns the first of them.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segm_by_name(name) -&gt; segment_t</strong><div class="epy_nested">
+<strong class="epy_parameter">name</strong>: segment name. may be NULL. (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: NULL or pointer to segment structure</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segm_by_sel"><code class="name flex">
+<span>def <span class="ident">get_segm_by_sel</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to segment structure. This function finds a segment by its
+selector. If there are several segments with the same selectors, the
+last one will be returned.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segm_by_sel(selector) -&gt; segment_t</strong><div class="epy_nested">
+<strong class="epy_parameter">selector</strong>: a segment with the specified selector will be<div class="epy_nested">
+returned (C++: sel_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: pointer to segment or NULL</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segm_class"><code class="name flex">
+<span>def <span class="ident">get_segm_class</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment class. Segment class is arbitrary text (max 8 characters).</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segm_class(s) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: size of segment class (-1 if s==NULL or bufsize&lt;=0)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segm_name"><code class="name flex">
+<span>def <span class="ident">get_segm_name</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get true segment name by pointer to segment.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segm_name(s, flags=0) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: 0-return name as is; 1-substitute bad symbols with _ 1<div class="epy_nested">
+corresponds to GN_VISIBLE (C++: int)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: size of segment name (-1 if s==NULL)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segm_num"><code class="name flex">
+<span>def <span class="ident">get_segm_num</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of segment by address.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segm_num(ea) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address belonging to the segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: -1 if no segment occupies the specified address. otherwise<div class="epy_nested">
+returns number of the specified segment (0.. get_segm_qty()
+-1)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segm_para"><code class="name flex">
+<span>def <span class="ident">get_segm_para</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment base paragraph. Segment base paragraph may be converted to
+segment base linear address using 'to_ea()' function. In fact,
+to_ea(get_segm_para(s), 0) == get_segm_base(s).</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segm_para(s) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: 0 if s == NULL, the segment base paragraph</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segm_qty"><code class="name flex">
+<span>def <span class="ident">get_segm_qty</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of segments.</div></div>
+</dd>
+<dt id="ida_segment.get_segment_alignment"><code class="name flex">
+<span>def <span class="ident">get_segment_alignment</span></span>(<span>*args) &#8209;&gt;&#160;char&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get text representation of segment alignment code.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segment_alignment(align) -&gt; char const *</strong><div class="epy_nested">
+<strong class="epy_parameter">align</strong> (C++: uchar)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: text digestable by IBM PC assembler.</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segment_cmt"><code class="name flex">
+<span>def <span class="ident">get_segment_cmt</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment comment.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segment_cmt(s, repeatable) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment structure (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">repeatable</strong>: 0: get regular comment. 1: get repeatable comment.<div class="epy_nested">
+(C++: bool)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: size of comment or -1</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segment_combination"><code class="name flex">
+<span>def <span class="ident">get_segment_combination</span></span>(<span>*args) &#8209;&gt;&#160;char&#160;const&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get text representation of segment combination code.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segment_combination(comb) -&gt; char const *</strong><div class="epy_nested">
+<strong class="epy_parameter">comb</strong> (C++: uchar)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: text digestable by IBM PC assembler.</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_segment_translations"><code class="name flex">
+<span>def <span class="ident">get_segment_translations</span></span>(<span>*args) &#8209;&gt;&#160;ssize_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment translation list.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_segment_translations(transmap, segstart) -&gt; ssize_t</strong><div class="epy_nested">
+<strong class="epy_parameter">transmap</strong>: vector of segment start addresses for the translation<div class="epy_nested">
+list (C++: eavec_t
+*)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">segstart</strong>: start address of the segment to get information about<div class="epy_nested">
+(C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: -1 if no translation list or bad segstart. otherwise returns<div class="epy_nested">
+size of translation list.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segment.get_selector_qty"><code class="name flex">
+<span>def <span class="ident">get_selector_qty</span></span>(<span>*args) &#8209;&gt;&#160;size_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of defined selectors.</div></div>
+</dd>
+<dt id="ida_segment.get_visible_segm_name"><code class="name flex">
+<span>def <span class="ident">get_visible_segm_name</span></span>(<span>*args) &#8209;&gt;&#160;qstring&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment name by pointer to segment.</div>
+<div class="epy_par">
+<strong class="epy_sig">get_visible_segm_name(s) -&gt; str</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: size of segment name (-1 if s==NULL)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.getn_selector"><code class="name flex">
+<span>def <span class="ident">getn_selector</span></span>(<span>*args) &#8209;&gt;&#160;sel_t&#160;*,&#160;ea_t&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get description of selector (0.. 'get_selector_qty()' -1)</div>
+<div class="epy_par">
+<strong class="epy_sig">getn_selector(n) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">n</strong> (C++: int)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.getnseg"><code class="name flex">
+<span>def <span class="ident">getnseg</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to segment by its number.Obsoleted because it can slow
+down the debugger (it has to refresh the whole memory segmentation to
+calculate the correct answer)</div>
+<div class="epy_par">
+<strong class="epy_sig">getnseg(n) -&gt; segment_t</strong><div class="epy_nested">
+<strong class="epy_parameter">n</strong>: segment number in the range (0.. get_segm_qty() -1) (C++:<div class="epy_nested">
+int)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: NULL or pointer to segment structure</div>
+</div></div>
+</dd>
+<dt id="ida_segment.getseg"><code class="name flex">
+<span>def <span class="ident">getseg</span></span>(<span>*args) &#8209;&gt;&#160;<a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a>&#160;*</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get pointer to segment by linear address.</div>
+<div class="epy_par">
+<strong class="epy_sig">getseg(ea) -&gt; segment_t</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address belonging to the segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: NULL or pointer to segment structure</div>
+</div></div>
+</dd>
+<dt id="ida_segment.is_finally_visible_segm"><code class="name flex">
+<span>def <span class="ident">is_finally_visible_segm</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+See 'SFL_HIDDEN' , 'SCF_SHHID_SEGM' .</div>
+<div class="epy_par">
+<strong class="epy_sig">is_finally_visible_segm(s) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong> (C++: segment_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.is_miniidb"><code class="name flex">
+<span>def <span class="ident">is_miniidb</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is the database a miniidb created by the debugger?.</div></div>
+</dd>
+<dt id="ida_segment.is_segm_locked"><code class="name flex">
+<span>def <span class="ident">is_segm_locked</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a segment pointer locked?</div>
+<div class="epy_par">
+<strong class="epy_sig">is_segm_locked(segm) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">segm</strong> (C++: const
+segment_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.is_spec_ea"><code class="name flex">
+<span>def <span class="ident">is_spec_ea</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Does the address belong to a segment with a special type?. (
+'SEG_XTRN' , 'SEG_GRP' , 'SEG_ABSSYM' , 'SEG_COMM' )</div>
+<div class="epy_par">
+<strong class="epy_sig">is_spec_ea(ea) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: linear address (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.is_spec_segm"><code class="name flex">
+<span>def <span class="ident">is_spec_segm</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Has segment a special type?. ( 'SEG_XTRN' , 'SEG_GRP' , 'SEG_ABSSYM' ,
+'SEG_COMM' )</div>
+<div class="epy_par">
+<strong class="epy_sig">is_spec_segm(seg_type) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">seg_type</strong> (C++: uchar)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.is_visible_segm"><code class="name flex">
+<span>def <span class="ident">is_visible_segm</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+See 'SFL_HIDDEN' .</div>
+<div class="epy_par">
+<strong class="epy_sig">is_visible_segm(s) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong> (C++: segment_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.lock_segm"><code class="name flex">
+<span>def <span class="ident">lock_segm</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Lock segment pointer Locked pointers are guaranteed to remain valid
+until they are unlocked. Ranges with locked pointers cannot be deleted
+or moved.</div>
+<div class="epy_par">
+<strong class="epy_sig">lock_segm(segm, lock)</strong><div class="epy_nested">
+<strong class="epy_parameter">segm</strong> (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">lock</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.move_segm"><code class="name flex">
+<span>def <span class="ident">move_segm</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Move a segment to a new address. This function moves all information
+to the new address. It fixes up address sensitive information in the
+kernel. The total effect is equal to reloading the segment to the
+target address. For the file format dependent address sensitive
+information, 'loader_t::move_segm' is called. Also IDB notification
+event 'idb_event::segm_moved' is called.</div>
+<div class="epy_par">
+<strong class="epy_sig">move_segm(s, to, flags=0) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: segment to move (C++: segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">to</strong>: new segment start address (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Move segment flags (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Move segment result codes</div>
+</div></div>
+</dd>
+<dt id="ida_segment.move_segm_start"><code class="name flex">
+<span>def <span class="ident">move_segm_start</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Move segment start. The main difference between this function and
+'set_segm_start()' is that this function may expand the previous
+segment while 'set_segm_start()' never does it. So, this function
+allows to change bounds of two segments simultaneously. If the
+previous segment and the specified segment have the same addressing
+mode and segment base, then instructions and data are not destroyed -
+they simply move from one segment to another. Otherwise all
+instructions/data which migrate from one segment to another are
+destroyed.this function never disables addresses.</div>
+<div class="epy_par">
+<strong class="epy_sig">move_segm_start(ea, newstart, mode) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address belonging to the segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">newstart</strong>: new start address of the segment note that segment<div class="epy_nested">
+start address should be higher than segment base
+linear address. (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">mode</strong>: policy for destroying defined items
+0: if it is<div class="epy_nested">
+necessary to destroy defined items, display a dialog box
+and ask confirmation
+1: if it is necessary to destroy
+defined items, just destroy them without asking the user
+-1: if it is necessary to destroy defined items, don't
+destroy them (i.e. function will fail)
+-2: don't
+destroy defined items (function will succeed) (C++: int)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failed, a warning message is displayed</div>
+</div></div>
+</dd>
+<dt id="ida_segment.rebase_program"><code class="name flex">
+<span>def <span class="ident">rebase_program</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Rebase the whole program by 'delta' bytes.</div>
+<div class="epy_par">
+<strong class="epy_sig">rebase_program(delta, flags) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">delta</strong>: number of bytes to move the program (C++: adiff_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Move segment flags
+it is recommended to use<div class="epy_nested">
+MSF_FIXONCE
+so that the loader takes care of global
+variables it stored in the database (C++: int)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Move segment result codes</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segm_adjust_diff"><code class="name flex">
+<span>def <span class="ident">segm_adjust_diff</span></span>(<span>*args) &#8209;&gt;&#160;adiff_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Truncate and sign extend a delta depending on the segment.</div>
+<div class="epy_par">
+<strong class="epy_sig">segm_adjust_diff(s, delta) -&gt; adiff_t</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong> (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">delta</strong> (C++: adiff_t)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segm_adjust_ea"><code class="name flex">
+<span>def <span class="ident">segm_adjust_ea</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Truncate an address depending on the segment.</div>
+<div class="epy_par">
+<strong class="epy_sig">segm_adjust_ea(s, ea) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong> (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">ea</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segtype"><code class="name flex">
+<span>def <span class="ident">segtype</span></span>(<span>*args) &#8209;&gt;&#160;uchar</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get segment type.</div>
+<div class="epy_par">
+<strong class="epy_sig">segtype(ea) -&gt; uchar</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any linear address within the segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: Segment types ,
+SEG_UNDF
+if no segment found at 'ea'</div>
+</div></div>
+</dd>
+<dt id="ida_segment.sel2ea"><code class="name flex">
+<span>def <span class="ident">sel2ea</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get mapping of a selector as a linear address.</div>
+<div class="epy_par">
+<strong class="epy_sig">sel2ea(selector) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">selector</strong>: number of selector to translate to linear address<div class="epy_nested">
+(C++: sel_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: linear address the specified selector is mapped to. if there<div class="epy_nested">
+is no mapping, returns to_ea(selector,0);</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segment.sel2para"><code class="name flex">
+<span>def <span class="ident">sel2para</span></span>(<span>*args) &#8209;&gt;&#160;ea_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get mapping of a selector.</div>
+<div class="epy_par">
+<strong class="epy_sig">sel2para(selector) -&gt; ea_t</strong><div class="epy_nested">
+<strong class="epy_parameter">selector</strong>: number of selector to translate (C++: sel_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: paragraph the specified selector is mapped to. if there is no<div class="epy_nested">
+mapping, returns 'selector'.</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_defsr"><code class="name flex">
+<span>def <span class="ident">set_defsr</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_defsr(s, reg, value)</strong><div class="epy_nested">
+s: segment_t *
+reg: int
+value: sel_t</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_group_selector"><code class="name flex">
+<span>def <span class="ident">set_group_selector</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Create a new group of segments (used OMF files).</div>
+<div class="epy_par">
+<strong class="epy_sig">set_group_selector(grp, sel) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">grp</strong>: selector of group segment (segment type is
+SEG_GRP ) You<div class="epy_nested">
+should create an 'empty' (1 byte) group segment It won't
+contain anything and will be used to redirect references
+to the group of segments to the common selector. (C++:
+sel_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sel</strong>: common selector of all segments belonging to the segment<div class="epy_nested">
+You should create all segments within the group with the
+same selector value. (C++: sel_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: 1 ok</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_segm_addressing"><code class="name flex">
+<span>def <span class="ident">set_segm_addressing</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Change segment addressing mode (16, 32, 64 bits). You must use this
+function to change segment addressing, never change the 'bitness'
+field directly. This function will delete all instructions, comments
+and names in the segment</div>
+<div class="epy_par">
+<strong class="epy_sig">set_segm_addressing(s, bitness) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment (C++: segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">bitness</strong>: new addressing mode of segment
+2: 64bit segment
+1:<div class="epy_nested">
+32bit segment
+0: 16bit segment (C++: size_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_segm_base"><code class="name flex">
+<span>def <span class="ident">set_segm_base</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Internal function.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_segm_base(s, newbase) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong> (C++: segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">newbase</strong> (C++: ea_t)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_segm_class"><code class="name flex">
+<span>def <span class="ident">set_segm_class</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set segment class.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_segm_class(s, sclass, flags=0) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment (may be NULL) (C++: segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">sclass</strong>: segment class (may be NULL). If segment type is<div class="epy_nested">
+SEG_NORM
+and segment class is one of predefined names,
+then segment type is changed to:
+"CODE" -&gt;
+SEG_CODE
+"DATA" -&gt;
+SEG_DATA
+"STACK" -&gt;
+SEG_BSS
+"BSS" -&gt;
+SEG_BSS
+if "UNK" then segment type is reset to
+SEG_NORM . (C++: const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong> (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok, name is good and segment is renamed</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failure, name is NULL or bad or segment is NULL</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_segm_end"><code class="name flex">
+<span>def <span class="ident">set_segm_end</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set segment end address. The next segment is shrinked to allow
+expansion of the specified segment. The kernel might even delete the
+next segment if necessary. The kernel will ask the user for a
+permission to destroy instructions or data going out of segment scope
+if such instructions exist.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_segm_end(ea, newend, flags) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address belonging to the segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">newend</strong>: new end address of the segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Segment modification flags (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failed, a warning message is displayed</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_segm_name"><code class="name flex">
+<span>def <span class="ident">set_segm_name</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Rename segment. The new name is validated (see validate_name). A
+segment always has a name. If you hadn't specified a name, the kernel
+will assign it "seg###" name where ### is segment number.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_segm_name(s, name, flags=0) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment (may be NULL) (C++: segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">name</strong>: new segment name (C++: const char *)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: ADDSEG_IDBENC or 0 (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok, name is good and segment is renamed</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failure, name is bad or segment is NULL</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_segm_start"><code class="name flex">
+<span>def <span class="ident">set_segm_start</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set segment start address. The previous segment is trimmed to allow
+expansion of the specified segment. The kernel might even delete the
+previous segment if necessary. The kernel will ask the user for a
+permission to destroy instructions or data going out of segment scope
+if such instructions exist.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_segm_start(ea, newstart, flags) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">ea</strong>: any address belonging to the segment (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">newstart</strong>: new start address of the segment note that segment<div class="epy_nested">
+start address should be higher than segment base
+linear address. (C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">flags</strong>: Segment modification flags (C++: int)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failed, a warning message is displayed</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_segment_cmt"><code class="name flex">
+<span>def <span class="ident">set_segment_cmt</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set segment comment.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_segment_cmt(s, cmt, repeatable)</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong>: pointer to segment structure (C++: const
+segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">cmt</strong>: comment string, may be multiline (with '
+'). maximal size<div class="epy_nested">
+is 4096 bytes. Use empty str ("") to delete comment (C++:
+const char *)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">repeatable</strong>: 0: set regular comment. 1: set repeatable comment.<div class="epy_nested">
+(C++: bool)</div>
+</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_segment_translations"><code class="name flex">
+<span>def <span class="ident">set_segment_translations</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set new translation list.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_segment_translations(segstart, transmap) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">segstart</strong>: start address of the segment to add translation to<div class="epy_nested">
+(C++: ea_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">transmap</strong>: vector of segment start addresses for the translation<div class="epy_nested">
+list. If transmap is empty, the translation list is
+deleted. (C++: const
+eavec_t
+&amp;)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - too many translations or bad segstart</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_selector"><code class="name flex">
+<span>def <span class="ident">set_selector</span></span>(<span>*args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Set mapping of selector to a paragraph. You should call this
+functionbeforecreating a segment which uses the selector, otherwise
+the creation of the segment will fail.</div>
+<div class="epy_par">
+<strong class="epy_sig">set_selector(selector, paragraph) -&gt; int</strong><div class="epy_nested">
+<strong class="epy_parameter">selector</strong>: number of selector to map
+if selector ==
+BADSEL ,<div class="epy_nested">
+then return 0 (fail)
+if the selector has had a
+mapping, old mapping is destroyed
+if the selector
+number is equal to paragraph value, then the mapping
+is destroyed because we don't need to keep trivial
+mappings. (C++: sel_t)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_parameter">paragraph</strong>: paragraph to map selector (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 1 - ok</div>
+<div class="epy_nested">
+<strong class="epy_tag">retval</strong>: 0 - failure (bad selector or too many mappings)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.set_visible_segm"><code class="name flex">
+<span>def <span class="ident">set_visible_segm</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+See 'SFL_HIDDEN' .</div>
+<div class="epy_par">
+<strong class="epy_sig">set_visible_segm(s, visible)</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong> (C++: segment_t
+*)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">visible</strong> (C++: bool)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.setup_selector"><code class="name flex">
+<span>def <span class="ident">setup_selector</span></span>(<span>*args) &#8209;&gt;&#160;sel_t</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Allocate a selector for a segment if necessary. You must call this
+function before calling 'add_segm_ex()' . 'add_segm()' calls this
+function itself, so you don't need to allocate a selector. This
+function will allocate a selector if 'segbase' requires more than 16
+bits and the current processor is IBM PC. Otherwise it will return the
+segbase value.</div>
+<div class="epy_par">
+<strong class="epy_sig">setup_selector(segbase) -&gt; sel_t</strong><div class="epy_nested">
+<strong class="epy_parameter">segbase</strong>: a new segment base paragraph (C++: ea_t)</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: the allocated selector number</div>
+</div></div>
+</dd>
+<dt id="ida_segment.std_out_segm_footer"><code class="name flex">
+<span>def <span class="ident">std_out_segm_footer</span></span>(<span>*args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Generate segment footer line as a comment line. This function may be
+used in IDP modules to generate segment footer if the target assembler
+doesn't have 'ends' directive.</div>
+<div class="epy_par">
+<strong class="epy_sig">std_out_segm_footer(ctx, seg)</strong><div class="epy_nested">
+<strong class="epy_parameter">ctx</strong> (C++: struct
+outctx_t
+&amp;)</div>
+<div class="epy_nested">
+<strong class="epy_parameter">seg</strong> (C++: segment_t
+*)</div>
+</div></div>
+</dd>
+<dt id="ida_segment.take_memory_snapshot"><code class="name flex">
+<span>def <span class="ident">take_memory_snapshot</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Take a memory snapshot of the running process.</div>
+<div class="epy_par">
+<strong class="epy_sig">take_memory_snapshot(only_loader_segs) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">only_loader_segs</strong>: only is_loader_segm() segments will be<div class="epy_nested">
+affected (C++: bool)</div>
+</div>
+<div class="epy_nested">
+<strong class="epy_tag">return</strong>: success</div>
+</div></div>
+</dd>
+<dt id="ida_segment.update_segm"><code class="name flex">
+<span>def <span class="ident">update_segm</span></span>(<span>*args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">update_segm(s) -&gt; bool</strong><div class="epy_nested">
+<strong class="epy_parameter">s</strong> (C++: segment_t
+*)</div>
+</div></div>
+</dd>
+
+
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ida_segment.lock_segment"><code class="flex name class">
+<span>class <span class="ident">lock_segment</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ lock_segment class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self, _segm) -&gt; lock_segment</strong><div class="epy_nested">
+_segm: segment_t const *</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segment_t"><code class="flex name class">
+<span>class <span class="ident">segment_t</span></span>
+<span>(</span><span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Proxy of C++ segment_t class.</div>
+<div class="epy_par">
+<strong class="epy_sig">__init__(self) -&gt; segment_t</strong></div></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="ida_segment.segment_t.align"><code class="name">var <span class="ident">align</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_align_get(self) -&gt; uchar</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.bitness"><code class="name">var <span class="ident">bitness</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_bitness_get(self) -&gt; uchar</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.color"><code class="name">var <span class="ident">color</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_color_get(self) -&gt; bgcolor_t</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.comb"><code class="name">var <span class="ident">comb</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_comb_get(self) -&gt; uchar</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.defsr"><code class="name">var <span class="ident">defsr</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_defsr_get(self) -&gt; sel_t [16]</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.end_ea"><code class="name">var <span class="ident">end_ea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_end_ea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.flags"><code class="name">var <span class="ident">flags</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_flags_get(self) -&gt; ushort</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_name_get(self) -&gt; uval_t</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.orgbase"><code class="name">var <span class="ident">orgbase</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_orgbase_get(self) -&gt; uval_t</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.perm"><code class="name">var <span class="ident">perm</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_perm_get(self) -&gt; uchar</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.sclass"><code class="name">var <span class="ident">sclass</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_sclass_get(self) -&gt; uval_t</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.sel"><code class="name">var <span class="ident">sel</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_sel_get(self) -&gt; sel_t</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.start_ea"><code class="name">var <span class="ident">start_ea</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_start_ea_get(self) -&gt; ea_t</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.type"><code class="name">var <span class="ident">type</span></code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">segment_t_type_get(self) -&gt; uchar</strong></div></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="ida_segment.segment_t.abits"><code class="name flex">
+<span>def <span class="ident">abits</span></span>(<span>self, *args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of address bits.</div></div>
+</dd>
+<dt id="ida_segment.segment_t.abytes"><code class="name flex">
+<span>def <span class="ident">abytes</span></span>(<span>self, *args) &#8209;&gt;&#160;int</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Get number of address bytes.</div></div>
+</dd>
+<dt id="ida_segment.segment_t.clr_comorg"><code class="name flex">
+<span>def <span class="ident">clr_comorg</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clr_comorg(self)</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.clr_ob_ok"><code class="name flex">
+<span>def <span class="ident">clr_ob_ok</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">clr_ob_ok(self)</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.comorg"><code class="name flex">
+<span>def <span class="ident">comorg</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">comorg(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.is_16bit"><code class="name flex">
+<span>def <span class="ident">is_16bit</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a 16-bit segment?</div></div>
+</dd>
+<dt id="ida_segment.segment_t.is_32bit"><code class="name flex">
+<span>def <span class="ident">is_32bit</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a 32-bit segment?</div></div>
+</dd>
+<dt id="ida_segment.segment_t.is_64bit"><code class="name flex">
+<span>def <span class="ident">is_64bit</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a 64-bit segment?</div></div>
+</dd>
+<dt id="ida_segment.segment_t.is_header_segm"><code class="name flex">
+<span>def <span class="ident">is_header_segm</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">is_header_segm(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.is_hidden_segtype"><code class="name flex">
+<span>def <span class="ident">is_hidden_segtype</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">is_hidden_segtype(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.is_loader_segm"><code class="name flex">
+<span>def <span class="ident">is_loader_segm</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">is_loader_segm(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.is_visible_segm"><code class="name flex">
+<span>def <span class="ident">is_visible_segm</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">is_visible_segm(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.ob_ok"><code class="name flex">
+<span>def <span class="ident">ob_ok</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">ob_ok(self) -&gt; bool</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.set_comorg"><code class="name flex">
+<span>def <span class="ident">set_comorg</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_comorg(self)</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.set_debugger_segm"><code class="name flex">
+<span>def <span class="ident">set_debugger_segm</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_debugger_segm(self, debseg)</strong><div class="epy_nested">
+debseg: bool</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segment_t.set_header_segm"><code class="name flex">
+<span>def <span class="ident">set_header_segm</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_header_segm(self, on)</strong><div class="epy_nested">
+on: bool</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segment_t.set_hidden_segtype"><code class="name flex">
+<span>def <span class="ident">set_hidden_segtype</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_hidden_segtype(self, hide)</strong><div class="epy_nested">
+hide: bool</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segment_t.set_loader_segm"><code class="name flex">
+<span>def <span class="ident">set_loader_segm</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_loader_segm(self, ldrseg)</strong><div class="epy_nested">
+ldrseg: bool</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segment_t.set_ob_ok"><code class="name flex">
+<span>def <span class="ident">set_ob_ok</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_ob_ok(self)</strong></div></div>
+</dd>
+<dt id="ida_segment.segment_t.set_visible_segm"><code class="name flex">
+<span>def <span class="ident">set_visible_segm</span></span>(<span>self, *args) &#8209;&gt;&#160;void</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+<strong class="epy_sig">set_visible_segm(self, visible)</strong><div class="epy_nested">
+visible: bool</div>
+</div></div>
+</dd>
+<dt id="ida_segment.segment_t.update"><code class="name flex">
+<span>def <span class="ident">update</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Update segment information. You must call this function after
+modification of segment characteristics. Note that not all fields of
+segment structure may be modified directly, there are special
+functions to modify some fields.</div></div>
+</dd>
+<dt id="ida_segment.segment_t.use64"><code class="name flex">
+<span>def <span class="ident">use64</span></span>(<span>self, *args) &#8209;&gt;&#160;bool</span>
+</code></dt>
+<dd>
+<div class="desc"><div class="epy_par">
+Is a 64-bit segment?</div></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="ida_range.range_t" href="ida_range.html#ida_range.range_t">range_t</a></b></code>:
+<ul class="hlist">
+<li><code><a title="ida_range.range_t.clear" href="ida_range.html#ida_range.range_t.clear">clear</a></code></li>
+<li><code><a title="ida_range.range_t.compare" href="ida_range.html#ida_range.range_t.compare">compare</a></code></li>
+<li><code><a title="ida_range.range_t.contains" href="ida_range.html#ida_range.range_t.contains">contains</a></code></li>
+<li><code><a title="ida_range.range_t.empty" href="ida_range.html#ida_range.range_t.empty">empty</a></code></li>
+<li><code><a title="ida_range.range_t.extend" href="ida_range.html#ida_range.range_t.extend">extend</a></code></li>
+<li><code><a title="ida_range.range_t.intersect" href="ida_range.html#ida_range.range_t.intersect">intersect</a></code></li>
+<li><code><a title="ida_range.range_t.overlaps" href="ida_range.html#ida_range.range_t.overlaps">overlaps</a></code></li>
+<li><code><a title="ida_range.range_t.size" href="ida_range.html#ida_range.range_t.size">size</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="&#128270; Search in module ida_segment ..." aria-label="Search in module ida_segment" disabled="disabled" minlength="2"/>
+</form>
+<link rel="preload stylesheet" as="style" href="assets/tingle.min.css"/>
+<script src="assets/tingle.min.js"/>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) =&gt; {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+encoded_query = encodeURIComponent(query)
+encoded_query = encoded_query + "," + encodeURIComponent("ida_segment")
+const url = 'doc-search.html#' + encoded_query;
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () =&gt; {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() =&gt; input.focus(), 100);
+}
+}).setContent('&lt;iframe src="' + url + '"&gt;&lt;/iframe&gt;').open();
+}
+</script>
+<div class="toc">
+<ul/>
+</div>
+<ul id="index">
+<li><h3><a href="#header-variables">Global variables</a></h3>
+<ul class="">
+<li><code><a title="ida_segment.ADDSEG_FILLGAP" href="#ida_segment.ADDSEG_FILLGAP">ADDSEG_FILLGAP</a></code></li>
+<li><code><a title="ida_segment.ADDSEG_IDBENC" href="#ida_segment.ADDSEG_IDBENC">ADDSEG_IDBENC</a></code></li>
+<li><code><a title="ida_segment.ADDSEG_NOAA" href="#ida_segment.ADDSEG_NOAA">ADDSEG_NOAA</a></code></li>
+<li><code><a title="ida_segment.ADDSEG_NOSREG" href="#ida_segment.ADDSEG_NOSREG">ADDSEG_NOSREG</a></code></li>
+<li><code><a title="ida_segment.ADDSEG_NOTRUNC" href="#ida_segment.ADDSEG_NOTRUNC">ADDSEG_NOTRUNC</a></code></li>
+<li><code><a title="ida_segment.ADDSEG_OR_DIE" href="#ida_segment.ADDSEG_OR_DIE">ADDSEG_OR_DIE</a></code></li>
+<li><code><a title="ida_segment.ADDSEG_QUIET" href="#ida_segment.ADDSEG_QUIET">ADDSEG_QUIET</a></code></li>
+<li><code><a title="ida_segment.ADDSEG_SPARSE" href="#ida_segment.ADDSEG_SPARSE">ADDSEG_SPARSE</a></code></li>
+<li><code><a title="ida_segment.CSS_BREAK" href="#ida_segment.CSS_BREAK">CSS_BREAK</a></code></li>
+<li><code><a title="ida_segment.CSS_NODBG" href="#ida_segment.CSS_NODBG">CSS_NODBG</a></code></li>
+<li><code><a title="ida_segment.CSS_NOMEM" href="#ida_segment.CSS_NOMEM">CSS_NOMEM</a></code></li>
+<li><code><a title="ida_segment.CSS_NORANGE" href="#ida_segment.CSS_NORANGE">CSS_NORANGE</a></code></li>
+<li><code><a title="ida_segment.CSS_OK" href="#ida_segment.CSS_OK">CSS_OK</a></code></li>
+<li><code><a title="ida_segment.MAX_GROUPS" href="#ida_segment.MAX_GROUPS">MAX_GROUPS</a></code></li>
+<li><code><a title="ida_segment.MAX_SEGM_TRANSLATIONS" href="#ida_segment.MAX_SEGM_TRANSLATIONS">MAX_SEGM_TRANSLATIONS</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_CHUNK" href="#ida_segment.MOVE_SEGM_CHUNK">MOVE_SEGM_CHUNK</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_DEBUG" href="#ida_segment.MOVE_SEGM_DEBUG">MOVE_SEGM_DEBUG</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_IDP" href="#ida_segment.MOVE_SEGM_IDP">MOVE_SEGM_IDP</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_LOADER" href="#ida_segment.MOVE_SEGM_LOADER">MOVE_SEGM_LOADER</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_ODD" href="#ida_segment.MOVE_SEGM_ODD">MOVE_SEGM_ODD</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_OK" href="#ida_segment.MOVE_SEGM_OK">MOVE_SEGM_OK</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_ORPHAN" href="#ida_segment.MOVE_SEGM_ORPHAN">MOVE_SEGM_ORPHAN</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_PARAM" href="#ida_segment.MOVE_SEGM_PARAM">MOVE_SEGM_PARAM</a></code></li>
+<li><code><a title="ida_segment.MOVE_SEGM_ROOM" href="#ida_segment.MOVE_SEGM_ROOM">MOVE_SEGM_ROOM</a></code></li>
+<li><code><a title="ida_segment.MSF_FIXONCE" href="#ida_segment.MSF_FIXONCE">MSF_FIXONCE</a></code></li>
+<li><code><a title="ida_segment.MSF_LDKEEP" href="#ida_segment.MSF_LDKEEP">MSF_LDKEEP</a></code></li>
+<li><code><a title="ida_segment.MSF_NETNODES" href="#ida_segment.MSF_NETNODES">MSF_NETNODES</a></code></li>
+<li><code><a title="ida_segment.MSF_NOFIX" href="#ida_segment.MSF_NOFIX">MSF_NOFIX</a></code></li>
+<li><code><a title="ida_segment.MSF_PRIORITY" href="#ida_segment.MSF_PRIORITY">MSF_PRIORITY</a></code></li>
+<li><code><a title="ida_segment.MSF_SILENT" href="#ida_segment.MSF_SILENT">MSF_SILENT</a></code></li>
+<li><code><a title="ida_segment.SEGMOD_KEEP" href="#ida_segment.SEGMOD_KEEP">SEGMOD_KEEP</a></code></li>
+<li><code><a title="ida_segment.SEGMOD_KEEP0" href="#ida_segment.SEGMOD_KEEP0">SEGMOD_KEEP0</a></code></li>
+<li><code><a title="ida_segment.SEGMOD_KEEPSEL" href="#ida_segment.SEGMOD_KEEPSEL">SEGMOD_KEEPSEL</a></code></li>
+<li><code><a title="ida_segment.SEGMOD_KILL" href="#ida_segment.SEGMOD_KILL">SEGMOD_KILL</a></code></li>
+<li><code><a title="ida_segment.SEGMOD_NOMOVE" href="#ida_segment.SEGMOD_NOMOVE">SEGMOD_NOMOVE</a></code></li>
+<li><code><a title="ida_segment.SEGMOD_SILENT" href="#ida_segment.SEGMOD_SILENT">SEGMOD_SILENT</a></code></li>
+<li><code><a title="ida_segment.SEGMOD_SPARSE" href="#ida_segment.SEGMOD_SPARSE">SEGMOD_SPARSE</a></code></li>
+<li><code><a title="ida_segment.SEGPERM_EXEC" href="#ida_segment.SEGPERM_EXEC">SEGPERM_EXEC</a></code></li>
+<li><code><a title="ida_segment.SEGPERM_MAXVAL" href="#ida_segment.SEGPERM_MAXVAL">SEGPERM_MAXVAL</a></code></li>
+<li><code><a title="ida_segment.SEGPERM_READ" href="#ida_segment.SEGPERM_READ">SEGPERM_READ</a></code></li>
+<li><code><a title="ida_segment.SEGPERM_WRITE" href="#ida_segment.SEGPERM_WRITE">SEGPERM_WRITE</a></code></li>
+<li><code><a title="ida_segment.SEG_ABSSYM" href="#ida_segment.SEG_ABSSYM">SEG_ABSSYM</a></code></li>
+<li><code><a title="ida_segment.SEG_BSS" href="#ida_segment.SEG_BSS">SEG_BSS</a></code></li>
+<li><code><a title="ida_segment.SEG_CODE" href="#ida_segment.SEG_CODE">SEG_CODE</a></code></li>
+<li><code><a title="ida_segment.SEG_COMM" href="#ida_segment.SEG_COMM">SEG_COMM</a></code></li>
+<li><code><a title="ida_segment.SEG_DATA" href="#ida_segment.SEG_DATA">SEG_DATA</a></code></li>
+<li><code><a title="ida_segment.SEG_GRP" href="#ida_segment.SEG_GRP">SEG_GRP</a></code></li>
+<li><code><a title="ida_segment.SEG_IMEM" href="#ida_segment.SEG_IMEM">SEG_IMEM</a></code></li>
+<li><code><a title="ida_segment.SEG_IMP" href="#ida_segment.SEG_IMP">SEG_IMP</a></code></li>
+<li><code><a title="ida_segment.SEG_MAX_BITNESS_CODE" href="#ida_segment.SEG_MAX_BITNESS_CODE">SEG_MAX_BITNESS_CODE</a></code></li>
+<li><code><a title="ida_segment.SEG_MAX_SEGTYPE_CODE" href="#ida_segment.SEG_MAX_SEGTYPE_CODE">SEG_MAX_SEGTYPE_CODE</a></code></li>
+<li><code><a title="ida_segment.SEG_NORM" href="#ida_segment.SEG_NORM">SEG_NORM</a></code></li>
+<li><code><a title="ida_segment.SEG_NULL" href="#ida_segment.SEG_NULL">SEG_NULL</a></code></li>
+<li><code><a title="ida_segment.SEG_UNDF" href="#ida_segment.SEG_UNDF">SEG_UNDF</a></code></li>
+<li><code><a title="ida_segment.SEG_XTRN" href="#ida_segment.SEG_XTRN">SEG_XTRN</a></code></li>
+<li><code><a title="ida_segment.SFL_COMORG" href="#ida_segment.SFL_COMORG">SFL_COMORG</a></code></li>
+<li><code><a title="ida_segment.SFL_DEBUG" href="#ida_segment.SFL_DEBUG">SFL_DEBUG</a></code></li>
+<li><code><a title="ida_segment.SFL_HEADER" href="#ida_segment.SFL_HEADER">SFL_HEADER</a></code></li>
+<li><code><a title="ida_segment.SFL_HIDDEN" href="#ida_segment.SFL_HIDDEN">SFL_HIDDEN</a></code></li>
+<li><code><a title="ida_segment.SFL_HIDETYPE" href="#ida_segment.SFL_HIDETYPE">SFL_HIDETYPE</a></code></li>
+<li><code><a title="ida_segment.SFL_LOADER" href="#ida_segment.SFL_LOADER">SFL_LOADER</a></code></li>
+<li><code><a title="ida_segment.SFL_OBOK" href="#ida_segment.SFL_OBOK">SFL_OBOK</a></code></li>
+<li><code><a title="ida_segment.SREG_NUM" href="#ida_segment.SREG_NUM">SREG_NUM</a></code></li>
+<li><code><a title="ida_segment.saAbs" href="#ida_segment.saAbs">saAbs</a></code></li>
+<li><code><a title="ida_segment.saGroup" href="#ida_segment.saGroup">saGroup</a></code></li>
+<li><code><a title="ida_segment.saRel1024Bytes" href="#ida_segment.saRel1024Bytes">saRel1024Bytes</a></code></li>
+<li><code><a title="ida_segment.saRel128Bytes" href="#ida_segment.saRel128Bytes">saRel128Bytes</a></code></li>
+<li><code><a title="ida_segment.saRel2048Bytes" href="#ida_segment.saRel2048Bytes">saRel2048Bytes</a></code></li>
+<li><code><a title="ida_segment.saRel32Bytes" href="#ida_segment.saRel32Bytes">saRel32Bytes</a></code></li>
+<li><code><a title="ida_segment.saRel4K" href="#ida_segment.saRel4K">saRel4K</a></code></li>
+<li><code><a title="ida_segment.saRel512Bytes" href="#ida_segment.saRel512Bytes">saRel512Bytes</a></code></li>
+<li><code><a title="ida_segment.saRel64Bytes" href="#ida_segment.saRel64Bytes">saRel64Bytes</a></code></li>
+<li><code><a title="ida_segment.saRelByte" href="#ida_segment.saRelByte">saRelByte</a></code></li>
+<li><code><a title="ida_segment.saRelDble" href="#ida_segment.saRelDble">saRelDble</a></code></li>
+<li><code><a title="ida_segment.saRelPage" href="#ida_segment.saRelPage">saRelPage</a></code></li>
+<li><code><a title="ida_segment.saRelPara" href="#ida_segment.saRelPara">saRelPara</a></code></li>
+<li><code><a title="ida_segment.saRelQword" href="#ida_segment.saRelQword">saRelQword</a></code></li>
+<li><code><a title="ida_segment.saRelWord" href="#ida_segment.saRelWord">saRelWord</a></code></li>
+<li><code><a title="ida_segment.saRel_MAX_ALIGN_CODE" href="#ida_segment.saRel_MAX_ALIGN_CODE">saRel_MAX_ALIGN_CODE</a></code></li>
+<li><code><a title="ida_segment.scCommon" href="#ida_segment.scCommon">scCommon</a></code></li>
+<li><code><a title="ida_segment.scGroup" href="#ida_segment.scGroup">scGroup</a></code></li>
+<li><code><a title="ida_segment.scPriv" href="#ida_segment.scPriv">scPriv</a></code></li>
+<li><code><a title="ida_segment.scPub" href="#ida_segment.scPub">scPub</a></code></li>
+<li><code><a title="ida_segment.scPub2" href="#ida_segment.scPub2">scPub2</a></code></li>
+<li><code><a title="ida_segment.scPub3" href="#ida_segment.scPub3">scPub3</a></code></li>
+<li><code><a title="ida_segment.scStack" href="#ida_segment.scStack">scStack</a></code></li>
+<li><code><a title="ida_segment.sc_MAX_COMB_CODE" href="#ida_segment.sc_MAX_COMB_CODE">sc_MAX_COMB_CODE</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="ida_segment.add_segm" href="#ida_segment.add_segm">add_segm</a></code></li>
+<li><code><a title="ida_segment.add_segm_ex" href="#ida_segment.add_segm_ex">add_segm_ex</a></code></li>
+<li><code><a title="ida_segment.add_segment_translation" href="#ida_segment.add_segment_translation">add_segment_translation</a></code></li>
+<li><code><a title="ida_segment.allocate_selector" href="#ida_segment.allocate_selector">allocate_selector</a></code></li>
+<li><code><a title="ida_segment.change_segment_status" href="#ida_segment.change_segment_status">change_segment_status</a></code></li>
+<li><code><a title="ida_segment.del_segm" href="#ida_segment.del_segm">del_segm</a></code></li>
+<li><code><a title="ida_segment.del_segment_translations" href="#ida_segment.del_segment_translations">del_segment_translations</a></code></li>
+<li><code><a title="ida_segment.del_selector" href="#ida_segment.del_selector">del_selector</a></code></li>
+<li><code><a title="ida_segment.find_free_selector" href="#ida_segment.find_free_selector">find_free_selector</a></code></li>
+<li><code><a title="ida_segment.find_selector" href="#ida_segment.find_selector">find_selector</a></code></li>
+<li><code><a title="ida_segment.get_defsr" href="#ida_segment.get_defsr">get_defsr</a></code></li>
+<li><code><a title="ida_segment.get_first_seg" href="#ida_segment.get_first_seg">get_first_seg</a></code></li>
+<li><code><a title="ida_segment.get_group_selector" href="#ida_segment.get_group_selector">get_group_selector</a></code></li>
+<li><code><a title="ida_segment.get_last_seg" href="#ida_segment.get_last_seg">get_last_seg</a></code></li>
+<li><code><a title="ida_segment.get_next_seg" href="#ida_segment.get_next_seg">get_next_seg</a></code></li>
+<li><code><a title="ida_segment.get_prev_seg" href="#ida_segment.get_prev_seg">get_prev_seg</a></code></li>
+<li><code><a title="ida_segment.get_segm_base" href="#ida_segment.get_segm_base">get_segm_base</a></code></li>
+<li><code><a title="ida_segment.get_segm_by_name" href="#ida_segment.get_segm_by_name">get_segm_by_name</a></code></li>
+<li><code><a title="ida_segment.get_segm_by_sel" href="#ida_segment.get_segm_by_sel">get_segm_by_sel</a></code></li>
+<li><code><a title="ida_segment.get_segm_class" href="#ida_segment.get_segm_class">get_segm_class</a></code></li>
+<li><code><a title="ida_segment.get_segm_name" href="#ida_segment.get_segm_name">get_segm_name</a></code></li>
+<li><code><a title="ida_segment.get_segm_num" href="#ida_segment.get_segm_num">get_segm_num</a></code></li>
+<li><code><a title="ida_segment.get_segm_para" href="#ida_segment.get_segm_para">get_segm_para</a></code></li>
+<li><code><a title="ida_segment.get_segm_qty" href="#ida_segment.get_segm_qty">get_segm_qty</a></code></li>
+<li><code><a title="ida_segment.get_segment_alignment" href="#ida_segment.get_segment_alignment">get_segment_alignment</a></code></li>
+<li><code><a title="ida_segment.get_segment_cmt" href="#ida_segment.get_segment_cmt">get_segment_cmt</a></code></li>
+<li><code><a title="ida_segment.get_segment_combination" href="#ida_segment.get_segment_combination">get_segment_combination</a></code></li>
+<li><code><a title="ida_segment.get_segment_translations" href="#ida_segment.get_segment_translations">get_segment_translations</a></code></li>
+<li><code><a title="ida_segment.get_selector_qty" href="#ida_segment.get_selector_qty">get_selector_qty</a></code></li>
+<li><code><a title="ida_segment.get_visible_segm_name" href="#ida_segment.get_visible_segm_name">get_visible_segm_name</a></code></li>
+<li><code><a title="ida_segment.getn_selector" href="#ida_segment.getn_selector">getn_selector</a></code></li>
+<li><code><a title="ida_segment.getnseg" href="#ida_segment.getnseg">getnseg</a></code></li>
+<li><code><a title="ida_segment.getseg" href="#ida_segment.getseg">getseg</a></code></li>
+<li><code><a title="ida_segment.is_finally_visible_segm" href="#ida_segment.is_finally_visible_segm">is_finally_visible_segm</a></code></li>
+<li><code><a title="ida_segment.is_miniidb" href="#ida_segment.is_miniidb">is_miniidb</a></code></li>
+<li><code><a title="ida_segment.is_segm_locked" href="#ida_segment.is_segm_locked">is_segm_locked</a></code></li>
+<li><code><a title="ida_segment.is_spec_ea" href="#ida_segment.is_spec_ea">is_spec_ea</a></code></li>
+<li><code><a title="ida_segment.is_spec_segm" href="#ida_segment.is_spec_segm">is_spec_segm</a></code></li>
+<li><code><a title="ida_segment.is_visible_segm" href="#ida_segment.is_visible_segm">is_visible_segm</a></code></li>
+<li><code><a title="ida_segment.lock_segm" href="#ida_segment.lock_segm">lock_segm</a></code></li>
+<li><code><a title="ida_segment.move_segm" href="#ida_segment.move_segm">move_segm</a></code></li>
+<li><code><a title="ida_segment.move_segm_start" href="#ida_segment.move_segm_start">move_segm_start</a></code></li>
+<li><code><a title="ida_segment.rebase_program" href="#ida_segment.rebase_program">rebase_program</a></code></li>
+<li><code><a title="ida_segment.segm_adjust_diff" href="#ida_segment.segm_adjust_diff">segm_adjust_diff</a></code></li>
+<li><code><a title="ida_segment.segm_adjust_ea" href="#ida_segment.segm_adjust_ea">segm_adjust_ea</a></code></li>
+<li><code><a title="ida_segment.segtype" href="#ida_segment.segtype">segtype</a></code></li>
+<li><code><a title="ida_segment.sel2ea" href="#ida_segment.sel2ea">sel2ea</a></code></li>
+<li><code><a title="ida_segment.sel2para" href="#ida_segment.sel2para">sel2para</a></code></li>
+<li><code><a title="ida_segment.set_defsr" href="#ida_segment.set_defsr">set_defsr</a></code></li>
+<li><code><a title="ida_segment.set_group_selector" href="#ida_segment.set_group_selector">set_group_selector</a></code></li>
+<li><code><a title="ida_segment.set_segm_addressing" href="#ida_segment.set_segm_addressing">set_segm_addressing</a></code></li>
+<li><code><a title="ida_segment.set_segm_base" href="#ida_segment.set_segm_base">set_segm_base</a></code></li>
+<li><code><a title="ida_segment.set_segm_class" href="#ida_segment.set_segm_class">set_segm_class</a></code></li>
+<li><code><a title="ida_segment.set_segm_end" href="#ida_segment.set_segm_end">set_segm_end</a></code></li>
+<li><code><a title="ida_segment.set_segm_name" href="#ida_segment.set_segm_name">set_segm_name</a></code></li>
+<li><code><a title="ida_segment.set_segm_start" href="#ida_segment.set_segm_start">set_segm_start</a></code></li>
+<li><code><a title="ida_segment.set_segment_cmt" href="#ida_segment.set_segment_cmt">set_segment_cmt</a></code></li>
+<li><code><a title="ida_segment.set_segment_translations" href="#ida_segment.set_segment_translations">set_segment_translations</a></code></li>
+<li><code><a title="ida_segment.set_selector" href="#ida_segment.set_selector">set_selector</a></code></li>
+<li><code><a title="ida_segment.set_visible_segm" href="#ida_segment.set_visible_segm">set_visible_segm</a></code></li>
+<li><code><a title="ida_segment.setup_selector" href="#ida_segment.setup_selector">setup_selector</a></code></li>
+<li><code><a title="ida_segment.std_out_segm_footer" href="#ida_segment.std_out_segm_footer">std_out_segm_footer</a></code></li>
+<li><code><a title="ida_segment.take_memory_snapshot" href="#ida_segment.take_memory_snapshot">take_memory_snapshot</a></code></li>
+<li><code><a title="ida_segment.update_segm" href="#ida_segment.update_segm">update_segm</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="ida_segment.lock_segment" href="#ida_segment.lock_segment">lock_segment</a></code></h4>
+</li>
+<li>
+<h4><code><a title="ida_segment.segment_t" href="#ida_segment.segment_t">segment_t</a></code></h4>
+<ul class="two-column">
+<li><code><a title="ida_segment.segment_t.abits" href="#ida_segment.segment_t.abits">abits</a></code></li>
+<li><code><a title="ida_segment.segment_t.abytes" href="#ida_segment.segment_t.abytes">abytes</a></code></li>
+<li><code><a title="ida_segment.segment_t.align" href="#ida_segment.segment_t.align">align</a></code></li>
+<li><code><a title="ida_segment.segment_t.bitness" href="#ida_segment.segment_t.bitness">bitness</a></code></li>
+<li><code><a title="ida_segment.segment_t.clr_comorg" href="#ida_segment.segment_t.clr_comorg">clr_comorg</a></code></li>
+<li><code><a title="ida_segment.segment_t.clr_ob_ok" href="#ida_segment.segment_t.clr_ob_ok">clr_ob_ok</a></code></li>
+<li><code><a title="ida_segment.segment_t.color" href="#ida_segment.segment_t.color">color</a></code></li>
+<li><code><a title="ida_segment.segment_t.comb" href="#ida_segment.segment_t.comb">comb</a></code></li>
+<li><code><a title="ida_segment.segment_t.comorg" href="#ida_segment.segment_t.comorg">comorg</a></code></li>
+<li><code><a title="ida_segment.segment_t.defsr" href="#ida_segment.segment_t.defsr">defsr</a></code></li>
+<li><code><a title="ida_segment.segment_t.end_ea" href="#ida_segment.segment_t.end_ea">end_ea</a></code></li>
+<li><code><a title="ida_segment.segment_t.flags" href="#ida_segment.segment_t.flags">flags</a></code></li>
+<li><code><a title="ida_segment.segment_t.is_16bit" href="#ida_segment.segment_t.is_16bit">is_16bit</a></code></li>
+<li><code><a title="ida_segment.segment_t.is_32bit" href="#ida_segment.segment_t.is_32bit">is_32bit</a></code></li>
+<li><code><a title="ida_segment.segment_t.is_64bit" href="#ida_segment.segment_t.is_64bit">is_64bit</a></code></li>
+<li><code><a title="ida_segment.segment_t.is_header_segm" href="#ida_segment.segment_t.is_header_segm">is_header_segm</a></code></li>
+<li><code><a title="ida_segment.segment_t.is_hidden_segtype" href="#ida_segment.segment_t.is_hidden_segtype">is_hidden_segtype</a></code></li>
+<li><code><a title="ida_segment.segment_t.is_loader_segm" href="#ida_segment.segment_t.is_loader_segm">is_loader_segm</a></code></li>
+<li><code><a title="ida_segment.segment_t.is_visible_segm" href="#ida_segment.segment_t.is_visible_segm">is_visible_segm</a></code></li>
+<li><code><a title="ida_segment.segment_t.name" href="#ida_segment.segment_t.name">name</a></code></li>
+<li><code><a title="ida_segment.segment_t.ob_ok" href="#ida_segment.segment_t.ob_ok">ob_ok</a></code></li>
+<li><code><a title="ida_segment.segment_t.orgbase" href="#ida_segment.segment_t.orgbase">orgbase</a></code></li>
+<li><code><a title="ida_segment.segment_t.perm" href="#ida_segment.segment_t.perm">perm</a></code></li>
+<li><code><a title="ida_segment.segment_t.sclass" href="#ida_segment.segment_t.sclass">sclass</a></code></li>
+<li><code><a title="ida_segment.segment_t.sel" href="#ida_segment.segment_t.sel">sel</a></code></li>
+<li><code><a title="ida_segment.segment_t.set_comorg" href="#ida_segment.segment_t.set_comorg">set_comorg</a></code></li>
+<li><code><a title="ida_segment.segment_t.set_debugger_segm" href="#ida_segment.segment_t.set_debugger_segm">set_debugger_segm</a></code></li>
+<li><code><a title="ida_segment.segment_t.set_header_segm" href="#ida_segment.segment_t.set_header_segm">set_header_segm</a></code></li>
+<li><code><a title="ida_segment.segment_t.set_hidden_segtype" href="#ida_segment.segment_t.set_hidden_segtype">set_hidden_segtype</a></code></li>
+<li><code><a title="ida_segment.segment_t.set_loader_segm" href="#ida_segment.segment_t.set_loader_segm">set_loader_segm</a></code></li>
+<li><code><a title="ida_segment.segment_t.set_ob_ok" href="#ida_segment.segment_t.set_ob_ok">set_ob_ok</a></code></li>
+<li><code><a title="ida_segment.segment_t.set_visible_segm" href="#ida_segment.segment_t.set_visible_segm">set_visible_segm</a></code></li>
+<li><code><a title="ida_segment.segment_t.start_ea" href="#ida_segment.segment_t.start_ea">start_ea</a></code></li>
+<li><code><a title="ida_segment.segment_t.type" href="#ida_segment.segment_t.type">type</a></code></li>
+<li><code><a title="ida_segment.segment_t.update" href="#ida_segment.segment_t.update">update</a></code></li>
+<li><code><a title="ida_segment.segment_t.use64" href="#ida_segment.segment_t.use64">use64</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+<footer id="footer">
+<p>Copyright (c) 2021 Hex-Rays SA. <a href="/terms_of_use.shtml">Terms of use</a> and <a href="/privacy_policy.shtml">privacy policy</a>.</p>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> ???</a>.</p>
+</footer>
+</div></dd></div></dd></dl></section></article></main></body>
+</html>
