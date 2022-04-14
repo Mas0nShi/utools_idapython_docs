@@ -23,4 +23,4 @@ moreover, remove useless nodes.
 
 ## screenshot
 
-![](screenshot.png)
+![](image.png)
