@@ -10,6 +10,10 @@ use html parser replace some cdn refer/resources to local.
 
 moreover, remove useless nodes.
 
+## usage
+
+you can search `idapython` in official store.
+
 ## features
 
 - platform of utools
